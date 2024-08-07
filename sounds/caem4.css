@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'GmarketSansMedium';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neurimboGothicRegular';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/neurimboGothicRegular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.box{
+  width: 100%;
+  background-color: beige;
+  padding: 30px;
+}
+.box1{
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 0px black;
+}
+
+/*nth-child(3): n번째 등장하는 요소만 스탈링할때*/
+.box1 th:nth-child(3){
+  padding: 15px;
+  border-bottom: 1px solid #c2d3de;
+  
+}
+.long{
+  width: 200px;
+}
+/*a태그 하이퍼링크*/
+a{
+  text-decoration: none; /*하이퍼링크 밑줄 제거*/
+  color: inherit; /*하이퍼 링크 색상 제거 */
+  }
+  
+  /* 우측 상단 메뉴 */
+  .top_menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  color: #000000;
+  background-color: rgb(0, 255, 13);
+  justify-content: space-between; /* 로고와 아이콘 사이에 공간 분배 */
+  }
+  
+  /* 로고 */
+  .top_menu .logo {
+  font-family: 'neurimboGothicRegular';
+  margin: 0 auto; /* 좌우 여백을 자동으로 조정하여 중앙 정렬 */
+  }
+  
+  /* 아이콘들 컨테이너 */
+  .top_menu .top_icons {
+  display: flex;
+  align-items: center;
+  }
+  
+  /* 아이콘 */
+  .top_menu .top_icon {
+  margin: 0 5px; /* 아이콘 사이의 여백 조정 */
+  }
+  
+  /* 아이콘 중앙 수직 정렬 */
+  .top_menu .top_icon svg {
+  vertical-align: middle;
+  }
+  
+  /*우측상단 검색, 마이페이지, 찜, 장바구니, 로그인_글자 속성*/
+  .sign li{
+  margin: 0 5px; /*메뉴끼리의 사이 여백*/
+  /* text-align: center; /*텍스트 중앙 정렬
+  font-size: 0.6rem;
+  color: rgb(31, 218, 255); */
+  }
+  
+  /*헤드폰, 이어폰, 사운드바, 스피커, 고객지원_박스 속성*/
+  .categories{
+  margin: 0;
+  padding: 10px;
+  padding-bottom: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: center; /*가로로 중앙 정렬*/
+  background-color: rgb(0, 255, 13);
+  }
+  
+  /*헤드폰, 이어폰, 사운드바, 스피커, 고객지원_각 글자 속성*/
+  .categories li{
+  font-family: 'GmarketSansMedium';
+  text-align: center; /*텍스트 중앙 정렬*/
+  margin: 0 10px; /*각 글자 사이 여백*/
+  padding: 5px 20px; /*각 글자 박스 크기*/
+  color: #000000;
+  }
