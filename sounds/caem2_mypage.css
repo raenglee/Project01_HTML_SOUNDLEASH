@@ -51,6 +51,7 @@ body {
 
 /* 프로필 컨테이너 스타일 설정 */
 .profile-container {
+  height: 400px;
   display: flex; /* 플렉스 박스로 설정 */
   align-items: center; /* 아이템들을 중앙에 정렬 */
   justify-content: center; /* 중앙에 배치 */
@@ -71,15 +72,6 @@ body {
 /* 프로필 이미지 호버 스타일 설정 */
 .profile-img:hover {
   transform: scale(1.1); /* 호버 시 확대 */
-}
-
-/* 푸터 스타일 설정 */
-footer {
-  text-align: center; /* 텍스트 중앙 정렬 */
-  padding: 1rem; /* 안쪽 여백을 1rem으로 설정 */
-  background: #f8f8f8; /* 배경색을 연한 회색으로 설정 */
-  color: #333; /* 글자 색상을 어두운 회색으로 설정 */
-  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1); /* 상단에 그림자 추가 */
 }
 /*a태그 하이퍼링크*/
 a{
@@ -148,3 +140,12 @@ margin: 0 10px; /*각 글자 사이 여백*/
 padding: 5px 20px; /*각 글자 박스 크기*/
 color: #000000;
 }
+/*가장 하단 푸터*/
+footer{
+  font-family: 'GmarketSansMedium';
+  font-size: 0.5rem;
+  color: white;
+  background-color: rgb(0, 255, 13);
+  position : absolute;
+  bottom : 0;
+  }

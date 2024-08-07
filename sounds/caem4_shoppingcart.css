@@ -111,3 +111,12 @@ a{
   padding: 5px 20px; /*각 글자 박스 크기*/
   color: #000000;
   }
+  /*가장 하단 푸터*/
+footer{
+  font-family: 'GmarketSansMedium';
+  font-size: 0.5rem;
+  color: white;
+  background-color: rgb(0, 255, 13);
+  position : absolute;
+  bottom : 0;
+  }
