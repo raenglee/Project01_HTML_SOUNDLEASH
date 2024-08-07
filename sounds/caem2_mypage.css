@@ -13,6 +13,13 @@
 }
 
 /* 전체 페이지의 기본 스타일 설정 */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif; /* 페이지 전체의 글꼴을 'Roboto'로 설정 */
   margin: 0; /* 기본 여백을 0으로 설정 */
