@@ -25,9 +25,9 @@
   padding: 30px;
 }
 
-.shoppingcartname{
-  padding: 10%;
-  margin: 10%;
+h3{
+  padding: 25px;
+  margin: 30px;
   text-align: center;
 }
 
@@ -40,13 +40,6 @@
   border: 1px solid black;
   padding: 10px;
   box-shadow: 0px 0px 5px 0px black;
-}
-
-/*nth-child(3): n번째 등장하는 요소만 스탈링할때*/
-.box1 th:nth-child(3){
-  padding: 15px;
-  border-bottom: 1px solid #c2d3de;
-  
 }
 .long{
   width: 200px;
