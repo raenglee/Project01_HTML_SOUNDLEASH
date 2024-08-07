@@ -821,7 +821,7 @@ table {
     width: 65px;
     height: 30px;
     margin-top: 2px;
-    margin-right: 60px;
+    margin-right: 70px;
     background-color: #a8b1b1;
     border: none;
     color: #000000;
@@ -844,7 +844,6 @@ table {
 
 #birthdate.text{
 height: 30px;
-padding-right: 200px;
 margin-right: 30px;
 
 }
@@ -912,7 +911,7 @@ select {
     display: inline-block;
     background: #ffffff;
     border: 1px solid #000000;
-
+    border-radius: 5px;
     outline: 0;
     box-sizing: border-box;
     color: inherit;
@@ -941,12 +940,11 @@ select {
     margin: 5px;
     /* width: 50%; */
     background-color: #04BEBD;
-    border: none;
     color: #fff;
     cursor: pointer;
     font-size: 15px;
     font-display: center;
-    border-radius: 0;
+    border-radius: 5px;
 }
 
 .text {
@@ -1018,4 +1016,5 @@ button:hover {
 .button {
     text-align: center;
     padding-bottom: 50px;
+    border-radius: 5px;
 }
