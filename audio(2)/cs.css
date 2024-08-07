@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cs-bar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+.cs-bar li {
+    display: inline-block;
+}
+
+.cs-bar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s; /* 부드러운 전환 효과 */
+}
+
+/* 호버 효과 */
+.cs-bar li a:hover {
+    background-color: white; /* 호버 시 배경색 변경 */
+    color: black; /* 호버 시 텍스트 색상 변경 */
+}
+.cs-bar li a:hover {
+    background-color: #4CAF50;
+    color: white;
+    transform: scale(1.1); /* 약간 확대 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 그림자 효과 */
+}
+#notice a:hover { background-color: plum; }
+#faq a:hover { background-color: plum; }
+#store-info a:hover { background-color:plum; }
+#service-center a:hover { background-color:plum; }
