@@ -74,42 +74,43 @@
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-
-
-
-
+/*메뉴 박스 속성*/
 #menu {
-  position: absolute;
-  width: 300px;
+  position: absolute; /*자식 요소*/
+  width: 90px; /*넓이*/
+  height: 100vh; /*메뉴박스 높이*/
   margin: -100px 0 0 -50px;
-  padding: 50px;
-  padding-top: 125px;
+  padding: 50px; /*전체박스크기*/
+  padding-top: 120px; /*상단높이조절*/
 
-  background: #ededed;
+  background: #a8a8a8;
   list-style-type: none;
 
   transform-origin: 0% 0%;
-  transform: translate(-100%, 0);
+  transform: translate(-100%, 0); /*메뉴박스 팝업 위치, 마이너스여야 왼쪽에서 오른쪽으로 나옴*/
 
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  /*메뉴박스 나오는 속도*/
+  transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-/*메뉴 */
+/*메뉴 글씨 기본 설정*/
 #menu a {
   text-decoration: none;
-  color: #68b7db;
+  color: #000000;
 
-  transition: color 0.3s ease;
+  /*색상 변경 반응 속도*/
+  transition: color 0.2s ease;
 }
 
-/*메뉴 선택시 색상변경 등*/
+/*메뉴 선택시 색상변경*/
 #menu a:hover {
-  color: rgb(175, 62, 42);
+  color: rgb(116, 175, 243);
 }
 
+/*메뉴간 간격*/
 #menu li {
-  padding: 10px 0;
-  font-size: 22px;
+  padding: 7px 0;
+  font-size: 19px;
 }
 
 #menu_hamburger input:checked ~ ul {
