@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*1️⃣상품 목록 1번째줄-----------------------------------------------*/
+
+/*🎧헤드셋 상품 목록 1번째줄 전체 속성*/
+.products_line1 {
+    display: flex; /*카테고리 사진 가로정렬*/
+    justify-content: space-evenly; /*상품 간 간격 동일하게*/
+    padding-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+    
+    /*상품 목록 1번째줄*/
+    .product_line1 {
+    overflow: hidden;  /*고정 ? */
+    text-align: center;  /*텍스트 중간정렬*/
+    }
+    
+    /*1번째 줄 상품 사진 설정*/
+    .product_line1 img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+    box-shadow: 10px 5px 0px 0px rgb(0, 0, 0);
+    }
+    
+    /*1번째 줄 상품 이름, 가격 속성*/
+    .product_line1 h3, p {
+    font-family: 'GmarketSansMedium';
+    margin: 1px 0;
+    font-size: 0.7rem;
+    color: #000000;
+    }
+  
+    /*2️⃣상품 목록 2번째줄-----------------------------------------------*/
+  
+    /*🎧헤드셋 상품 목록 2번째줄 전체 속성*/
+  .products_line2 {
+    display: flex; /*카테고리 사진 가로정렬*/
+    justify-content: space-evenly; /*상품 간 간격 동일하게*/
+    padding-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+    
+    /*상품 목록 2번째줄*/
+    .product_line2 {
+    overflow: hidden;  /*고정 ? */
+    text-align: center;  /*텍스트 중간정렬*/
+    }
+    
+    /*2번째 줄 상품 사진 설정*/
+    .product_line2 img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+    box-shadow: 10px 5px 0px 0px rgb(0, 0, 0);
+    }
+    
+    /*2번째 줄 상품 이름, 가격 속성*/
+    .product_line2 h3, p {
+    font-family: 'GmarketSansMedium';
+    margin: 1px 0;
+    font-size: 0.7rem;
+    color: #000000;
+    }
+  
+    /*3️⃣상품 목록 3번째줄-----------------------------------------------*/
+  
+    /*🎧헤드셋 상품 목록 3번째줄 전체 속성*/
+  .products_line3 {
+    display: flex; /*카테고리 사진 가로정렬*/
+    justify-content: space-evenly; /*상품 간 간격 동일하게*/
+    padding-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+    
+    /*상품 목록 3번째줄*/
+    .product_line3 {
+    overflow: hidden;  /*고정 ? */
+    text-align: center;  /*텍스트 중간정렬*/
+    }
+    
+    /*3번째 줄 상품 사진 설정*/
+    .product_line3 img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000000;
+    box-shadow: 10px 5px 0px 0px rgb(0, 0, 0);
+    }
+    
+    /*3 번째 줄 상품 이름, 가격 속성*/
+    .product_line3 h3, p {
+    font-family: 'GmarketSansMedium';
+    margin: 1px 0;
+    font-size: 0.7rem;
+    color: #000000;
+    }

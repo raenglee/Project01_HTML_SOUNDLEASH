@@ -1,19 +1,21 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p{
-    font-size: 5rem;
+p {
+  font-size: 5rem;
 }
 
+/*👆top으로*/
 .totop {
-    position:fixed;
-    right: 30px;
-    bottom:30px;
-  }
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+}
 
-  html{
-    scroll-behavior: smooth;
-  }
+/*스크롤시 부드럽게*/
+html {
+  scroll-behavior: smooth;
+}

@@ -14,18 +14,17 @@ a {
   color: #000000;
 }
 
-/*햄버거 메뉴바 전체 설정*/
+/*🍔햄버거 메뉴바 전체 설정*/
 #menu_hamburger {
-  display: block;
   /*줄바꿈*/
-  position: relative;
+  display: block;
   /*부모 속성*/
+  position: relative;
   /*위치_바꿔야함*/
   top: 50px;
   left: 40px;
-
-  z-index: 1;
   /*우선순위 설정, 숫자가 클수록 위에 배치됨*/
+  z-index: 1;
 }
 
 /*햄버거 메뉴바 인풋박스*/
@@ -33,12 +32,12 @@ a {
   /*체크박스 크기*/
   width: 50px;
   height: 50px;
-  position: absolute;
   /*relative기준으로 배치*/
+  position: absolute;
   cursor: pointer;
   opacity: 0;
-  z-index: 2;
   /*우선순위 1보다 위*/
+  z-index: 2;
   /*클릭 되는 영역 조절*/
   top: -15px;
   left: -20px;
@@ -51,20 +50,20 @@ a {
   width: 30px;
   height: 3px;
   margin-bottom: 5px;
-  position: relative;
   /*부모 속성*/
+  position: relative;
 
   background: #5884ad;
   /* border-radius: 0px; */
 
   z-index: 1;
 
-  transform-origin: 4px 0px;
   /*메뉴 열었을 때 X모양 정렬*/
+  transform-origin: 4px 0px;
 
+  /*아이콘 변경 부드럽게 전환*/
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  /*아이콘 변경 부드럽게 전환*/
 }
 
 /*X모양에 대한 설정*/
@@ -72,7 +71,7 @@ a {
   transform-origin: 0% 0%;
 }
 
-#menu_hamburger span:nth-last-child(2) {
+#menu_hamburger span:nth-child(4) {
   transform-origin: 0% 100%;
 }
 
@@ -83,37 +82,38 @@ a {
 }
 
 /*X모양으로 변환시 중앙선*/
-#menu_hamburger input:checked~span:nth-last-child(3) {
-  opacity: 0;
+#menu_hamburger input:checked~span:nth-child(3) {
   /*사라짐*/
-  transform: rotate(0deg) scale(0.2, 0.2);
+  opacity: 0;
   /*각도 및 사이즈 조절*/
+  transform: rotate(0deg) scale(0.2, 0.2);
+
 }
 
-#menu_hamburger input:checked~span:nth-last-child(2) {
+#menu_hamburger input:checked~span:nth-child(4) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
 /*메뉴 박스 속성*/
 #menu {
-  position: absolute;
   /*자식 요소*/
-  width: 190px;
+  position: absolute;
   /*넓이*/
-  height: 100vh;
+  width: 190px;
   /*메뉴박스 높이*/
+  height: 100vh;
+  /*전체박스크기*/
   margin: -100px 0 0 -50px;
   padding: 50px;
-  /*전체박스크기*/
-  padding-top: 120px;
   /*상단높이조절*/
+  padding-top: 120px;
 
   background: #a8a8a8;
   list-style-type: none;
 
+  /*메뉴박스 팝업 위치, 마이너스여야 왼쪽에서 오른쪽으로 나옴*/
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  /*메뉴박스 팝업 위치, 마이너스여야 왼쪽에서 오른쪽으로 나옴*/
 
   /*메뉴박스 나오는 속도*/
   transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -144,19 +144,119 @@ a {
   transform: none;
 }
 
-/*스크롤 되는지 보기위한 Lorem*/
-p{
-  font-size: 5rem;
-}
-
-/*top으로*/
+/*👆top으로*/
 .totop {
-  position:fixed;
+  position: fixed;
   right: 30px;
-  bottom:30px;
+  bottom: 30px;
 }
 
 /*스크롤시 부드럽게*/
-html{
+html {
   scroll-behavior: smooth;
+}
+
+/*1️⃣상품 목록 1번째줄-----------------------------------------------*/
+
+/*🎧헤드셋 상품 목록 1번째줄 전체 속성*/
+.products_line1 {
+  /*카테고리 사진 가로정렬*/
+  display: flex;
+  /*상품 간 간격 동일하게*/
+  justify-content: space-evenly;
+  padding-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/*상품 목록 1번째줄*/
+.product_line1 {
+  /*고정 ? */
+  overflow: hidden;
+  text-align: center;
+}
+
+/*1번째 줄 상품 사진 설정*/
+.product_line1 img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+  box-shadow: 10px 5px 0px 0px rgb(0, 0, 0);
+}
+
+/*1번째 줄 상품 이름, 가격 속성*/
+.product_line1 h3,
+p {
+  font-family: 'GmarketSansMedium';
+  margin: 1px 0;
+  font-size: 0.7rem;
+  color: #000000;
+}
+
+/*2️⃣상품 목록 2번째줄-----------------------------------------------*/
+
+/*🎧헤드셋 상품 목록 2번째줄 전체 속성*/
+.products_line2 {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/*상품 목록 2번째줄*/
+.product_line2 {
+  overflow: hidden;
+  text-align: center;
+}
+
+/*2번째 줄 상품 사진 설정*/
+.product_line2 img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+  box-shadow: 10px 5px 0px 0px rgb(0, 0, 0);
+}
+
+/*2번째 줄 상품 이름, 가격 속성*/
+.product_line2 h3,
+p {
+  font-family: 'GmarketSansMedium';
+  margin: 1px 0;
+  font-size: 0.7rem;
+  color: #000000;
+}
+
+/*3️⃣상품 목록 3번째줄-----------------------------------------------*/
+
+/*🎧헤드셋 상품 목록 3번째줄 전체 속성*/
+.products_line3 {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/*상품 목록 3번째줄*/
+.product_line3 {
+  overflow: hidden;
+  text-align: center;
+}
+
+/*3번째 줄 상품 사진 설정*/
+.product_line3 img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+  box-shadow: 10px 5px 0px 0px rgb(0, 0, 0);
+}
+
+/*3 번째 줄 상품 이름, 가격 속성*/
+.product_line3 h3,
+p {
+  font-family: 'GmarketSansMedium';
+  margin: 1px 0;
+  font-size: 0.7rem;
+  color: #000000;
 }
