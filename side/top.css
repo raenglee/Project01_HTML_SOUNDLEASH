@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p{
+    font-size: 5rem;
+}
+
+.totop {
+    position:fixed;
+    right: 30px;
+    bottom:30px;
+  }
+
+  html{
+    scroll-behavior: smooth;
+  }
