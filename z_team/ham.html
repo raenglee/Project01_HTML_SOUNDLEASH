@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="ham.css" />
+</head>
+<body>
+    
+    <!--햄버거 메뉴바-->
+    <nav>
+        <div id="menu_hamburger">
+            <!--삼단바모양-->
+            <input type="checkbox" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <!--메뉴 종류-->
+            <ul id="menu">
+                <li><a href="#">메인</a></li>
+                
+                <li class="dropdown">
+                    <label for="headphone-toggle">헤드폰</label>
+                    <input type="checkbox" id="headphone-toggle">
+                    <ul class="submenu">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">헤드폰</a></li>
+                        <li><a href="#">헤드폰 악세서리</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <label for="earphone-toggle">이어폰</label>
+                    <input type="checkbox" id="earphone-toggle">
+                    <ul class="submenu">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">이어폰</a></li>
+                        <li><a href="#">이어폰 악세서리</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <label for="speaker-toggle">스피커</label>
+                    <input type="checkbox" id="speaker-toggle">
+                    <ul class="submenu">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">스피커</a></li>
+                        <li><a href="#">스피커 악세서리</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <label for="bar-toggle">사운드바</label>
+                    <input type="checkbox" id="bar-toggle">
+                    <ul class="submenu">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">사운드바</a></li>
+                        <li><a href="#">사운드바 악세서리</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <label for="info-toggle">고객지원</label>
+                    <input type="checkbox" id="info-toggle">
+                    <ul class="submenu">
+                        <li><a href="#">공지 및 이벤트</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">1:1문의</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+  
+</body>
+</html>

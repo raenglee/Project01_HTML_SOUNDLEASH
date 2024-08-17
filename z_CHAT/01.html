@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamburger Menu and Header</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- 헤더, 로고 및 햄버거 메뉴 버튼 -->
+    <header>
+        <div id="menu_hamburger">
+            <!-- 햄버거 메뉴 아이콘 -->
+            <input type="checkbox" id="menu_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <h1>로고</h1>
+        <!-- 아이콘들 -->
+        <nav class="top_icons">
+            <div class="top_icon" id="search_icon">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 513.749 513.749"
+                        style="enable-background:new 0 0 513.749 513.749;" xml:space="preserve" width="20" height="20">
+                        <g>
+                            <path
+                                d="M504.352,459.061l-99.435-99.477c74.402-99.427,54.115-240.344-45.312-314.746S119.261-9.277,44.859,90.15 S-9.256,330.494,90.171,404.896c79.868,59.766,189.565,59.766,269.434,0l99.477,99.477c12.501,12.501,32.769,12.501,45.269,0 c12.501-12.501,12.501-32.769,0-45.269L504.352,459.061z M225.717,385.696c-88.366,0-160-71.634-160-160s71.634-160,160-160 s160,71.634,160,160C385.623,314.022,314.044,385.602,225.717,385.696z" />
+                        </g>
+                    </svg></a>
+            </div>
+            <div class="top_icon" id="login_icon">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
+                        style="enable-background:new 0 0 512 512;" xml:space="preserve" width="20" height="20">
+                        <g>
+                            <circle cx="256" cy="128" r="128" />
+                            <path
+                                d="M256,298.667c-105.99,0.118-191.882,86.01-192,192C64,502.449,73.551,512,85.333,512h341.333 c11.782,0,21.333-9.551,21.333-21.333C447.882,384.677,361.99,298.784,256,298.667z" />
+                        </g>
+                    </svg></a>
+            </div>
+            <div class="top_icon" id="basket_icon">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"
+                        width="20" height="20">
+                        <path
+                            d="M23.27,9.03c-.57-.66-1.4-1.03-2.27-1.03h-.09C20.41,3.51,16.59,0,11.97,0S3.53,3.51,3.03,8h-.06c-.87,0-1.7,.38-2.27,1.03C.13,9.69-.12,10.56,0,11.42l1.06,7.42c.42,2.94,2.97,5.15,5.94,5.15h9.97c2.97,0,5.52-2.21,5.94-5.15l1.06-7.42c.12-.86-.13-1.73-.7-2.39ZM11.97,2c3.52,0,6.43,2.61,6.92,6H5.05c.49-3.39,3.4-6,6.92-6Z" />
+                    </svg></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 햄버거 메뉴 -->
+    <nav id="side_nav">
+        <ul id="menu">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">PRODUCTS</a></li>
+            <li><a href="#">SUPPORT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <h1 id="selected">헤드폰</h1>
+
+    <h2 class="search">상세검색</h2>
+    <br>
+    <table>
+        <tr>
+            <th>브랜드별</th>
+            <td colspan="2"><input type="checkbox" id="search_"> BOSE
+                <input type="checkbox" id="search_"> Apple
+                <input type="checkbox" id="search_"> 커세어<br>
+                <input type="checkbox" id="search_"> 로지텍
+                <input type="checkbox" id="search_"> 삼성전자
+                <input type="checkbox" id="search_"> SONY
+                <input type="checkbox" id="search_"> Razer
+            </td>
+        </tr>
+        <tr>
+            <th>유무선</th>
+            <td><input type="checkbox" id="search_"> 유선
+                <input type="checkbox" id="search_"> 무선
+                <input type="checkbox" id="search_"> 유무선 겸용
+            </td>
+        </tr>
+        <tr>
+            <th>무게</th>
+            <td><input type="checkbox" id="search_"> ~100g
+                <input type="checkbox" id="search_"> ~150g
+                <input type="checkbox" id="search_"> ~200g
+                <input type="checkbox" id="search_"> ~250g<br>
+                <input type="checkbox" id="search_"> ~300g
+                <input type="checkbox" id="search_"> ~350g
+                <input type="checkbox" id="search_"> ~500g
+            </td>
+        </tr>
+        <tr>
+            <th>부가기능</th>
+            <td><input type="checkbox" id="search_"> LED라이트
+                <input type="checkbox" id="search_"> 진동
+                <input type="checkbox" id="search_"> 터치버튼<br>
+                <input type="checkbox" id="search_"> 음성안내
+                <input type="checkbox" id="search_"> 오토페어링
+                <input type="checkbox" id="search_"> 전용 앱 지원
+            </td>
+        </tr>
+    </table>
+
+    <!-- 상품 목록 -->
+    <div class="products_line1">
+        <div class="product_line1"><a href="#">
+                <img src="../y_img_product/headphones/커세어 HS80_흰색.jpg" alt="커세어 HS80" width="255" height="255">
+                <h3>커세어 HS80</h3>
+                <p>188,700원</p>
+            </a>
+        </div>
+        <div class="product_line1"><a href="#">
+                <img src="../y_img_product/headphones/BOSE 보스 QC 45_검은색.jpg" alt="보스QC45" width="255" height="255">
+                <h3>BOSE 보스 QC 45</h3>
+                <p>255,500원</p>
+            </a>
+        </div>
+        <div class="product_line1"><a href="#">
+                <img src="../y_img_product/headphones/Apple 에어팟 맥스_실버.jpg" alt="소니 WH-1000XM5" width="255" height="255">
+                <h3>Apple 에어팟 맥스</h3>
+                <p>629,000원</p>
+            </a>
+        </div>
+        <div class="product_line1"><a href="#">
+                <img src="../y_img_product/headphones/소니 WH-1000XM5_검은색.jpg" alt="소니 WH-1000XM5"
