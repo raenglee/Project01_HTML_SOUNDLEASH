@@ -1,0 +1,287 @@
+/* 전체속성 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body의 기본 마진 제거 */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더 스타일 */
+header {
+    height: 70px;
+    background-color: #c18de4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* 헤더 위에 빈 공간 없애기 위해 margin-top 설정 */
+    margin-top: 0;
+    /* 헤더 아래에 빈 공간이 생길 경우 margin-bottom 설정 */
+    margin: 0;
+}
+
+
+h1 {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+}
+
+.top_icons {
+    display: flex;
+    gap: 5px;
+}
+
+.top_icon {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* 햄버거 메뉴바 전체 설정 */
+#menu_hamburger {
+    display: block;
+    position: relative;
+    top: -42px;
+    left: 40px;
+    z-index: 1;
+    width: 50px;
+    height: 100%;
+}
+
+/* 햄버거 메뉴바 인풋박스 */
+#menu_hamburger input[type="checkbox"] {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 200;
+    top: -30px;
+    left: -20px;
+    right: 20px;
+}
+
+
+
+/* 햄버거 아이콘 */
+#menu_hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #5884ad;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+                background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), 
+                opacity 0.55s ease;
+    z-index: 100;
+}
+
+
+
+#menu_hamburger span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menu_hamburger span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menu_hamburger input[type="checkbox"]:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+#menu_hamburger input[type="checkbox"]:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menu_hamburger input[type="checkbox"]:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* 메뉴 박스 속성 */
+#menu {
+    position: absolute;
+    width: 210px;
+    height: 200vh;
+    margin: -60px 0 0 -40px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 80px;
+    
+    background: #a8a8a8;
+    list-style-type: none;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.2s ease;
+    padding-left: 45px;
+}
+
+#menu a:hover {
+    color: rgb(116, 175, 243);
+}
+
+#menu li {
+    padding: 7px 0;
+    font-size: 19px;
+}
+
+#menu label {
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-right: 70px;
+}
+
+.dropdown li {
+    width: 100%;
+
+}
+
+.dropdown a {
+    font-size: 16px;
+}
+
+/* 하위 메뉴 스타일 */
+.submenu {
+    max-height: 0; /* 기본 상태에서는 숨김 */
+    overflow: hidden; /* 넘치는 내용 숨기기 */
+    opacity: 0; /* 기본 상태에서 투명 */
+    padding: 0;
+    margin: 0;
+    list-style-type: none; /* 불릿 제거 */
+    transition: max-height 0.2s ease, opacity 0.5s ease; /* 부드러운 전환 효과 */
+}
+
+/* 하위 카테고리 배경색 및 스타일 추가 */
+.submenu li {
+    background-color: #757575; 
+    padding: 0px;
+    margin: 0px;
+
+}
+
+/* 하위 카테고리 항목의 호버 효과 */
+.submenu li:hover {
+    background-color: #c0c0c0; /* 호버 시 배경색 */
+}
+
+/* 드롭다운 기능: 클릭 시 하위 메뉴 표시 */
+.dropdown > input:checked + ul.submenu {
+    max-height: 500px; /* 하위 메뉴가 펼쳐질 때의 높이 */
+    opacity: 1; /* 하위 메뉴가 펼쳐질 때 불투명 */
+}
+
+/* 숨겨진 체크박스 추가 */
+.dropdown > label {
+    cursor: pointer;
+}
+
+/* 햄버거 메뉴 활성화 시 메뉴 보이게 설정 */
+#menu_hamburger input[type="checkbox"]:checked ~ ul {
+    transform: none;
+}
+
+
+
+body > nav{
+    position: fixed;
+}
+
+
+/* 목록 화면 오른쪽에 고정 */
+.recently-viewed {
+    position: fixed;            /* 스크롤을 내려도 위치 고정 */
+    top: 50%;                   /* 전체 화면의 중앙에 위치 */
+    right: 0;                   /* 화면의 오른쪽 끝에 배치 */
+    transform: translateY(-50%); /* 스크롤 내려도 중앙정렬 유지 */
+    width: 100px;               /* 상품 목록 너비 */
+    background-color: #ffffff; 
+    border: 1px solid #000000; 
+    padding: 10px;              
+    z-index: 1000; 
+    text-align: center;
+}
+
+/* 목록 제목 */
+.recently-viewed h3 {
+    font-size: 14px; 
+    margin: 0; 
+    margin-bottom: 8px; 
+}
+
+/* 상품들 보이는 공간 */
+.recently-viewed ul {
+    list-style: none; /* 불릿 제거 */
+    padding: 0; 
+    margin: 0; 
+    max-height: 320px; 
+    overflow: hidden; 
+}
+
+/* 상품 */
+.recently-viewed ul li {
+    margin-bottom: 5px;
+}
+
+/* 마지막 상품 항목의 여백 제거 */
+.recently-viewed ul li:last-child {
+    margin-bottom: 0; /* 마지막 항목의 하단 여백 제거 */
+}
+
+/* 상품 링크 */
+.recently-viewed ul li a {
+    display: block; /* 이미지 전체 클릭 가능 */
+}
+
+/* 상품 이미지 */
+.recently-viewed ul li img {
+    width: 100%; 
+    height: auto; /* 이미지 비율 유지하며 높이 자동 조정 */
+    border: 0px solid #ddd; 
+    border-radius: 4px; /* 이미지 모서리를 둥글게 설정 */
+}
+
+/* 화살표 버튼 */
+.arrow {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 3px 0;
+    color: #333;
+}
+
+/* 비활성화된 화살표 */
+.arrow.disabled {
+    color: #ccc; 
+    cursor: not-allowed; /* 커서 비활성화 */
+}
+
+
+
+
+/*삭제해도ㄱㅊ*/
+.a1111{
+height: 200vh;
+width: 30px;
+}
+
+
+
+
+

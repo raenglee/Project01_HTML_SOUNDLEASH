@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="category_headphones.css" />
+</head>
+ <!--헤더, 로고-->
+ <header>
+    <h1>로고</h1>
+
+    <!-- 아이콘들 -->
+    <nav class="top_icons">
+        <div class="top_icon" id="search_icon">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 513.749 513.749"
+                    style="enable-background:new 0 0 513.749 513.749;" xml:space="preserve" width="20" height="20">
+                    <g>
+                        <path
+                            d="M504.352,459.061l-99.435-99.477c74.402-99.427,54.115-240.344-45.312-314.746S119.261-9.277,44.859,90.15 S-9.256,330.494,90.171,404.896c79.868,59.766,189.565,59.766,269.434,0l99.477,99.477c12.501,12.501,32.769,12.501,45.269,0 c12.501-12.501,12.501-32.769,0-45.269L504.352,459.061z M225.717,385.696c-88.366,0-160-71.634-160-160s71.634-160,160-160 s160,71.634,160,160C385.623,314.022,314.044,385.602,225.717,385.696z" />
+                    </g>
+                </svg></a>
+        </div>
+        <div class="top_icon" id="login_icon">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
+                    style="enable-background:new 0 0 512 512;" xml:space="preserve" width="20" height="20">
+                    <g>
+                        <circle cx="256" cy="128" r="128" />
+                        <path
+                            d="M256,298.667c-105.99,0.118-191.882,86.01-192,192C64,502.449,73.551,512,85.333,512h341.333 c11.782,0,21.333-9.551,21.333-21.333C447.882,384.677,361.99,298.784,256,298.667z" />
+                    </g>
+                </svg></a>
+        </div>
+        <div class="top_icon" id="basket_icon">
+            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"
+                    width="20" height="20">
+                    <path
+                        d="M23.27,9.03c-.57-.66-1.4-1.03-2.27-1.03h-.09C20.41,3.51,16.59,0,11.97,0S3.53,3.51,3.03,8h-.06c-.87,0-1.7,.38-2.27,1.03C.13,9.69-.12,10.56,0,11.42l1.06,7.42c.42,2.94,2.97,5.15,5.94,5.15h9.97c2.97,0,5.52-2.21,5.94-5.15l1.06-7.42c.12-.86-.13-1.73-.7-2.39ZM11.97,2c3.52,0,6.43,2.61,6.92,6H5.05c.49-3.39,3.4-6,6.92-6Z" />
+                </svg></a>
+        </div>
+    </nav>
+
+</header>
+
+
+<body>
+    
+    <!--햄버거 메뉴바-->
+    <nav id="top">
+        <div id="menu_hamburger">
+            <!--삼단바모양-->
+            <input type="checkbox" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <!--메뉴 종류-->
+            <ul id="menu">
+                <li><a href="#">메인</a></li>
+                
+                <li class="dropdown">
+                    <label for="headphone-toggle">헤드폰</label>
+                    <input type="checkbox" id="headphone-toggle">
+                    <ul class="submenu">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">헤드폰</a></li>
+                        <li><a href="#">헤드폰 악세서리</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <label for="earphone-toggle">이어폰</label>
+                    <input type="checkbox" id="earphone-toggle">
+                    <ul class="submenu">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">이어폰</a></li>
+                        <li><a href="#">이어폰 악세서리</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <label for="speaker-toggle">스피커</label>
+                    <input type="checkbox" id="speaker-toggle">
+                    <ul class="submenu">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">스피커</a></li>
+                        <li><a href="#">스피커 악세서리</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <label for="bar-toggle">사운드바</label>
+                    <input type="checkbox" id="bar-toggle">
+                    <ul class="submenu">
+                        <li><a href="#">전체</a></li>
+                        <li><a href="#">사운드바</a></li>
+                        <li><a href="#">사운드바 악세서리</a></li>
+                    </ul>
+                </li>
+                
+                <li class="dropdown">
+                    <label for="my-toggle">마이페이지</label>
+                    <input type="checkbox" id="my-toggle">
+                    <ul class="submenu">
+                        <li><a href="#">배송정보</a></li>
+                        <li><a href="#">내정보수정</a></li>
+                        <li><a href="#">취소/교환/반품</a></li>
+                        <li><a href="#">내 글 관리</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <label for="info-toggle">고객지원</label>
+                    <input type="checkbox" id="info-toggle">
+                    <ul class="submenu">
+                        <li><a href="#">공지 및 이벤트</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">1:1문의</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+
+  <!-- 최근본 -->
+    <div class="recently-viewed">
+        <h3>최근 본 상품</h3>
+        <div class="arrow up">&#9650;</div>
+        <ul>
+            <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품1"></a></li>
+            <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품2"></a></li>
+            <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품3"></a></li>
+            <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품4"></a></li>
+            <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품5"></a></li>
+        </ul>
+        <div class="arrow down">&#9660;</div>
+    </div>
+
+
+
+<div class="a1111">
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const upArrow = document.querySelector('.arrow.up'); // 위쪽 화살표 요소 선택
+        const downArrow = document.querySelector('.arrow.down'); // 아래쪽 화살표 요소 선택
+        const list = document.querySelector('.recently-viewed ul'); // 최근 본 상품 목록 선택
+        let scrollPosition = 0; // 현재 스크롤 위치 저장 변수
+        const itemHeight = 110; // 각 항목의 높이 (이미지 100px + 10px 마진)
+    
+        // 화살표의 활성화/비활성화 상태를 업데이트하는 함수
+        function updateArrows() {
+            const maxScrollPosition = list.scrollHeight - list.clientHeight; // 최대 스크롤 가능한 위치 계산
+            upArrow.classList.toggle('disabled', scrollPosition <= 0); // 스크롤이 최상단이면 위쪽 화살표 비활성화
+            downArrow.classList.toggle('disabled', scrollPosition >= maxScrollPosition); // 스크롤이 최하단이면 아래쪽 화살표 비활성화
+        }
+    
+        // 위쪽 화살표 클릭 시 동작
+        upArrow.addEventListener('click', function () {
+            if (scrollPosition > 0) { // 스크롤 위치가 최상단보다 아래에 있는 경우에만 실행
+                scrollPosition -= itemHeight; // 스크롤 위치를 한 항목만큼 위로 이동
+                list.scrollTo({ top: scrollPosition, behavior: 'smooth' }); // 스크롤을 부드럽게 이동
+                updateArrows(); // 화살표 상태 업데이트
+            }
+        });
+    
+        // 아래쪽 화살표 클릭 시 동작
+        downArrow.addEventListener('click', function () {
+            const maxScrollPosition = list.scrollHeight - list.clientHeight; // 최대 스크롤 가능한 위치 계산
+            if (scrollPosition < maxScrollPosition) { // 스크롤 위치가 최하단보다 위에 있는 경우에만 실행
+                scrollPosition += itemHeight; // 스크롤 위치를 한 항목만큼 아래로 이동
+                list.scrollTo({ top: scrollPosition, behavior: 'smooth' }); // 스크롤을 부드럽게 이동
+                updateArrows(); // 화살표 상태 업데이트
+            }
+        });
+    
+        updateArrows(); // 초기 상태에서 화살표 상태 업데이트
+    });
+    
+    
+    
+        </script>
+
+</body>
+
+
+</html>
