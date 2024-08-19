@@ -23,7 +23,7 @@ body {
 /* 헤더 스타일 */
 header {
   height: 70px;
-  background-color: #1e4a89;
+  background-color: #a0d6f5;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,14 +86,13 @@ h1 {
   height: 3px;
   margin-bottom: 5px;
   position: relative;
-  background: #ffffff;
+  background: #1e4a89;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     opacity 0.55s ease;
   z-index: 100;
 }
-
 
 
 #menu_hamburger span:first-child {
@@ -129,7 +128,8 @@ h1 {
   padding-left: 0px;
   padding-top: 80px;
 
-  background: #c0c0c0;
+  background: #ffffff;
+  box-shadow: 2px 2px 10px 0px #1e4a89;
   list-style-type: none;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
@@ -144,7 +144,8 @@ h1 {
 }
 
 #menu a:hover {
-  color: #1e4a89;
+  color: #000000;
+  box-shadow: 5px 0px 0px 0px #1e4a89;
 }
 
 #menu li {
@@ -309,6 +310,24 @@ body>nav {
   /* 커서 비활성화 */
 }
 
+table {
+
+  align-items: center;
+  border: 1px solid black;
+  border-collapse: collapse;
+
+  td,
+  th {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+.search {
+  display: inline-block;
+}
+
 /*1️⃣상품 목록 1번째줄-----------------------------------------------*/
 
 /*🎧헤드셋 상품 목록 1번째줄 전체 속성*/
@@ -334,7 +353,6 @@ body>nav {
   max-width: 100%;
   height: auto;
   border: 1px solid #000000;
-  box-shadow: 10px 5px 0px 0px rgb(0, 0, 0);
 }
 
 /*1번째 줄 상품 이름, 가격 속성*/
@@ -368,7 +386,6 @@ p {
   max-width: 100%;
   height: auto;
   border: 1px solid #000000;
-  box-shadow: 10px 5px 0px 0px rgb(0, 0, 0);
 }
 
 /*2번째 줄 상품 이름, 가격 속성*/
@@ -402,7 +419,6 @@ p {
   max-width: 100%;
   height: auto;
   border: 1px solid #000000;
-  box-shadow: 10px 5px 0px 0px rgb(0, 0, 0);
 }
 
 /*3 번째 줄 상품 이름, 가격 속성*/
