@@ -139,15 +139,16 @@
         <div class="arrow down">&#9660;</div>
     </div>
 
+    <div class="container">
+        <h1 id="selected">헤드폰</h1>
 
-    <h1 id="selected">헤드폰</h1>
-
-    <h2 class="search">상세검색</h2>
+        <h3 class="search" id="searchLabel">상세검색</h3>
     <br>
-    <table>
+    <table id="searchTable">
         <tr>
             <th>브랜드별</th>
-            <td colspan="2"><input type="checkbox" id="search_"> BOSE
+            <td colspan="2">
+                <input type="checkbox" id="search_"> BOSE
                 <input type="checkbox" id="search_"> Apple
                 <input type="checkbox" id="search_"> 커세어<br>
                 <input type="checkbox" id="search_"> 로지텍
@@ -158,14 +159,16 @@
         </tr>
         <tr>
             <th>유무선</th>
-            <td><input type="checkbox" id="search_"> 유선
+            <td>
+                <input type="checkbox" id="search_"> 유선
                 <input type="checkbox" id="search_"> 무선
                 <input type="checkbox" id="search_"> 유무선 겸용
             </td>
         </tr>
         <tr>
             <th>무게</th>
-            <td><input type="checkbox" id="search_"> ~100g
+            <td>
+                <input type="checkbox" id="search_"> ~100g
                 <input type="checkbox" id="search_"> ~150g
                 <input type="checkbox" id="search_"> ~200g
                 <input type="checkbox" id="search_"> ~250g<br>
@@ -176,7 +179,8 @@
         </tr>
         <tr>
             <th>부가기능</th>
-            <td><input type="checkbox" id="search_"> LED라이트
+            <td>
+                <input type="checkbox" id="search_"> LED라이트
                 <input type="checkbox" id="search_"> 진동
                 <input type="checkbox" id="search_"> 터치버튼<br>
                 <input type="checkbox" id="search_"> 음성안내
@@ -186,35 +190,37 @@
         </tr>
     </table>
 
-    <!--1️⃣🎧헤드셋 상품 1번째 줄-->
-    <div class="products_line1">
-        <div class="product_line1"><a href="#">
-                <img src="../y_img_product/headphones/커세어 HS80_흰색.jpg" alt="커세어 HS80" width="255" height="255">
-                <h3>커세어 HS80</h3>
-                <p>188,700원</p>
-            </a>
-        </div>
-        <div class="product_line1"><a href="#">
-                <img src="../y_img_product/headphones/BOSE 보스 QC 45_검은색.jpg" alt="보스QC45" width="255" height="255">
-                <h3>BOSE 보스 QC 45</h3>
-                <p>255,500원</p>
-            </a>
-        </div>
-        <div class="product_line1"><a href="#">
-                <img src="../y_img_product/headphones/Apple 에어팟 맥스_실버.jpg" alt="소니 WH-1000XM5" width="255" height="255">
-                <h3>Apple 에어팟 맥스</h3>
-                <p>769,000원</p>
-            </a>
-        </div>
-        <div class="product_line1"><a href="#">
-                <img src="../y_img_product/headphones/삼성전자 JBL T720BT 화이트.jpg" alt="카테고리 이미지" width="255" height="255">
-                <h3>커세어 HS80</h3>
-                <p>188,700원</p>
-            </a>
-        </div>
-    </div>
 
-</html>
+        <!--1️⃣🎧헤드셋 상품 1번째 줄-->
+        <div class="products_line1">
+            <div class="product_line1"><a href="#">
+                    <img src="../y_img_product/headphones/커세어 HS80_흰색.jpg" alt="커세어 HS80" width="255" height="255">
+                    <h3>커세어 HS80</h3>
+                    <p>188,700원</p>
+                </a>
+            </div>
+            <div class="product_line1"><a href="#">
+                    <img src="../y_img_product/headphones/BOSE 보스 QC 45_검은색.jpg" alt="보스QC45" width="255" height="255">
+                    <h3>BOSE 보스 QC 45</h3>
+                    <p>255,500원</p>
+                </a>
+            </div>
+            <div class="product_line1"><a href="#">
+                    <img src="../y_img_product/headphones/Apple 에어팟 맥스_실버.jpg" alt="소니 WH-1000XM5" width="255"
+                        height="255">
+                    <h3>Apple 에어팟 맥스</h3>
+                    <p>769,000원</p>
+                </a>
+            </div>
+            <div class="product_line1"><a href="#">
+                    <img src="../y_img_product/headphones/삼성전자 JBL T720BT 화이트.jpg" alt="카테고리 이미지" width="255"
+                        height="255">
+                    <h3>커세어 HS80</h3>
+                    <p>188,700원</p>
+                </a>
+            </div>
+        </div>
+
 
 <!--2️⃣🎧헤드셋 상품 2번째 줄-->
 <div class="products_line2">
@@ -271,7 +277,7 @@
         </a>
     </div>
 </div>
-
+</div>
 
 
 
@@ -325,6 +331,17 @@
 
         updateArrows(); // 초기 상태에서 화살표 상태 업데이트
     });
+
+
+            //상세검색 열고닫기
+            document.getElementById('searchLabel').addEventListener('click', function() {
+            var table = document.getElementById('searchTable');
+            if (table.style.display === 'table') {
+                table.style.display = 'none';
+            } else {
+                table.style.display = 'table';
+            }
+        });
 
 
 

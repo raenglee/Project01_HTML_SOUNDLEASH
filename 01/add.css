@@ -14,11 +14,6 @@ a {
   color: #000000;
 }
 
-/* body의 기본 마진 제거 */
-body {
-  margin: 0;
-  padding: 0;
-}
 
 /* 헤더 스타일 */
 header {
@@ -33,7 +28,6 @@ header {
   /* 헤더 아래에 빈 공간이 생길 경우 margin-bottom 설정 */
   margin: 0;
 }
-
 
 h1 {
   flex: 1;
@@ -310,22 +304,33 @@ body>nav {
   /* 커서 비활성화 */
 }
 
-table {
+/*⏹메인박스*/
+.container{
+  margin-left: 250px;
+  margin-right: 250px;
+}
 
-  align-items: center;
+/*🔍상세검색*/
+table {
   border: 1px solid black;
   border-collapse: collapse;
+  width: 100%; /* 테이블이 전체 너비를 차지하도록 */
+}
 
-  td,
-  th {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-  }
+td, th {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
 }
 
 .search {
   display: inline-block;
+  cursor: pointer; /* 클릭 가능 표시 */
+  margin-right: 20px;
+}
+
+#searchTable {
+  display: none;
 }
 
 /*1️⃣상품 목록 1번째줄-----------------------------------------------*/
@@ -337,8 +342,6 @@ table {
   /*상품 간 간격 동일하게*/
   justify-content: space-evenly;
   padding-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 /*상품 목록 1번째줄*/
@@ -371,8 +374,6 @@ p {
   display: flex;
   justify-content: space-evenly;
   padding-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 /*상품 목록 2번째줄*/
@@ -404,8 +405,6 @@ p {
   display: flex;
   justify-content: space-evenly;
   padding-top: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 /*상품 목록 3번째줄*/
