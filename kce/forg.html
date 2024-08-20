@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .tab-container {
+            border: 1px solid #000000;
+            text-align: center;
+            width: 460px;
+            /* 탭과 콘텐츠의 너비 설정 */
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 10px;
+            height: 50px;
+        }
+
+        .tab-button {
+            font-size: 17px;
+            flex: 1;
+            /* 버튼 너비를 동일하게 만듦 */
+            padding: 10px 0;
+            cursor: pointer;
+            background-color: #f7f3f3;
+            border: none;
+            border-bottom: 2px solid transparent;
+            outline: none;
+            text-align: center;
+            transition: background-color 0.3s;
+
+        }
+
+        .tab-button.active {
+            background-color: #ffffff;
+            border-bottom: 3px solid #007bff;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border-top: none;
+            text-align: center;
+        }
+
+        .content {
+            width: 460px;
+            height: 400px;
+            background: #ffffff;
+            /* 내용 영역의 배경 색상 */
+            color: #000000;
+            /* 내용 영역의 텍스트 색상 */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* 수평 중앙 정렬 */
+            align-items: center;
+            /* 수직 중앙 정렬 */
+        }
+
+        .tab-content.active {
+            justify-content: center;
+            /* 수평 중앙 정렬 */
+            align-items: center;
+            /* 수직 중앙 정렬 */
+            height: 300px;
+            width: 400px;
+            display: block;
+            padding-top: 30px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 폼 요소를 중앙 정렬 */
+            width: 100%;
+            /* 폼의 너비를 100%로 설정 */
+            max-width: 460px;
+            /* 폼의 최대 너비 설정 */
+            padding-top: 35px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            width: 100%;
+            /* 인풋 박스를 폼 너비에 맞춤 */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px 0px 5px 0px;
+            font-size: 13px;
+            padding-top: 3px;
+
+        }
+
+        input {
+            width: 310px;
+            /* 인풋 박스 너비를 폼 너비에 맞춤 */
+            max-width: 350px;
+            /* 인풋 박스 최대 너비 설정 */
+            height: 37px;
+            /* 인풋 박스 높이 */
+            padding: 0 10px;
+            color: #000000;
+            /* 입력 박스 텍스트 색상 */
+            font-size: 16px;
+            /* 입력 박스 텍스트 크기 */
+            border-width: 0 0 1px;
+            background-color: #007bff17;
+        }
+
+        input:focus {
+            outline: none;
+            background-color: #007bff10;
+            border-color: #007bff;
+
+        }
+
+        .no-border {
+            border-width: 0;
+        }
+
+
+
+        .log-button {
+            margin-top: 35px;
+            padding: 15px;
+            width: 280px;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #000000;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+
+
+        }
+
+        .lookup-button {
+            margin-top: 35px;
+            padding: 15px;
+            width: 280px;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #000000;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+
+        }
+
+        button:hover {
+            background-color: rgb(0, 89, 255);
+            width: 280px;
+        }
+
+  
+        /* 비밀번호 입력 박스와 버튼 스타일 */
+        .password-group {
+            margin-bottom: 5px;
+            /* display: flex; */
+            /* align-items: center; */
+            /* 비밀번호 입력 박스와 버튼을 수직으로 중앙 정렬 */
+            /* width: 100%; */
+            /* 비밀번호 입력 박스와 버튼의 너비를 100%로 설정 */
+        }
+
+        .password-container {
+            /* display: flex; */
+            /* align-items: center; */
+            /* 비밀번호 입력 박스와 버튼을 수직으로 중앙 정렬 */
+            /* width: 100%; */
+            /* 비밀번호 입력 박스와 버튼의 너비를 100%로 설정 */
+        }
+
+        .form-group {
+            float: left;
+            margin-bottom: 15px;
+
+        }
+
+    
+
+        .forg {
+            padding-bottom: 0px 10px 0px 2px;
+        }
+
+        .Signw2 {
+            margin-top: 20px;
+            padding-bottom: 50px;
+        }
+
+        .Signw2 :hover {
+            text-decoration: underline #007bff;
+            margin: 0px;
+        }
+
+        .forg :hover {
+            text-decoration: underline #007bff;
+            margin: 0px;
+        }
+
+
+        a {
+            text-decoration: none;
+            /*하이퍼링크 밑줄 제거*/
+            color: inherit;
+            /*하이퍼 링크 색상 제거 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="tab-container">
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('tab1')">아이디 찾기</button>
+            <button class="tab-button" onclick="openTab('tab2')">비밀번호 찾기</button>
+        </div>
+
+        <div class="content">
+            <div id="tab1" class="tab-content active">
+                <div class="content-item" id="content1">
+                    <h2>아이디 찾기</h2>
+                    <form id="loginForm" action="#" method="post">
+                        <div class="form-group">
+                            <input type="text" id="login-ID" name="ID" placeholder="아이디" required>
+                        </div>
+                        <div class="form-group password-group">
+                            <div class="password-container">
+                                <input type="password" id="login-password" name="password" placeholder="비밀번호" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group password-group">
+                            <div class="password-container">
+                                <input type="tel" id="login-password" name="phone" placeholder="전화번호"
+                                    pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="log-button">아이디 찾기</button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="tab2" class="tab-content">
+                <div class="content-item" id="content2">
+                    <h2>비회원 주문조회</h2>
+                    <form id="orderLookupForm">
+                        <div class="form-group">
+                            <input type="text" id="login-ID" name="ID" placeholder="아이디" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="name-o" name="name" placeholder="이름" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="order-id" name="order-id" placeholder="주문번호" required>
+                        </div>
+                        <button type="submit" class="lookup-button">주문조회</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script>
+        function openTab(tabId) {
+            // 모든 탭 콘텐츠 숨기기
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+
+            // 모든 탭 버튼에서 active 클래스 제거
+            const tabButtons = document.querySelectorAll('.tab-button');
+            tabButtons.forEach(button => button.classList.remove('active'));
+
+            // 클릭한 탭 콘텐츠 표시
+            document.getElementById(tabId).classList.add('active');
+
+            // 클릭한 탭 버튼에 active 클래스 추가
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+
+</body>
+
+</html>
