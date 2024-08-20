@@ -304,8 +304,10 @@ body>nav {
 
 /*⏹메인박스*/
 .container {
-  margin-left: 250px;
-  margin-right: 250px;
+width: 80%;
+display: flex;
+margin: 0 auto;
+
 }
 
 /*공지, 이벤트*/
@@ -331,34 +333,27 @@ width: 100%;
 
 /*뉴스레터 */
 .news {
-  display: flex;
-  float: left;
-overflow: hidden;
-position: ;00000000000000000000000000000000000000
-}
+ width: 100%;
+    display: flex;
+    justify-content: space-between;
+  overflow: auto;
+  }
 .news h3{
   height: 50px;
 
 }
-#go a{
-  font-size: 15px;
-  margin-bottom: 30px;
-  
-}
-#news-con p{
+
+/* #news-con p{
   height: 110px;
   padding-top: 10px;
-}
+} */
 .news a {
-  font-size: 12px;
 
+  font-size: 15px;
+  margin-bottom: 30px;
 }
 
-.goshop{
-    display: flex;
-      float: left;
- 
-}
+
 
 #news_bose {
   width: 300px;
