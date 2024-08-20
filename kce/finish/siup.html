@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .SignUp-wrap{
+width: 800px;
+
+} */
+
+
+
+        #SignUp-info {
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+
+        }
+
+        .h2-ok {
+            padding: 0 0 15px 20px;
+            font-size: 17px;
+            color: #222;
+            line-height: 100%;
+            border-bottom: 2px solid #cbe6ff;
+        }
+
+        .title {
+            margin: 2rem auto;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .agree-container {
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        .agree {
+            position: relative;
+            background-color: #ffffff;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .agree.active {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .agree0 {
+            padding: 1rem;
+            background-color: rgb(255, 255, 255);
+            border-bottom: 2px solid #007bff;
+            
+
+        }
+
+        .agree1 {
+            padding: 1rem;
+            background-color: rgb(240, 247, 255);
+        }
+
+        .agree-title {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .agree-container input {
+            margin-right: 10px;
+        }
+
+        .agree-sub {
+            max-height: 0;
+            overflow: auto;
+            transition: max-height 0.3s ease-in-out;
+            background-color: rgba(246, 251, 255, 0.438);
+        }
+
+        .agree-text {
+
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            color: rgba(0, 0, 0, 0.863);
+            font-size: 16px;
+            overflow: auto;
+
+        }
+
+        .agree.active .agree-sub {
+            max-height: 200px;
+            border-top: 1px solid silver;
+            transition: max-height 0.3s ease-in-out;
+        }
+
+        .agree-btn {
+            cursor: pointer;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            border: 0;
+            border-radius: 50%;
+            font-size: 1.5rem;
+        }
+
+        .agree-btn:focus {
+            outline: 0;
+        }
+
+        .agree-icon.close {
+            display: none;
+        }
+
+        .agree.active .agree-icon.close {
+            color: #ffffff;
+            display: block;
+        }
+
+        .agree.active .agree-icon.open {
+            display: none;
+        }
+
+
+        .line {
+            display: flex;
+            flex-basis: 100%;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            color: rgba(0, 0, 0, 0.35);
+            font-size: 15px;
+            padding-top: 60px;
+            max-width: 500px;
+            
+            
+        }
+
+        .line::before {
+            content: "";
+            flex-grow: 50px;
+            margin: 0px 16px;
+            background: rgba(0, 0, 0, 0.35);
+            height: 1px;
+            font-size: 0px;
+            line-height: 0px;
+            width: 150px;
+
+
+        }
+
+        .line::after {
+            content: "";
+            margin: 0px 16px;
+            background: rgba(0, 0, 0, 0.35);
+            height: 1px;
+            font-size: 0px;
+            line-height: 0px;
+            width: 150px;
+        }
+
+
+
+        .h2-info {
+            padding: 60px 0 40px 0;
+            font-size: 30px;
+            color: #222;
+            line-height: 100%;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            padding-bottom: 20px;
+
+        }
+
+
+        .form-group>input {
+
+            width: 500px;
+            height: 50px;
+            /* 인풋 박스 높이 */
+            padding: 0 10px;
+            color: #000000;
+            /* 입력 박스 텍스트 색상 */
+            font-size: 20px;
+            /* 입력 박스 텍스트 크기 */
+            border-width: 0 0 1px;
+            background-color: #d1e7ff7f;
+
+
+        }
+
+        .form-group>input:focus {
+            outline: none;
+            background-color: rgb(240, 247, 255);
+            border-color: #007bff;
+
+        }
+
+        #up-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lookup-button {
+            margin: 60px;
+            padding: 15px;
+            width: 280px;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #000000;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .lookup-button:hover {
+            background-color: rgb(0, 89, 255);
+            width: 280px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="SignUp-wrap">
+        <h1 class="title">약관동의</h1>
+        <ul class="agree-container">
+            <div class="agree0">
+                <input type="checkbox" name="agree_all" id="agree_all">
+                <label for="agree_all">이용약관, 개인정보 수집 및 이용, 프로모션 안내 메일 수신(선택)에 모두 동의합니다.</label>
+            </div>
+            <li class="agree">
+
+                <div class="agree1">
+                    <p class="agree-title">
+                        <input type="checkbox" name="agree" id="ck1"><label for="chk1">[필수]이용 약관에 동의합니다.</label>
+                    </p>
+                </div>
+                <div class="agree-sub">
+                    <p class="agree-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio veritatis
+                        ducimus
+                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas corporis
+                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aperiam, ea
+                        culpa
+                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia exercitationem
+                        cumque
+                        corporis voluptatem? Corporis, mollitia!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio veritatis
+                        ducimus
+                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas corporis
+                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aperiam, ea
+                        culpa
+                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia exercitationem
+                        cumque
+                        corporis voluptatem? Corporis, mollitia!
+                    </p>
+                </div>
+                <button class="agree-btn">
+                    <span class="agree-icon open">+</span>
+                    <span class="agree-icon close">-</span>
+                </button>
+            </li>
+            <li class="agree">
+                <div class="agree1">
+                    <p class="agree-title">
+                        <input type="checkbox" name="agree" id="ck1"><label for="chk1">[필수] 개인정보 수집 및 이용 동의</label>
+
+                    </p>
+                </div>
+                <div class="agree-sub">
+                    <p class="agree-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio veritatis
+                        ducimus
+                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas corporis
+                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aperiam, ea
+                        culpa
+                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia exercitationem
+                        cumque
+                        corporis voluptatem? Corporis, mollitia!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio veritatis
+                        ducimus
+                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas corporis
+                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aperiam, ea
+                        culpa
+                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia exercitationem
+                        cumque
+                        corporis voluptatem? Corporis, mollitia!
+                    </p>
+                </div>
+                <button class="agree-btn">
+                    <span class="agree-icon open">+</span>
+                    <span class="agree-icon close">-</span>
+                </button>
+            </li>
+            <li class="agree">
+                <div class="agree1">
+                    <p class="agree-title">
+                        <input type="checkbox" name="agree" id="ck1"><label for="chk1">[선택] 개인정보 자사 마케팅 수집 및 이용
+                            동의</label>
+
+                    </p>
+                </div>
+                <div class="agree-sub">
+                    <p class="agree-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio veritatis
+                        ducimus
+                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas corporis
+                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aperiam, ea
+                        culpa
+                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia exercitationem
+                        cumque
+                        corporis voluptatem? Corporis, mollitia!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio veritatis
+                        ducimus
+                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas corporis
+                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum aperiam, ea
+                        culpa
+                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia exercitationem
+                        cumque
+                        corporis voluptatem? Corporis, mollitia!
+                    </p>
+                </div>
+                <button class="agree-btn">
+                    <span class="agree-icon open">+</span>
+                    <span class="agree-icon close">-</span>
+                </button>
+            </li>
+        </ul>
+        <div class="line">
+        ▽
+        </div>
+        <div id="SignUp-info">
+            <h2 class="h2-info">회원정보</h2>
+
+            <form id="up-form">
+                <div class="form-group">
+                    <input type="text" id="login-ID" name="ID" placeholder="아이디" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="pass" placeholder="비밀번호" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="pass" placeholder="비밀번호 확인" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="연락처" required>
+                </div>
+                <button type="submit" class="lookup-button">회원가입</button>
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+        const btns = document.querySelectorAll(".agree-btn");
+
+        btns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const agreeItem = btn.parentNode;
+                const isActive = agreeItem.classList.contains("active");
+
+                removeActiveClasses();
+
+                if (!isActive) {
+                    agreeItem.classList.add("active");
+                }
+            });
+        });
+
+        function removeActiveClasses() {
+            btns.forEach((btn) => {
+                btn.parentNode.classList.remove("active");
+            });
+        }
+
+
+        // 동의 모두선택 / 해제
+        const agreeChkAll = document.querySelector('input[name=agree_all]');
+        agreeChkAll.addEventListener('change', (e) => {
+            let chk1Chk = document.querySelectorAll('input[name=agree]');
+            for (let i = 0; i < chk1Chk.length; i++) {
+                chk1Chk[i].checked = e.target.checked;
+            }
+        });
+    </script>
+</body>
+
+</html>

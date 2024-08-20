@@ -12,25 +12,23 @@
             box-sizing: border-box;
         }
 
-        html,
-        body {
+        html {
             height: 100%;
         }
 
         body {
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .SignUp-wrap {
-            display: flex;
-            width: 50%;
-        }
+        /* .SignUp-wrap{
+width: 800px;
 
+} */
         #agree {
-            width: 600px;
-            float: left;
+            width: 900px;
             display: flex;
             /* 요소들을 플렉스 박스로 만듦 */
             flex-direction: column;
@@ -39,18 +37,15 @@
 
 
         }
+
 
         #SignUp-info {
-            width: 600px;
-            float: left;
+            width: 500px;
             display: flex;
-            /* 요소들을 플렉스 박스로 만듦 */
             flex-direction: column;
-            /* 요소들을 세로로 정렬 */
-            /* 요소들을 중앙으로 정렬 */
             justify-content: center;
-            border: 1px solid #000000;  /*수정*/
-            
+            margin: 0 auto;
+
         }
 
         .h2-ok {
@@ -70,7 +65,7 @@
 
         .agree1>div {
             overflow: auto;
-            height: 60px;
+            height: 120px;
             padding: 20px 20px;
             font-size: 13px;
             color: hsl(0, 0%, 33%);
@@ -92,27 +87,29 @@
             font-size: 30px;
             color: #222;
             line-height: 100%;
+            margin: 0 auto;
         }
 
         .form-group {
             padding-bottom: 20px;
+
         }
+
 
         .form-group>input {
 
-            width: 330px;
-            /* 인풋 박스 너비를 폼 너비에 맞춤 */
-            max-width: 350px;
-            /* 인풋 박스 최대 너비 설정 */
-            height: 37px;
+            width: 500px;
+            height: 50px;
             /* 인풋 박스 높이 */
             padding: 0 10px;
             color: #000000;
             /* 입력 박스 텍스트 색상 */
-            font-size: 16px;
+            font-size: 20px;
             /* 입력 박스 텍스트 크기 */
             border-width: 0 0 1px;
             background-color: #007bff17;
+
+
         }
 
         .form-group>input:focus {
@@ -122,8 +119,14 @@
 
         }
 
+        #up-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .lookup-button {
-            margin-top: 60px;
+            margin: 60px;
             padding: 15px;
             width: 280px;
             background-color: #ffffff;
@@ -132,7 +135,6 @@
             cursor: pointer;
             font-size: 20px;
             transition: background-color 0.3s;
-
         }
 
         button:hover {
@@ -184,29 +186,29 @@
 
                 </div>
                 <p><input type="checkbox" id="ck1"><label for="chk1">[선택]약관에 동의합니다.</label></p>
-                <p class="notice">※ 개인정보 제공에 대한 동의를 거부할 권리가 있으며, 동의를 거부할 경우<br> 마케팅 정보를 받을 수 없습니다.</p>
+                <p class="notice">※ 개인정보 제공에 대한 동의를 거부할 권리가 있으며, 동의를 거부할 경우 마케팅 정보를 받을 수 없습니다.</p>
             </div>
         </div>
 
         <div id="SignUp-info">
             <h2 class="h2-info">회원정보</h2>
-            <div class="SignUp">
-                <form id="up-form">
-                    <div class="form-group">
-                        <input type="text" id="login-ID" name="ID" placeholder="아이디" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" id="password" name="pass" placeholder="비밀번호" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="password" id="password" name="pass" placeholder="비밀번호 확인" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" name="phone" placeholder="연락처" required>
-                    </div>
-                    <button type="submit" class="lookup-button">회원가입</button>
-                </form>
-            </div>
+
+            <form id="up-form">
+                <div class="form-group">
+                    <input type="text" id="login-ID" name="ID" placeholder="아이디" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="pass" placeholder="비밀번호" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" name="pass" placeholder="비밀번호 확인" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" name="phone" placeholder="연락처" required>
+                </div>
+                <button type="submit" class="lookup-button">회원가입</button>
+            </form>
+
         </div>
 
 
