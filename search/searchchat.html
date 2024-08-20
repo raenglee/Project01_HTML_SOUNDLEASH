@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +15,12 @@
         table {
             border: 1px solid black;
             border-collapse: collapse;
-            width: 100%; /* 테이블이 전체 너비를 차지하도록 */
+            width: 100%;
+            /* 테이블이 전체 너비를 차지하도록 */
         }
 
-        td, th {
+        td,
+        th {
             border: 1px solid black;
             padding: 10px;
             text-align: center;
@@ -25,9 +28,8 @@
 
         .search {
             display: inline-block;
-            cursor: pointer; /* 클릭 가능 표시 */
-            color: blue; /* 링크 스타일 적용 (원하는 스타일로 변경 가능) */
-            text-decoration: underline; /* 밑줄 추가 */
+            cursor: pointer;
+            /* 클릭 가능 표시 */
         }
 
         #searchTable {
@@ -35,6 +37,7 @@
         }
     </style>
 </head>
+
 <body>
     <h3 class="search" id="searchLabel">상세검색</h3>
     <br>
@@ -84,10 +87,10 @@
         </tr>
     </table>
 
-    
+
     <script>
         //상세검색 열고닫기
-        document.getElementById('searchLabel').addEventListener('click', function() {
+        document.getElementById('searchLabel').addEventListener('click', function () {
             var table = document.getElementById('searchTable');
             if (table.style.display === 'table') {
                 table.style.display = 'none';
@@ -97,4 +100,5 @@
         });
     </script>
 </body>
+
 </html>

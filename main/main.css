@@ -18,7 +18,7 @@ a {
 /* 헤더 스타일 */
 header {
   height: 70px;
-  background-color: #a0d6f5;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -70,8 +70,6 @@ h1 {
   left: -20px;
   right: 20px;
 }
-
-
 
 /* 햄버거 아이콘 */
 #menu_hamburger span {
@@ -237,7 +235,7 @@ body>nav {
   /* 스크롤 내려도 중앙정렬 유지 */
   transform: translateY(-50%);
   /* 상품 목록 너비 */
-  width: 100px; 
+  width: 100px;
   background-color: #ffffff;
   border: 1px solid #000000;
   padding: 10px;
@@ -305,131 +303,74 @@ body>nav {
 }
 
 /*⏹메인박스*/
-.container{
+.container {
   margin-left: 250px;
   margin-right: 250px;
 }
 
-/*🔍상세검색*/
-table {
+/*공지, 이벤트*/
+.noevent {
+  display: flex;
+}
+
+.notice {
   border: 1px solid black;
-  border-collapse: collapse;
-  width: 100%; /* 테이블이 전체 너비를 차지하도록 */
+  background-color: #ccc;
 }
 
-td, th {
+.event {
   border: 1px solid black;
-  padding: 10px;
-  text-align: center;
+  background-color: #ccc;
 }
 
-.search {
-  display: inline-block;
-  cursor: pointer; /* 클릭 가능 표시 */
-  margin-right: 20px;
-}
-
-#searchTable {
-  display: none;
-}
-
-/*1️⃣상품 목록 1번째줄-----------------------------------------------*/
-
-/*🎧헤드셋 상품 목록 1번째줄 전체 속성*/
-.products_line1 {
-  /*카테고리 사진 가로정렬*/
+/*뉴스레터 */
+.news {
   display: flex;
-  /*상품 간 간격 동일하게*/
-  justify-content: space-evenly;
-  padding-top: 5%;
+  gap: 20px;
 }
 
-/*상품 목록 1번째줄*/
-.product_line1 {
-  /*고정 ? */
-  overflow: hidden;
-  text-align: center;
+.news a {
+  font-size: 12px;
+
 }
 
-/*1번째 줄 상품 사진 설정*/
-.product_line1 img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #000000;
+#news_bose {
+  width: 300px;
+  position: relative;
 }
 
-/*1번째 줄 상품 이름, 가격 속성*/
-.product_line1 h3,
-p {
-  font-family: 'GmarketSansMedium';
-  margin: 1px 0;
-  font-size: 0.7rem;
-  color: #000000;
+#goshop_bose {
+  position: absolute;
 }
 
-/*2️⃣상품 목록 2번째줄-----------------------------------------------*/
-
-/*🎧헤드셋 상품 목록 2번째줄 전체 속성*/
-.products_line2 {
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 5%;
+#news_sony {
+  width: 300px;
+  position: relative;
 }
 
-/*상품 목록 2번째줄*/
-.product_line2 {
-  overflow: hidden;
-  text-align: center;
+#goshop_sony {
+  position: absolute;
 }
 
-/*2번째 줄 상품 사진 설정*/
-.product_line2 img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #000000;
+#news_airpodpro2 {
+  width: 300px;
+  position: relative;
 }
 
-/*2번째 줄 상품 이름, 가격 속성*/
-.product_line2 h3,
-p {
-  font-family: 'GmarketSansMedium';
-  margin: 1px 0;
-  font-size: 0.7rem;
-  color: #000000;
+#goshop_airpodpro2{
+  position: absolute;
 }
 
-/*3️⃣상품 목록 3번째줄-----------------------------------------------*/
-
-/*🎧헤드셋 상품 목록 3번째줄 전체 속성*/
-.products_line3 {
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 5%;
+#news_bao {
+  width: 300px;
 }
 
-/*상품 목록 3번째줄*/
-.product_line3 {
-  overflow: hidden;
-  text-align: center;
+/*푸터*/
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  margin-top: 30px;
 }
-
-/*3번째 줄 상품 사진 설정*/
-.product_line3 img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #000000;
-}
-
-/*3 번째 줄 상품 이름, 가격 속성*/
-.product_line3 h3,
-p {
-  font-family: 'GmarketSansMedium';
-  margin: 1px 0;
-  font-size: 0.7rem;
-  color: #000000;
-}
-
-
 
 /*👆top으로*/
 .totop {
