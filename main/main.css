@@ -331,34 +331,18 @@ body>nav {
 
 .news a {
   font-size: 12px;
-
 }
 
 #news_bose {
   width: 300px;
-  position: relative;
-}
-
-#goshop_bose {
-  position: absolute;
 }
 
 #news_sony {
   width: 300px;
-  position: relative;
-}
-
-#goshop_sony {
-  position: absolute;
 }
 
 #news_airpodpro2 {
   width: 300px;
-  position: relative;
-}
-
-#goshop_airpodpro2{
-  position: absolute;
 }
 
 #news_bao {
@@ -367,7 +351,7 @@ body>nav {
 
 /*푸터*/
 footer {
-  background-color: #000000;
+  background-color: #33438b;
   color: #ffffff;
   margin-top: 30px;
 }
