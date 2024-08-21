@@ -304,16 +304,23 @@ body>nav {
 
 /*⏹메인박스*/
 .container {
-width: 80%;
-display: flex;
+padding-left: 250px;
+padding-right: 250px;
+/* display: flex;
 margin: 0 auto;
-
+overflow: auto; */
 }
 
 /*공지, 이벤트*/
 .main-sub {
+  padding-top: 18px;
 width: 100%;
   overflow: hidden;
+}
+
+
+#main-img{
+    display: block;
 }
 
 .notice {
@@ -337,52 +344,66 @@ width: 100%;
     display: flex;
     justify-content: space-between;
   overflow: auto;
+  padding-top: 15px;
   }
 .news h3{
-  height: 50px;
+  height: 60px;
 
 }
 
-/* #news-con p{
-  height: 110px;
-  padding-top: 10px;
-} */
-.news a {
+#news-con{
+  height: 130px;
+}
 
+/* .gogo{
+  position: absolute;
+    bottom: 0;
+
+} */
+
+.news a {
   font-size: 15px;
   margin-bottom: 30px;
 }
 
-
+.container img{
+  width: 100%;
+}
 
 #news_bose {
-  width: 300px;
+  width: 24%;
 }
 
 #goshop_bose {
-  width: 300px;
+  bottom: 0%;
+    width: 24%;
 }
 
 #news_sony {
-  width: 300px;
+  width: 24%;
 }
 
 #goshop_sony {
-  width: 300px;
+  bottom: 0%;
+  width: 24%;
 }
 
 #news_airpodpro2 {
-  width: 300px;
-}
+width: 24%;}
 
 #goshop_airpodpro2{
-  width: 300px;
-}
+  bottom: 0%;
+width: 24%;}
 
 #news_bao {
-  
-  width: 300px;
+
+width: 24%;}
+
+#goshop_bao{
+  bottom: 0%;
+  width: 24%;
 }
+
 
 /*푸터*/
 footer {
