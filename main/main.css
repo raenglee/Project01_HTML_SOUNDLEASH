@@ -300,15 +300,18 @@ body>nav {
   color: #ccc;
   cursor: not-allowed;
   /* 커서 비활성화 */
+  overflow: hidden;
 }
 
 /*⏹메인박스*/
 .container {
-padding-left: 250px;
-padding-right: 250px;
-/* display: flex;
+height: auto;
+width: 80vw;
 margin: 0 auto;
+padding: 0 auto;
+/* display: flex;
 overflow: auto; */
+position: relative;
 }
 
 /*공지, 이벤트*/
@@ -347,12 +350,15 @@ width: 100%;
   padding-top: 15px;
   }
 .news h3{
-  height: 60px;
+  overflow: hidden;
+  height: 5vh;
 
 }
 
 #news-con{
-  height: 130px;
+  overflow: hidden;
+height: 13vh;
+padding-top: 10px;
 }
 
 /* .gogo{
@@ -366,9 +372,13 @@ width: 100%;
   margin-bottom: 30px;
 }
 
-.container img{
+#news_img{
   width: 100%;
 }
+
+.gogo{position: absolute;
+  bottom: 0;
+  }
 
 #news_bose {
   width: 24%;
