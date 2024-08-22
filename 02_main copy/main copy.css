@@ -336,27 +336,27 @@ body>nav {
   width: 100%;
 }
 
-.noevent_con_da{
+.noevent_con_da {
   display: flex;
 }
 
-.noevent_date{
-margin-left: auto;
-font-size: 14px;
+.noevent_date {
+  margin-left: auto;
+  font-size: 14px;
 }
 
 .noevnet_title {
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .noevnet_con {
-  padding: 3px;
+  padding-bottom: 7px;
   font-size: 14px;
 }
 
 .notice {
   background-color: hsla(215, 100%, 41%, 0.123);
-  padding: 10px;
+  padding: 15px;
   width: 50%;
 }
 
@@ -367,13 +367,106 @@ font-size: 14px;
 
 .event {
   background-color: hsla(215, 100%, 41%, 0.123);
-  padding: 10px;
+  padding: 15px;
   width: 50%;
 }
 
 .event a:hover {
   color: #1e4a89;
   font-weight: bolder;
+}
+
+/*카테고리로 이동*/
+
+.goshop{
+  padding-top: 10px;
+}
+
+.go_cate {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.go_headphones {
+  border: 1px solid black;
+  background-color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  width: 300px;
+}
+
+.go_headphones :hover {
+  background-color: hsla(215, 100%, 41%, 0.123);
+}
+
+.go_earphones {
+  border: 1px solid black;
+  background-color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  width: 300px;
+}
+
+.go_speaker {
+  border: 1px solid black;
+  background-color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  width: 300px;
+}
+
+.go_soundbar {
+  border: 1px solid black;
+  background-color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  width: 300px;
+}
+
+
+
+
+
+
+
+/*🥇베스트상품*/
+
+.bestitem {
+  padding-top: 20px;
+  /*왜 패딩이안될까? 언니한테 물어보기*/
+  padding-bottom: 20px;
+}
+
+/*상품 목록*/
+
+/*🎧헤드셋 상품 목록 1번째줄 전체 속성*/
+.best_products {
+  /*카테고리 사진 가로정렬*/
+  display: flex;
+  justify-content: space-between;
+}
+
+/*상품 목록 1번째줄*/
+.product_line1 {
+  /*고정 ? */
+  overflow: hidden;
+  text-align: center;
+}
+
+/*1번째 줄 상품 사진 설정*/
+.product_line1 img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+}
+
+/*1번째 줄 상품 이름, 가격 속성*/
+.product_line1 h3 {
+  margin: 1px 0;
+  font-size: 0.7rem;
+  color: #000000;
 }
 
 /*📰뉴스레터 */
