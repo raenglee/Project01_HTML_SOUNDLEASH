@@ -15,7 +15,7 @@ a {
 }
 
 
-/* 🌊헤더 스타일 */
+/* 헤더 스타일 */
 header {
   height: 70px;
   background-color: #ffffff;
@@ -62,7 +62,7 @@ h1 {
   z-index: 10000 !important;
   width: 50px;
   height: 100%;
-
+  
 }
 
 /* 햄버거 메뉴바 인풋박스 */
@@ -126,7 +126,7 @@ h1 {
   padding-right: 0px;
   padding-left: 0px;
   padding-top: 80px;
-
+  
 
   background: #ffffff;
   box-shadow: 2px 2px 10px 0px #1e4a89;
@@ -225,12 +225,12 @@ label:hover {
   transform: none;
 }
 
+
+
 body>nav {
   position: fixed;
 }
 
-
-/*👀최근 본 상품*/
 
 /* 목록 화면 오른쪽에 고정 */
 .recently-viewed {
@@ -313,10 +313,118 @@ body>nav {
 
 /*⏹메인박스*/
 .container {
-  height: auto;
-  width: 73vw;
-  margin: 0 auto;
-  padding: 0 auto;
+height: auto;
+width: 73vw;
+margin: 0 auto;
+padding: 0 auto;
+/* display: flex;
+overflow: auto; */
+
+}
+
+/*공지, 이벤트*/
+.main-sub {
+  padding-top: 18px;
+  overflow: hidden;
+  width: 100%;
+  z-index: -1;
+}
+
+
+#main-img{
+    display: block;
+}
+
+.notice {
+  border: 1px solid black;
+  background-color: #ccc;
+}
+
+.event {
+  border: 1px solid black;
+  background-color: #ccc;
+}
+
+.noevent{
+    display: flex;
+      float: left;
+}
+
+/*뉴스레터 */
+.news {
+ width: 100%;
+    display: flex;
+    justify-content: space-between;
+  overflow: auto;
+  padding-top: 15px;
+  }
+
+  .news h3{
+  overflow: hidden;
+  height: 6vh;
+  padding-top: 5px;
+
+}
+
+#news-con{
+  overflow: hidden;
+height: 12vh;
+padding-top: 10px;
+
+}
+
+
+
+.news  {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+#news_img{
+  width: 100%;
+}
+
+.gogo{
+  float: left;
+  /* width: 50%; */
+  
+  }
+
+#news_bose {
+  width: 24%;
+}
+
+/* #goshop_bose {
+    width: 50%;
+} */
+
+#news_sony {
+  width: 24%;
+}
+
+/* #goshop_sony {
+  width: 50%;
+} */
+
+#news_airpodpro2 {
+width: 24%;}
+
+/* #goshop_airpodpro2{
+width: 50%;} */
+
+#news_bao {
+width: 24%;}
+
+/* #goshop_bao{
+  width: 50%;
+} */
+
+
+/*푸터*/
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  margin-top: 30px;
 }
 
 /*👆top으로*/
@@ -329,11 +437,4 @@ body>nav {
 /*스크롤시 부드럽게*/
 html {
   scroll-behavior: smooth;
-}
-
-/*🦶푸터*/
-footer {
-  background-color: #4676ce;
-  color: #ffffff;
-  margin-top: 30px;
 }
