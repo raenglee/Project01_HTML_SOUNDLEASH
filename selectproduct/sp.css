@@ -304,59 +304,114 @@ body>nav {
 
 /*⏹메인박스*/
 .container {
-  margin-left: 250px;
-  margin-right: 250px;
+  margin: 0 auto;
+  padding: 0 auto;
+  width: 73vw;
 }
 
 /*상품소개*/
-#cate{
+#cate {
   margin-top: 50px;
   display: flex;
 }
 
-.product_top{
+/*사진 우측 설명*/
+.product_top {
   display: flex;
 }
 
-.bbl{
+.explain {
+  display: flex;
+}
+
+.ex_title {
+  width: 80px;
+  padding: 1px;
+}
+
+.pro_color {
+  padding-left: 2px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#pro_color_b {
+  width: 15px;
+  height: 15px;
+  border: 0.5px solid black;
+  background-color: black;
+  cursor: pointer;
+}
+
+#pro_color_w {
+  width: 15px;
+  height: 15px;
+  border: 0.5px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+
+#pro_color_g {
+  width: 15px;
+  height: 15px;
+  border: 0.5px solid black;
+  background-color: green;
+  cursor: pointer;
+}
+
+/*가격*/
+#pro_price {
+  margin: 10px;
+}
+
+/*가격아래 설명*/
+#explain p {
+  margin: 5px;
+}
+
+/**/
+
+/*구매장바구니찜버튼*/
+.bbl {
   display: flex;
   text-align: center;
   line-height: 50px;
   gap: 20px;
 }
 
-#buy{
+#buy {
   width: 120px;
   height: 50px;
-    border: 1px solid #000000;
-    background: #ffffff;
+  border: 1px solid #000000;
+  background: #ffffff;
 }
 
 #buy:hover {
   background: #3a5ac4;
 }
 
-#basket{
-    width: 120px;
-    height: 50px;
-    border: 1px solid #000000;
+#basket {
+  width: 120px;
+  height: 50px;
+  border: 1px solid #000000;
 }
 
 #basket:hover {
   background: #3a5ac4;
 }
 
-#love{
+#love {
   width: 120px;
   height: 50px;
-    border: 1px solid #000000;
+  border: 1px solid #000000;
 }
 
 #love:hover {
   background: #3a5ac4;
 }
 
-.detail{
+.detail {
   width: 50px;
 }
 
@@ -366,19 +421,20 @@ table {
   border: 1px solid black;
   border-collapse: collapse;
 
-  td, th {
+  td,
+  th {
     font-size: 0.9rem;
-      border: 1px solid black;
-      padding: 10px;
+    border: 1px solid black;
+    padding: 10px;
   }
 }
 
-#detail_notice{
+#detail_notice {
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-#return{
+#return {
   margin-top: 5px;
   margin-bottom: 5px;
 }
