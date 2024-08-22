@@ -53,9 +53,10 @@ h1 {
   position: relative;
   top: -42px;
   left: 40px;
-  z-index: 1;
+  z-index: 10000 !important;
   width: 50px;
   height: 100%;
+  
 }
 
 /* 햄버거 메뉴바 인풋박스 */
@@ -119,6 +120,7 @@ h1 {
   padding-right: 0px;
   padding-left: 0px;
   padding-top: 80px;
+  
 
   background: #ffffff;
   box-shadow: 2px 2px 10px 0px #1e4a89;
@@ -239,7 +241,7 @@ body>nav {
   background-color: #ffffff;
   border: 1px solid #000000;
   padding: 10px;
-  z-index: 1000;
+  z-index: 1;
   text-align: center;
 }
 
@@ -306,19 +308,20 @@ body>nav {
 /*⏹메인박스*/
 .container {
 height: auto;
-width: 80vw;
+width: 73vw;
 margin: 0 auto;
 padding: 0 auto;
 /* display: flex;
 overflow: auto; */
-position: relative;
+
 }
 
 /*공지, 이벤트*/
 .main-sub {
   padding-top: 18px;
-width: 100%;
   overflow: hidden;
+  width: 100%;
+  z-index: -1;
 }
 
 
@@ -349,25 +352,24 @@ width: 100%;
   overflow: auto;
   padding-top: 15px;
   }
-.news h3{
+
+  .news h3{
   overflow: hidden;
-  height: 5vh;
+  height: 6vh;
+  padding-top: 5px;
 
 }
 
 #news-con{
   overflow: hidden;
-height: 13vh;
+height: 12vh;
 padding-top: 10px;
+
 }
 
-/* .gogo{
-  position: absolute;
-    bottom: 0;
 
-} */
 
-.news a {
+.news  {
   font-size: 15px;
   margin-bottom: 30px;
 }
@@ -376,43 +378,40 @@ padding-top: 10px;
   width: 100%;
 }
 
-.gogo{position: absolute;
-  bottom: 0;
+.gogo{
+  float: left;
+  /* width: 50%; */
+  
   }
 
 #news_bose {
   width: 24%;
 }
 
-#goshop_bose {
-  bottom: 0%;
-    width: 24%;
-}
+/* #goshop_bose {
+    width: 50%;
+} */
 
 #news_sony {
   width: 24%;
 }
 
-#goshop_sony {
-  bottom: 0%;
-  width: 24%;
-}
+/* #goshop_sony {
+  width: 50%;
+} */
 
 #news_airpodpro2 {
 width: 24%;}
 
-#goshop_airpodpro2{
-  bottom: 0%;
-width: 24%;}
+/* #goshop_airpodpro2{
+width: 50%;} */
 
 #news_bao {
-
 width: 24%;}
 
-#goshop_bao{
-  bottom: 0%;
-  width: 24%;
-}
+/* #goshop_bao{
+  width: 50%;
+} */
 
 
 /*푸터*/
