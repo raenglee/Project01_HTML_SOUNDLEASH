@@ -326,9 +326,19 @@ html {
   scroll-behavior: smooth;
 }
 
+
 /*🦶푸터*/
+footer {
+  position: absolute;
+  bottom: 0;
+  background: #ceddf8;
+  color: white;
+  height: 60px;
+}
+
+/*🦶푸터
 footer {
   background-color: #4676ce;
   color: #ffffff;
   margin-top: 30px;
-}
+}*/
