@@ -364,10 +364,7 @@ overflow: auto; */
   overflow: hidden;
 height: 12vh;
 padding-top: 10px;
-
 }
-
-
 
 .news  {
   font-size: 15px;
@@ -380,39 +377,21 @@ padding-top: 10px;
 
 .gogo{
   float: left;
-  /* width: 50%; */
-  
   }
 
 #news_bose {
   width: 24%;
 }
 
-/* #goshop_bose {
-    width: 50%;
-} */
-
 #news_sony {
   width: 24%;
 }
 
-/* #goshop_sony {
-  width: 50%;
-} */
-
 #news_airpodpro2 {
 width: 24%;}
 
-/* #goshop_airpodpro2{
-width: 50%;} */
-
 #news_bao {
 width: 24%;}
-
-/* #goshop_bao{
-  width: 50%;
-} */
-
 
 /*푸터*/
 footer {
