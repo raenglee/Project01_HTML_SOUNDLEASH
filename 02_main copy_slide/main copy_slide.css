@@ -316,9 +316,31 @@ body>nav {
 }
 
 /*🎬메인 상단 이미지*/
-#main-img {
+/* #main-img {
   display: block;
+} */
+
+.slider {
+  width: 100vw; /* 화면 너비에 맞게 설정 */
+  height: 900px; /* 화면 높이에 맞게 설정 */
+  overflow: hidden;
+  position: relative;
 }
+
+.slides {
+  display: flex;
+  width: calc(1920px * 3); /* 모든 슬라이드를 포함한 너비 */
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.slides img {
+  width: 1920px; /* 슬라이드 너비 고정 */
+  height: 900px; /* 슬라이드 컨테이너 높이에 맞게 설정 */
+  object-fit: cover; /* 비율 유지하면서 컨테이너를 완전히 채우도록 설정 */
+}
+
+
 
 /*메인 박스 요소 정렬*/
 .main-sub {
@@ -336,15 +358,6 @@ body>nav {
   width: 100%;
 }
 
-.noevent_con_da{
-  display: flex;
-}
-
-.noevent_date{
-margin-left: auto;
-font-size: 14px;
-}
-
 .noevnet_title {
   padding-bottom: 5px;
 }
@@ -355,7 +368,7 @@ font-size: 14px;
 }
 
 .notice {
-  background-color: hsla(215, 100%, 41%, 0.123);
+  background-color: #00000011;
   padding: 10px;
   width: 50%;
 }
@@ -366,7 +379,7 @@ font-size: 14px;
 }
 
 .event {
-  background-color: hsla(215, 100%, 41%, 0.123);
+  background-color: #00000011;
   padding: 10px;
   width: 50%;
 }
@@ -409,7 +422,6 @@ font-size: 14px;
 
 .gogo {
   float: left;
-  font-size: 13px;
 }
 
 #news_bose {
