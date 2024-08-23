@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*전체속성*/
 * {
+  font-family: 'S-CoreDream-3Light';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,11 +22,10 @@ a {
   color: #000000;
 }
 
-
-/* 헤더 스타일 */
+/* 🌊헤더 스타일 */
 header {
   height: 70px;
-  background-color: #a0d6f5;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,11 +40,17 @@ h1 {
   flex: 1;
   text-align: center;
   margin: 0;
+  color: #1e4a89;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .top_icons {
   display: flex;
   gap: 5px;
+  position: absolute;
+  right: 1%;
 }
 
 .top_icon {
@@ -45,17 +58,16 @@ h1 {
   align-items: center;
 }
 
-
-
 /* 🍔햄버거 메뉴바 전체 설정 */
 #menu_hamburger {
   display: block;
   position: relative;
   top: -42px;
   left: 40px;
-  z-index: 1;
+  z-index: 10000 !important;
   width: 50px;
   height: 100%;
+
 }
 
 /* 햄버거 메뉴바 인풋박스 */
@@ -70,8 +82,6 @@ h1 {
   left: -20px;
   right: 20px;
 }
-
-
 
 /* 햄버거 아이콘 */
 #menu_hamburger span {
@@ -121,6 +131,7 @@ h1 {
   padding-right: 0px;
   padding-left: 0px;
   padding-top: 80px;
+
 
   background: #ffffff;
   box-shadow: 2px 2px 10px 0px #1e4a89;
@@ -219,12 +230,12 @@ label:hover {
   transform: none;
 }
 
-
-
 body>nav {
   position: fixed;
 }
 
+
+/*👀최근 본 상품*/
 
 /* 목록 화면 오른쪽에 고정 */
 .recently-viewed {
@@ -237,11 +248,11 @@ body>nav {
   /* 스크롤 내려도 중앙정렬 유지 */
   transform: translateY(-50%);
   /* 상품 목록 너비 */
-  width: 100px; 
+  width: 100px;
   background-color: #ffffff;
   border: 1px solid #000000;
   padding: 10px;
-  z-index: 1000;
+  z-index: 1;
   text-align: center;
 }
 
@@ -302,22 +313,28 @@ body>nav {
   color: #ccc;
   cursor: not-allowed;
   /* 커서 비활성화 */
+  overflow: hidden;
 }
 
 /*⏹메인박스*/
-.container{
-  margin-left: 250px;
-  margin-right: 250px;
+.container {
+  height: auto;
+  width: 73vw;
+  margin: 0 auto;
+  padding: 0 auto;
 }
+
 
 /*🔍상세검색*/
 table {
   border: 1px solid black;
   border-collapse: collapse;
-  width: 100%; /* 테이블이 전체 너비를 차지하도록 */
+  width: 100%;
+  /* 테이블이 전체 너비를 차지하도록 */
 }
 
-td, th {
+td,
+th {
   border: 1px solid black;
   padding: 10px;
   text-align: center;
@@ -325,7 +342,8 @@ td, th {
 
 .search {
   display: inline-block;
-  cursor: pointer; /* 클릭 가능 표시 */
+  cursor: pointer;
+  /* 클릭 가능 표시 */
   margin-right: 20px;
 }
 
@@ -431,6 +449,16 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*👆top으로*/
 .totop {
   position: fixed;
@@ -441,4 +469,14 @@ p {
 /*스크롤시 부드럽게*/
 html {
   scroll-behavior: smooth;
+}
+
+
+/*🦶푸터*/
+footer {
+  /* position: absolute;
+  일단은 내용이 많이 있을 경우에는 없어야하고, 내용이 별로 없으면 있어야함*/
+  bottom: 0;
+  background: #4676ce;
+  color: white;
 }
