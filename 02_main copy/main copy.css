@@ -333,11 +333,11 @@ body>nav {
 /*🎬메인 상단 이미지*/
 #main-img {
   display: block;
+  margin-bottom: 20px;
 }
 
 /*메인 박스 요소 정렬*/
 .main-sub {
-  padding-top: 18px;
   overflow: hidden;
   width: 100%;
   z-index: -1;
@@ -349,7 +349,7 @@ body>nav {
   display: flex;
   float: left;
   width: 100%;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .noevent_con_da {
@@ -363,7 +363,6 @@ body>nav {
 
 .noevnet_title {
   padding-bottom: 10px;
-
 }
 
 .noevnet_con {
@@ -400,6 +399,7 @@ body>nav {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 20px;
 }
 
 .go_headphones {
@@ -446,18 +446,16 @@ body>nav {
   background-color: hsla(215, 100%, 41%, 0.123);
 }
 
-
-
 /*🥇베스트상품*/
 
 .best {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 /*베스트 상품 전체 속성*/
 .best_products {
+  margin-bottom: 20px;
   /*카테고리 사진 가로정렬*/
   display: flex;
   justify-content: space-between;
@@ -481,21 +479,57 @@ body>nav {
   margin: 1px 0;
   color: #000000;
   font-size: 14px;
-  padding-bottom: 10px;
 }
 
 
 /*회사 소개*/
 .introduce {
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+}
+
+.introduce_img {
+  vertical-align: middle;
+  opacity: 0.7;
+  margin-bottom: 20px;
 }
 
 .introduce_text {
-  flex-direction: column;
-  color: rgb(0, 0, 0);
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
+
+/*대여하기, 쇼핑하기 글자배열이이상함*/
+.introduce_click {
+  position: absolute;
+  padding-top: 50px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.introduce_rent {
+  color: white;
+}
+
+.introduce_rent:hover {
+  color: #4676ce;
+}
+
+.introduce_sell {
+  color: white;
+}
+
+.introduce_sell:hover {
+  color: #4676ce;
+}
+
+
 
 /*📰뉴스레터 */
 .news {
@@ -503,7 +537,8 @@ body>nav {
   display: flex;
   justify-content: space-between;
   overflow: auto;
-  padding-top: 15px;
+  font-size: 15px;
+  margin-bottom: 20px;
 }
 
 .news h3 {
@@ -516,11 +551,6 @@ body>nav {
   overflow: hidden;
   height: 12vh;
   padding-top: 10px;
-}
-
-.news {
-  font-size: 15px;
-  margin-bottom: 30px;
 }
 
 #news_img {
@@ -553,7 +583,6 @@ footer {
   background-color: #4676ce;
   color: #ffffff;
   bottom: 0;
-  margin-top: 30px;
 }
 
 /*👆top으로*/
