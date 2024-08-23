@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Two Tabs Example</title>
     <style>
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
         body {
 
             padding: 0;
@@ -13,6 +20,7 @@
         }
 
         * {
+            font-family: 'S-CoreDream-3Light';
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -73,7 +81,6 @@
         }
 
         .content {
-            width: 460px;
             height: 600px;
             background: #ffffff;
             /* 내용 영역의 배경 색상 */
@@ -120,7 +127,6 @@
         label {
             display: block;
             margin-bottom: 5px 0px 5px 0px;
-            font-size: 13px;
             padding-top: 3px;
 
         }
@@ -522,7 +528,6 @@
 
         #menu label {
             padding-left: 40px;
-            padding-bottom: 10px;
             padding-right: 70px;
         }
 
@@ -882,9 +887,9 @@
                         </div>
                         <div class="sns-wrap">
                             <div class="login-sns">
-                                <a href=""><img class="KKO" src="/img/login/K.webp" width="40" alt="Kakao"></a>
-                                <a href=""><img class="GGL" src="/img/login/G.png" width="40" alt="Google"></a>
-                                <a href=""><img class="NVR" src="/img/login/N.png" width="40" alt="Naver"></a>
+                                <a href=""><img class="KKO" src="../img/login/K.webp" height="40" alt="Kakao"></a>
+                                <a href=""><img class="GGL" src="../img/login/G.png" height="40" alt="Google"></a>
+                                <a href=""><img class="NVR" src="../img/login/N.png" width="40" alt="Naver"></a>
                             </div>
                         </div>
                         <button type="submit" class="log-button">로그인</button>
