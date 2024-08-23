@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="slide.css">
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <img src="../y_img/main/bose_1920x900.png" alt="Slide 1">
+            <img src="../y_img/main/bangandolufsen_1920x900.jpg" alt="Slide 2">
+            <img src="../y_img/main/marshall_1920x900.jpg" alt="Slide 3">
+            <img src="../y_img/main/sennheiser_1920x900.jpg" alt="Slide 4">
+            <img src="../y_img/main/apple_1920x900.jpg" alt="Slide 5">
+        </div>
+    </div>
+ 
+
+    <script>
+        let index = 0;
+        const slides = document.querySelector('.slides');
+        const slideImages = document.querySelectorAll('.slides img');
+        const slideWidth = 1920; // 고정된 슬라이드 너비
+        const totalSlides = slideImages.length;
+    
+        function updateSlideWidth() {
+            // 슬라이드 컨테이너의 너비를 업데이트합니다
+            const sliderWidth = document.querySelector('.slider').clientWidth;
+            slides.style.width = `${sliderWidth * totalSlides}px`; // 슬라이드의 전체 너비 조정
+            slideImages.forEach(image => {
+                image.style.width = `${sliderWidth}px`; // 각 이미지의 너비를 조정
+            });
+        }
+    
+        function showNextSlide() {
+            index = (index + 1) % totalSlides;
+            slides.style.transform = `translateX(${-index * 1920}px)`; // 슬라이드를 이동
+        }
+    
+        window.addEventListener('resize', updateSlideWidth); // 윈도우 리사이즈 시 슬라이드 너비 업데이트
+    
+        updateSlideWidth(); // 초기화 시 슬라이드 너비 업데이트
+        setInterval(showNextSlide, 3000); // 슬라이드를 3초마다 변경
+    </script>
+    
+    
+    
+    
+</body>
+</html>
