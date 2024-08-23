@@ -437,4 +437,11 @@ footer {
 /*스크롤시 부드럽게*/
 html {
   scroll-behavior: smooth;
+  /* height: auto; */
+}
+
+
+
+.ggg{
+  height: 1000px;
 }
