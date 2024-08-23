@@ -5,7 +5,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>hamburger+totop+products</title>
-  <link rel="stylesheet" href="/mypagemain.css">
+  <link rel="stylesheet" href="/mypage/mypageMain.css">
+  <style>
+      @font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /*전체속성*/
+  * {
+    font-family: 'S-CoreDream-3Light';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  </style>
 </head>
 
 <!--🌊헤더, 로고-->
@@ -140,12 +156,14 @@
     </ul>
     <div class="arrow down">&#9660;</div>
   </div>
+
+  <div class="container">
   <div class="profile-section">
     <div class="profile-pic">
-        <img src="/img/빵귤.jpg" alt="프로필" class="profile">
+        <img src="/mypage/img/KakaoTalk_20240730_142141014.jpg" alt="프로필" class="profile">
     </div>
     <div class="profile-info">
-        <h2>닉네임</h2>
+        <h2>콩이</h2>
         <button class="edit-btn"><a href="#" onclick="showSection('profile')">수정</a></button>
     </div>
     <div class="profile-details">
@@ -155,12 +173,18 @@
     </div>
 </div>
 <div class="main-section">
-    <div class="main-box"><a href="#" onclick="showSection('#')">포인트</a></div>
-    <div class="main-box"><a href="#" onclick="showSection('#')">쿠폰</a></div>
-    <div class="main-box"><a href="#" onclick="showSection('#')">적립</a></div>
-    <div class="main-box"><a href="#" onclick="showSection('#')">주문내역</a></div>
-    <div class="main-box"><a href="#" onclick="showSection('#')">나의리뷰</a></div>
-    <div class="main-box"><a href="#" onclick="showSection('#')">문의</a></div>
+    <div class="main-box"><a href="#" onclick="showSection('#')">포인트</a>
+    <P>18000</P></div>
+    <div class="main-box"><a href="#" onclick="showSection('#')">쿠폰</a>
+    <p>5</p></div>
+    <div class="main-box"><a href="#" onclick="showSection('#')">적립</a>
+    <p></p></div>
+    <div class="main-box"><a href="#" onclick="showSection('#')">주문내역</a>
+    <p>5</p></div>
+    <div class="main-box"><a href="#" onclick="showSection('#')">나의리뷰</a>
+    <p>3</p></div>
+    <div class="main-box"><a href="#" onclick="showSection('#')">문의</a>
+    <p>0</p></div>
 </div>
 </div>
     <!--👆top으로-->
@@ -216,7 +240,7 @@
   </script>
 </body>
 
-<!--🦶푸터-->
+<!--🦶푸터
 <footer>
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio repellendus, vel quisquam
   saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint adipisci cumque.
@@ -225,5 +249,5 @@
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio repellendus, vel quisquam
   saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint adipisci cumque.
 </footer>
-
+-->
 </html>

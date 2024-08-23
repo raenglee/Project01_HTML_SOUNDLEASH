@@ -319,6 +319,9 @@ body>nav {
   position: relative;
   margin-bottom: 20px;
 }
+img:hover {
+  transform: scale(1.1);
+}
 .profile {
   border-radius: 50%; /* 원형으로 설정 */
   width: 200px; /* 너비를 150px로 설정 */
@@ -352,7 +355,12 @@ form {
   display: flex;
   flex-direction: column;
 }
-
+label {
+	display:inline-block;
+	text-align:center;
+	width:80px;
+	font-weight:bold;
+}
 form label {
   font-size: 16px;
   margin-bottom: 5px;
