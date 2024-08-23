@@ -8,10 +8,11 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
+            /* display: flex; */
             justify-content: center;
             align-items: center;
             height: 100vh;
+            padding: 0;
             margin: 0;
         }
 
@@ -24,6 +25,7 @@
             border: 1px solid #000000;
             text-align: center;
             width: 460px;
+            position: relative;
             /* 탭과 콘텐츠의 너비 설정 */
         }
 
@@ -310,6 +312,16 @@
         }
 
 
+        /*푸터*/
+        footer {
+            position: absolute;
+            background-color: #000000;
+            color: #ffffff;
+            margin-top: 30px;
+            bottom: 0%;
+
+        }
+
         /* .password-container input[type="password"] {
     flex: 1; }/* 비밀번호 입력 박스가 가능한 공간을 차지하도록 */
 
@@ -424,6 +436,7 @@
         </div>
     </div>
 
+
     <script>
         function openTab(tabId) {
             // 모든 탭 콘텐츠 숨기기
@@ -441,6 +454,21 @@
             event.currentTarget.classList.add('active');
         }
     </script>
+
+
+
+    <footer>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio repellendus, vel
+        quisquam
+        saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint adipisci cumque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio repellendus, vel
+        quisquam
+        saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint adipisci cumque.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio repellendus, vel
+        quisquam
+        saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint adipisci cumque.
+
+    </footer>
 </body>
 
 </html>
