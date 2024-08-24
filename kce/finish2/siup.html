@@ -25,7 +25,7 @@
         body {
             margin: 0;
             padding: 0;
-            position: relative;
+            overflow-x: hidden;
         }
 
 
@@ -41,9 +41,9 @@
             color: #000000;
         }
 
-
         /* 🌊헤더 스타일 */
         header {
+            flex: 1;
             height: 70px;
             background-color: #ffffff;
             display: flex;
@@ -54,7 +54,6 @@
             margin-top: 0;
             /* 헤더 아래에 빈 공간이 생길 경우 margin-bottom 설정 */
             margin: 0;
-
         }
 
         h1 {
@@ -81,20 +80,21 @@
 
 
 
+
         /* 🍔햄버거 메뉴바 전체 설정 */
         #menu_hamburger {
             display: block;
             position: relative;
             top: -42px;
             left: 40px;
-            z-index: 10000;
+            bottom: 0;
             width: 50px;
-            height: 100%;
-
+height: 100%;
         }
 
         /* 햄버거 메뉴바 인풋박스 */
         #menu_hamburger input[type="checkbox"] {
+            position: fixed;
             width: 70px;
             height: 70px;
             position: absolute;
@@ -149,11 +149,13 @@
         #menu {
             position: absolute;
             width: 210px;
-            height: 200vh;
-            margin: -60px 0 0 -40px;
+            height: 100vh;
+            margin: -53px 0 0 -40px;
             padding-right: 0px;
             padding-left: 0px;
             padding-top: 80px;
+            overflow: hidden;
+            padding-bottom: 100px;
 
 
             background: #ffffff;
@@ -339,19 +341,23 @@
             overflow: hidden;
         }
 
-        /*⏹메인박스*/
-        .container {
-            height: auto;
-            width: 73vw;
-            margin: 0 auto;
-            padding: 0 auto;
-        }
+
+
+
+
+
+
+
+
+
+
 
         /*👆top으로*/
         .totop {
             position: fixed;
             right: 77px;
             bottom: 30px;
+            z-index: 9999;
         }
 
         /*스크롤시 부드럽게*/
@@ -359,34 +365,32 @@
             scroll-behavior: smooth;
         }
 
-        /*🦶푸터*/
-        footer {
-            bottom: 0%;
-            background: #ceddf8;
-            color: white;
+
+
+
+
+
+
+
+
+
+
+
+        /*⏹메인박스*/
+        .container {
+            display: flex;
+            flex-direction: column;
+            width: 73vw;
+            margin: 0 auto;
+            padding: 0 auto;
+            margin-bottom: 50px;
+            height: 100%
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         .SignUp-wrap {
-            position: relative;
-            margin: 0 auto;
-            padding-top: 30px;
+            padding-top: 40px;
+            z-index: 60;
+
         }
 
 
@@ -395,9 +399,8 @@
             width: 500px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             margin: 0 auto;
-
+            height: 80%;
         }
 
         .h2-ok {
@@ -617,11 +620,51 @@
             background-color: rgb(0, 89, 255);
             width: 280px;
         }
+
+
+        .f_1 {
+            /* flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            min-height: 100%; */
+            z-index: 50;
+        }
+
+        .f_2 {
+
+            height: 100%;
+            position: relative;
+
+
+        }
+
+.wrap{
+    margin-bottom: 100px;
+}
+
+
+        /*🦶푸터*/
+        .footer_sub {
+            background: #4676ce;
+            color: white;
+            height: 80px;
+            padding: 20px 0;
+            z-index: -1;
+        }
+
+        .foot {
+            position: fixed;
+            bottom: 0px;
+            z-index: -1999;
+            margin: 0px auto
+        }
     </style>
 </head>
 
 <body>
 
+    <div class="wrap">
     <!--🌊헤더, 로고-->
     <header>
         <h1>SOUNDLISH</h1>
@@ -660,7 +703,6 @@
 
     </header>
 
-    <body>
 
         <!--🍔햄버거 메뉴바-->
         <nav id="top">
@@ -739,211 +781,256 @@
             </div>
 
         </nav>
-
-        <!--👀최근 본 상품-->
-        <div class="recently-viewed">
-            <h3>최근 본 상품</h3>
-            <div class="arrow up">&#9650;</div>
-            <ul>
-                <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품1"></a></li>
-                <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품2"></a></li>
-                <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품3"></a></li>
-                <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품4"></a></li>
-                <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품5"></a></li>
-            </ul>
-            <div class="arrow down">&#9660;</div>
-        </div>
-
-
-
-
-        <!--👆top으로-->
-        </div>
-        <div class=" totop">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="arrow-circle-down" viewBox="0 0 24 24" width="40"
-                    height="40">
-                    <path
-                        d="M12,24A12,12,0,1,0,0,12,12.013,12.013,0,0,0,12,24ZM6.293,9.465,9.879,5.879h0a3,3,0,0,1,4.243,0l3.585,3.586.024.025a1,1,0,1,1-1.438,1.389L13,7.586,13.007,18a1,1,0,0,1-2,0L11,7.587,7.707,10.879A1,1,0,1,1,6.293,9.465Z" />
-                </svg></a>
-        </div>
+        <div class="f_2">
+            <div class="f_1">
+                <!--👀최근 본 상품-->
+                <div class="recently-viewed">
+                    <h3>최근 본 상품</h3>
+                    <div class="arrow up">&#9650;</div>
+                    <ul>
+                        <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품1"></a></li>
+                        <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품2"></a></li>
+                        <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품3"></a></li>
+                        <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품4"></a></li>
+                        <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품5"></a></li>
+                    </ul>
+                    <div class="arrow down">&#9660;</div>
+                </div>
 
 
-        <!--⏹메인박스-->
-        <div class="container">
 
 
+                <!--👆top으로-->
+
+                <div class=" totop">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="arrow-circle-down" viewBox="0 0 24 24"
+                            width="40" height="40">
+                            <path
+                                d="M12,24A12,12,0,1,0,0,12,12.013,12.013,0,0,0,12,24ZM6.293,9.465,9.879,5.879h0a3,3,0,0,1,4.243,0l3.585,3.586.024.025a1,1,0,1,1-1.438,1.389L13,7.586,13.007,18a1,1,0,0,1-2,0L11,7.587,7.707,10.879A1,1,0,1,1,6.293,9.465Z" />
+                        </svg></a>
+                </div>
+
+                <!--⏹메인박스-->
+                <div class="container">
 
 
 
 
 
-            <div class="SignUp-wrap">
-                <h2 class="title">약관동의</h2>
-                <ul class="agree-container">
-                    <div class="agree0">
-                        <input type="checkbox" name="agree_all" id="agree_all">
-                        <label for="agree_all">이용약관, 개인정보 수집 및 이용, 프로모션 안내 메일 수신(선택)에 모두 동의합니다.</label>
+
+
+                    <div class="SignUp-wrap">
+                        <h2 class="title">약관동의</h2>
+                        <ul class="agree-container">
+                            <div class="agree0">
+                                <input type="checkbox" name="agree_all" id="agree_all">
+                                <label for="agree_all">이용약관, 개인정보 수집 및 이용, 프로모션 안내 메일 수신(선택)에 모두 동의합니다.</label>
+                            </div>
+                            <li class="agree">
+
+                                <div class="agree1">
+                                    <p class="agree-title">
+                                        <input type="checkbox" name="agree" id="ck1"><label for="chk1">[필수]이용 약관에
+                                            동의합니다.</label>
+                                    </p>
+
+                                </div>
+                                <div class="agree-sub">
+                                    <p class="agree-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
+                                        veritatis
+                                        ducimus
+                                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni
+                                        voluptas
+                                        corporis
+                                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Eum
+                                        aperiam,
+                                        ea
+                                        culpa
+                                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
+                                        exercitationem
+                                        cumque
+                                        corporis voluptatem? Corporis, mollitia!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
+                                        veritatis
+                                        ducimus
+                                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni
+                                        voluptas
+                                        corporis
+                                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Eum
+                                        aperiam,
+                                        ea
+                                        culpa
+                                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
+                                        exercitationem
+                                        cumque
+                                        corporis voluptatem? Corporis, mollitia!
+                                    </p>
+
+                                </div>
+                                <button class="agree-btn">
+                                    <span class="agree-icon open">+</span>
+                                    <span class="agree-icon close">-</span>
+                                </button>
+                            </li>
+                            <li class="agree">
+                                <div class="agree1">
+                                    <p class="agree-title">
+                                        <input type="checkbox" name="agree" id="ck1"><label for="chk1">[필수] 개인정보 수집 및 이용
+                                            동의</label>
+
+                                    </p>
+                                </div>
+                                <div class="agree-sub">
+                                    <p class="agree-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
+                                        veritatis
+                                        ducimus
+                                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni
+                                        voluptas
+                                        corporis
+                                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Eum
+                                        aperiam,
+                                        ea
+                                        culpa
+                                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
+                                        exercitationem
+                                        cumque
+                                        corporis voluptatem? Corporis, mollitia!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
+                                        veritatis
+                                        ducimus
+                                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni
+                                        voluptas
+                                        corporis
+                                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Eum
+                                        aperiam,
+                                        ea
+                                        culpa
+                                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
+                                        exercitationem
+                                        cumque
+                                        corporis voluptatem? Corporis, mollitia!
+                                    </p>
+                                </div>
+                                <button class="agree-btn">
+                                    <span class="agree-icon open">+</span>
+                                    <span class="agree-icon close">-</span>
+                                </button>
+                            </li>
+                            <li class="agree">
+                                <div class="agree1">
+                                    <p class="agree-title">
+                                        <input type="checkbox" name="agree" id="ck1"><label for="chk1">[선택] 개인정보 자사 마케팅
+                                            수집 및
+                                            이용
+                                            동의</label>
+
+                                    </p>
+                                </div>
+                                <div class="agree-sub">
+                                    <p class="agree-text">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
+                                        veritatis
+                                        ducimus
+                                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni
+                                        voluptas
+                                        corporis
+                                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Eum
+                                        aperiam,
+                                        ea
+                                        culpa
+                                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
+                                        exercitationem
+                                        cumque
+                                        corporis voluptatem? Corporis, mollitia!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
+                                        veritatis
+                                        ducimus
+                                        animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni
+                                        voluptas
+                                        corporis
+                                        quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Eum
+                                        aperiam,
+                                        ea
+                                        culpa
+                                        ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
+                                        exercitationem
+                                        cumque
+                                        corporis voluptatem? Corporis, mollitia!
+                                    </p>
+                                </div>
+                                <button class="agree-btn">
+                                    <span class="agree-icon open">+</span>
+                                    <span class="agree-icon close">-</span>
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="line">
+                            ▽
+                        </div>
+                        <div id="SignUp-info">
+                            <h2 class="h2-info">회원정보</h2>
+
+                            <form id="up-form">
+                                <div class="form-group">
+                                    <input type="text" id="login-ID" name="ID" placeholder="아이디" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="password" name="pass" placeholder="비밀번호" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" id="password" name="pass" placeholder="비밀번호 확인" required>
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" id="phone" name="phone" placeholder="연락처" required>
+                                </div>
+                                <button type="submit" class="lookup-button">회원가입</button>
+                            </form>
+
+                        </div>
+
+
                     </div>
-                    <li class="agree">
-
-                        <div class="agree1">
-                            <p class="agree-title">
-                                <input type="checkbox" name="agree" id="ck1"><label for="chk1">[필수]이용 약관에 동의합니다.</label>
-                            </p>
-
-                        </div>
-                        <div class="agree-sub">
-                            <p class="agree-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
-                                veritatis
-                                ducimus
-                                animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas
-                                corporis
-                                quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                                aperiam,
-                                ea
-                                culpa
-                                ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
-                                exercitationem
-                                cumque
-                                corporis voluptatem? Corporis, mollitia!
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
-                                veritatis
-                                ducimus
-                                animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas
-                                corporis
-                                quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                                aperiam,
-                                ea
-                                culpa
-                                ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
-                                exercitationem
-                                cumque
-                                corporis voluptatem? Corporis, mollitia!
-                            </p>
-
-                        </div>
-                        <button class="agree-btn">
-                            <span class="agree-icon open">+</span>
-                            <span class="agree-icon close">-</span>
-                        </button>
-                    </li>
-                    <li class="agree">
-                        <div class="agree1">
-                            <p class="agree-title">
-                                <input type="checkbox" name="agree" id="ck1"><label for="chk1">[필수] 개인정보 수집 및 이용
-                                    동의</label>
-
-                            </p>
-                        </div>
-                        <div class="agree-sub">
-                            <p class="agree-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
-                                veritatis
-                                ducimus
-                                animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas
-                                corporis
-                                quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                                aperiam,
-                                ea
-                                culpa
-                                ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
-                                exercitationem
-                                cumque
-                                corporis voluptatem? Corporis, mollitia!
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
-                                veritatis
-                                ducimus
-                                animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas
-                                corporis
-                                quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                                aperiam,
-                                ea
-                                culpa
-                                ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
-                                exercitationem
-                                cumque
-                                corporis voluptatem? Corporis, mollitia!
-                            </p>
-                        </div>
-                        <button class="agree-btn">
-                            <span class="agree-icon open">+</span>
-                            <span class="agree-icon close">-</span>
-                        </button>
-                    </li>
-                    <li class="agree">
-                        <div class="agree1">
-                            <p class="agree-title">
-                                <input type="checkbox" name="agree" id="ck1"><label for="chk1">[선택] 개인정보 자사 마케팅 수집 및 이용
-                                    동의</label>
-
-                            </p>
-                        </div>
-                        <div class="agree-sub">
-                            <p class="agree-text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
-                                veritatis
-                                ducimus
-                                animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas
-                                corporis
-                                quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                                aperiam,
-                                ea
-                                culpa
-                                ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
-                                exercitationem
-                                cumque
-                                corporis voluptatem? Corporis, mollitia!
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla iure aperiam odio
-                                veritatis
-                                ducimus
-                                animi dolore maxime porro quod. Laborum beatae vitae molestias facilis magni voluptas
-                                corporis
-                                quibusdam optio vero?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum
-                                aperiam,
-                                ea
-                                culpa
-                                ut voluptate fugit. Laborum delectus illo, ab harum ut, soluta sequi mollitia
-                                exercitationem
-                                cumque
-                                corporis voluptatem? Corporis, mollitia!
-                            </p>
-                        </div>
-                        <button class="agree-btn">
-                            <span class="agree-icon open">+</span>
-                            <span class="agree-icon close">-</span>
-                        </button>
-                    </li>
-                </ul>
-                <div class="line">
-                    ▽
-                </div>
-                <div id="SignUp-info">
-                    <h2 class="h2-info">회원정보</h2>
-
-                    <form id="up-form">
-                        <div class="form-group">
-                            <input type="text" id="login-ID" name="ID" placeholder="아이디" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" id="password" name="pass" placeholder="비밀번호" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" id="password" name="pass" placeholder="비밀번호 확인" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="연락처" required>
-                        </div>
-                        <button type="submit" class="lookup-button">회원가입</button>
-                    </form>
 
                 </div>
 
+            </div>
+        </div>
+            <div class="foot">
 
+                <div class="footer_sub footer">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio
+                    repellendus,
+                    vel
+                    quisquam
+                    saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint
+                    adipisci
+                    cumque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio
+                    repellendus,
+                    vel
+                    quisquam
+                    saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint
+                    adipisci
+                    cumque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio
+                    repellendus,
+                    vel
+                    quisquam
+                    saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint
+                    adipisci
+                    cumque.
+                </div>
             </div>
 
         </div>
-
 
         <script>
 
@@ -1018,25 +1105,10 @@
                 }
             });
         </script>
-        <!--🦶푸터-->
 
 
 
     </body>
 
-    <footer>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio repellendus, vel
-        quisquam
-        saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint adipisci
-        cumque.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio repellendus, vel
-        quisquam
-        saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint adipisci
-        cumque.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio repellendus, vel
-        quisquam
-        saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint adipisci
-        cumque.
-    </footer>
 
 </html>

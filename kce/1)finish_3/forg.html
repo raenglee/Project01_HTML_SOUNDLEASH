@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    @font-face {
+      font-family: 'S-CoreDream-3Light';
+      src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      font-family: 'S-CoreDream-3Light';
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+
+
+
+
+    ul li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: #000000;
+    }
+
+
+    /* 🌊헤더 스타일 */
+    header {
+      height: 70px;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      /* 헤더 위에 빈 공간 없애기 위해 margin-top 설정 */
+      margin-top: 0;
+      /* 헤더 아래에 빈 공간이 생길 경우 margin-bottom 설정 */
+      margin: 0;
+
+    }
+
+    h1 {
+      flex: 1;
+      text-align: center;
+      margin: 0;
+      color: #1e4a89;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .top_icons {
+      display: flex;
+      gap: 5px;
+      position: absolute;
+      right: 1%;
+    }
+
+    .top_icon {
+      display: flex;
+      align-items: center;
+    }
+
+
+
+    /* 🍔햄버거 메뉴바 전체 설정 */
+    #menu_hamburger {
+      display: block;
+      position: relative;
+      top: -42px;
+      left: 40px;
+      z-index: 10000;
+      width: 50px;
+      height: 100%;
+
+    }
+
+    /* 햄버거 메뉴바 인풋박스 */
+    #menu-toggle {
+      width: 70px;
+      height: 70px;
+      position: absolute;
+      cursor: pointer;
+      opacity: 0;
+      z-index: 2000000000;
+      top: -30px;
+      left: -20px;
+      right: 20px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    #menu input[type="checkbox"] {
+      position: absolute;
+      width: 70px;
+      height: 20px;
+      top: 7%;
+      opacity: 0;
+      cursor: pointer;
+
+    }
+
+
+    /* 햄버거 아이콘 */
+    #menu_hamburger span {
+      z-index: 2000000;
+
+      display: block;
+      width: 30px;
+      height: 3px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #1e4a89;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        opacity 0.55s ease;
+    }
+
+
+    #menu_hamburger span:first-child {
+      transform-origin: 0% 0%;
+    }
+
+    #menu_hamburger span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+
+    #menu_hamburger input[type="checkbox"]:checked~span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #232323;
+    }
+
+    #menu_hamburger input[type="checkbox"]:checked~span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    #menu_hamburger input[type="checkbox"]:checked~span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    /* 메뉴 박스 속성 */
+    #menu {
+      position: absolute;
+      width: 210px;
+      height: 500vh;
+      margin: -60px 0 0 -40px;
+      padding-right: 0px;
+      padding-left: 0px;
+      padding-top: 80px;
+
+
+      background: #ffffff;
+      box-shadow: 2px 2px 10px 0px #1e4a89;
+      list-style-type: none;
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+      transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+    }
+
+    #menu a {
+      text-decoration: none;
+      color: #000000;
+      transition: color 0.2s ease;
+      padding-left: 45px;
+    }
+
+    #menu a:hover {
+      color: #000000;
+      box-shadow: 5px 0px 0px 0px #1e4a89;
+    }
+
+    #menu li {
+      padding: 7px 0;
+      font-size: 19px;
+    }
+
+    #menu label {
+      padding-left: 40px;
+      padding-bottom: 10px;
+      padding-right: 70px;
+    }
+
+    label {
+      transition: color 0.2s ease;
+    }
+
+    label:hover {
+      color: #1e4a89;
+
+    }
+
+    .dropdown li {
+      width: 100%;
+
+    }
+
+    .dropdown a {
+      font-size: 16px;
+    }
+
+    /* 하위 메뉴 스타일 */
+    .submenu {
+      max-height: 0;
+      /* 기본 상태에서는 숨김 */
+      overflow: hidden;
+      /* 넘치는 내용 숨기기 */
+      opacity: 0;
+      /* 기본 상태에서 투명 */
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      /* 불릿 제거 */
+      transition: max-height 0.2s ease, opacity 0.5s ease;
+      /* 부드러운 전환 효과 */
+    }
+
+    /* 하위 카테고리 배경색 및 스타일 추가 */
+    .submenu li {
+      background-color: #a1a1a1;
+      padding: 0px;
+      margin: 0px;
+
+    }
+
+    /* 하위 카테고리 항목의 호버 효과 */
+    .submenu li:hover {
+      /* 호버 시 배경색 */
+
+    }
+
+    /* 드롭다운 기능: 클릭 시 하위 메뉴 표시 */
+    .dropdown>input:checked+ul.submenu {
+      max-height: 500px;
+      /* 하위 메뉴가 펼쳐질 때의 높이 */
+      opacity: 1;
+      /* 하위 메뉴가 펼쳐질 때 불투명 */
+    }
+
+    /* 숨겨진 체크박스 추가 */
+    .dropdown>label {
+      cursor: pointer;
+    }
+
+    /* 햄버거 메뉴 활성화 시 메뉴 보이게 설정 */
+    #menu_hamburger input[type="checkbox"]:checked~ul {
+      transform: none;
+    }
+
+    body>nav {
+      position: fixed;
+    }
+
+
+    /*👀최근 본 상품*/
+
+    /* 목록 화면 오른쪽에 고정 */
+    .recently-viewed {
+      /* 스크롤을 내려도 위치 고정 */
+      position: fixed;
+      /* 전체 화면의 중앙에 위치 */
+      top: 50%;
+      /* 화면의 오른쪽 끝에 배치 */
+      right: 50px;
+      /* 스크롤 내려도 중앙정렬 유지 */
+      transform: translateY(-50%);
+      /* 상품 목록 너비 */
+      width: 100px;
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      padding: 10px;
+      z-index: 100;
+      text-align: center;
+    }
+
+    /* 목록 제목 */
+    .recently-viewed h3 {
+      font-size: 14px;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    /* 상품들 보이는 공간 */
+    .recently-viewed ul {
+      list-style: none;
+      /* 불릿 제거 */
+      padding: 0;
+      margin: 0;
+      max-height: 320px;
+      overflow: hidden;
+    }
+
+    /* 상품 */
+    .recently-viewed ul li {
+      margin-bottom: 5px;
+    }
+
+    /* 마지막 상품 항목의 여백 제거 */
+    .recently-viewed ul li:last-child {
+      margin-bottom: 0;
+      /* 마지막 항목의 하단 여백 제거 */
+    }
+
+    /* 상품 링크 */
+    .recently-viewed ul li a {
+      display: block;
+      /* 이미지 전체 클릭 가능 */
+    }
+
+    /* 상품 이미지 */
+    .recently-viewed ul li img {
+      width: 100%;
+      height: auto;
+      /* 이미지 비율 유지하며 높이 자동 조정 */
+      border: 0px solid #ddd;
+      border-radius: 4px;
+      /* 이미지 모서리를 둥글게 설정 */
+    }
+
+    /* 화살표 버튼 */
+    .arrow {
+      cursor: pointer;
+      font-size: 20px;
+      margin: 3px 0;
+      color: #333;
+    }
+
+    /* 비활성화된 화살표 */
+    .arrow.disabled {
+      color: #ccc;
+      cursor: not-allowed;
+      /* 커서 비활성화 */
+      overflow: hidden;
+    }
+
+
+
+
+
+
+
+    /*👆top으로*/
+    .totop {
+      position: fixed;
+      right: 77px;
+      bottom: 30px;
+      z-index: 9999999;
+    }
+
+    /*스크롤시 부드럽게*/
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /*🦶푸터*/
+
+    .footer_wrap {
+      position: fixed;
+      bottom: 0px;
+      z-index: -1000;
+      height: 90px;
+
+    }
+
+
+    .footer_sub {
+      background: #ceddf8;
+      color: white;
+      position: fixed;
+
+      bottom: 0px;
+      z-index: -1000;
+
+      margin: 0px auto;
+
+    }
+
+
+    .wrap {
+      background-color: #ffffff;
+   
+    }
+
+
+
+    /*⏹메인박스*/
+    .container {
+      margin: 200px auto;   /*위아래 마진 개인조절*/
+      width: 73vw;
+      min-width: 1100px;    /*개인조절*/
+      text-align: center;   /**/
+
+      /* 높이는 X */
+
+
+    }
+
+
+
+    .content {
+      width: 100%;
+      background: #ffffff;
+      /* 내용 영역의 배경 색상 */
+      color: #000000;
+      /* 내용 영역의 텍스트 색상 */
+      display: flex;
+      margin: 100px auto 0 auto;
+      padding-bottom: 200px;
+      padding-top: 100px;
+    }
+
+
+
+    .content h2 {
+      margin: 20px auto 30px auto;
+    }
+
+    .tabs {
+      display: flex;
+      margin-bottom: 10px;
+      height: 50px;
+    }
+
+    /* .tab-button {
+      font-size: 17px;
+      flex: 1; */
+    /* 버튼 너비를 동일하게 만듦 */
+    /* padding: 10px 0;
+      cursor: pointer;
+      background-color: #f7f3f3;
+      border: none;
+      border-bottom: 2px solid transparent;
+      outline: none;
+      text-align: center;
+      transition: background-color 0.3s;
+
+    } */
+
+    .tab_element {
+      width: 100%;
+    }
+
+    #tab1 {
+      height: auto;
+      width: 50%;
+      border-right: thin solid #000000;
+      display: flex;
+      padding-bottom: 30px;
+      /*위에서 아래로 수직 배치*/
+      flex-direction: column;
+      /*중앙정렬*/
+      justify-content: center;
+    }
+
+    #tab2 {
+      height: auto;
+      width: 50%;
+      display: flex;
+      padding-bottom: 30px;
+
+      /*위에서 아래로 수직 배치*/
+      flex-direction: column;
+      /*중앙정렬*/
+      justify-content: center;
+
+    }
+
+    .tab-content {
+      padding: 20px;
+      border-top: none;
+      text-align: center;
+    }
+
+    /* .tab-content.active {
+            justify-content: center;
+            /* 수평 중앙 정렬 */
+    /* align-items: center; */
+    /* 수직 중앙 정렬 */
+    /* height: 300px;
+        width: 400px;
+        display: block;
+        padding-top: 30px;
+        } */
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 폼 요소를 중앙 정렬 */
+      width: 100%;
+      /* 폼의 너비를 100%로 설정 */
+      max-width: 460px;
+      /* 폼의 최대 너비 설정 */
+      padding-top: 35px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      width: 100%;
+      /* 인풋 박스를 폼 너비에 맞춤 */
+
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px 0px 5px 0px;
+      padding-top: 3px;
+
+    }
+
+    input {
+      width: 360px;
+      /* 인풋 박스 너비를 폼 너비에 맞춤 */
+      max-width: 360px;
+      /* 인풋 박스 최대 너비 설정 */
+      height: 45px;
+      /* 인풋 박스 높이 */
+      padding: 0 10px;
+      margin: 5px auto;
+      color: #000000;
+      /* 입력 박스 텍스트 색상 */
+      font-size: 17px;
+      /* 입력 박스 텍스트 크기 */
+      border-width: 0 0 1px;
+      background-color: #007bff17;
+    }
+
+    input:focus {
+      outline: none;
+      background-color: #007bff10;
+      border-color: #007bff;
+
+    }
+
+    .no-border {
+      border-width: 0;
+    }
+
+
+
+    .log-button {
+      margin-top: 35px;
+      padding: 15px;
+      width: 280px;
+      background-color: #ffffff;
+      color: #000000;
+      border: 1px solid #000000;
+      cursor: pointer;
+      font-size: 20px;
+      transition: background-color 0.3s;
+
+
+    }
+
+    .lookup-button {
+      margin-top: 35px;
+      padding: 15px;
+      width: 280px;
+      background-color: #ffffff;
+      color: #000000;
+      border: 1px solid #000000;
+      cursor: pointer;
+      font-size: 20px;
+      transition: background-color 0.3s;
+
+    }
+
+    button:hover {
+      background-color: rgb(0, 89, 255);
+      width: 280px;
+    }
+
+
+    /* 비밀번호 입력 박스와 버튼 스타일 */
+    .password-group {
+      margin-bottom: 5px;
+      /* display: flex; */
+      /* align-items: center; */
+      /* 비밀번호 입력 박스와 버튼을 수직으로 중앙 정렬 */
+      /* width: 100%; */
+      /* 비밀번호 입력 박스와 버튼의 너비를 100%로 설정 */
+    }
+
+    .password-container {
+      /* display: flex; */
+      /* align-items: center; */
+      /* 비밀번호 입력 박스와 버튼을 수직으로 중앙 정렬 */
+      /* width: 100%; */
+      /* 비밀번호 입력 박스와 버튼의 너비를 100%로 설정 */
+    }
+
+    .form-group {
+      float: left;
+      margin-bottom: 15px;
+
+    }
+
+
+
+    .forg {
+      padding-bottom: 0px 10px 0px 2px;
+    }
+
+    .Signw2 {
+      margin-top: 20px;
+      padding-bottom: 50px;
+    }
+
+    .Signw2 :hover {
+      text-decoration: underline #007bff;
+      margin: 0px;
+    }
+
+    .forg :hover {
+      text-decoration: underline #007bff;
+      margin: 0px;
+    }
+
+
+    a {
+      text-decoration: none;
+      /*하이퍼링크 밑줄 제거*/
+      color: inherit;
+      /*하이퍼 링크 색상 제거 */
+    }
+  </style>
+</head>
+<!--🌊헤더, 로고-->
+
+<body>
+
+  <header>
+    <h1>SOUNDLISH</h1>
+
+    <!-- 아이콘들 -->
+    <nav class="top_icons">
+      <div class="top_icon" id="search_icon">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+            id="Capa_1" x="0px" y="0px" viewBox="0 0 513.749 513.749" style="enable-background:new 0 0 513.749 513.749;"
+            xml:space="preserve" width="20" height="20">
+            <g>
+              <path
+                d="M504.352,459.061l-99.435-99.477c74.402-99.427,54.115-240.344-45.312-314.746S119.261-9.277,44.859,90.15 S-9.256,330.494,90.171,404.896c79.868,59.766,189.565,59.766,269.434,0l99.477,99.477c12.501,12.501,32.769,12.501,45.269,0 c12.501-12.501,12.501-32.769,0-45.269L504.352,459.061z M225.717,385.696c-88.366,0-160-71.634-160-160s71.634-160,160-160 s160,71.634,160,160C385.623,314.022,314.044,385.602,225.717,385.696z" />
+            </g>
+          </svg></a>
+      </div>
+      <div class="top_icon" id="login_icon">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+            id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+            xml:space="preserve" width="20" height="20">
+            <g>
+              <circle cx="256" cy="128" r="128" />
+              <path
+                d="M256,298.667c-105.99,0.118-191.882,86.01-192,192C64,502.449,73.551,512,85.333,512h341.333 c11.782,0,21.333-9.551,21.333-21.333C447.882,384.677,361.99,298.784,256,298.667z" />
+            </g>
+          </svg></a>
+      </div>
+      <div class="top_icon" id="basket_icon">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24"
+            width="20" height="20">
+            <path
+              d="M23.27,9.03c-.57-.66-1.4-1.03-2.27-1.03h-.09C20.41,3.51,16.59,0,11.97,0S3.53,3.51,3.03,8h-.06c-.87,0-1.7,.38-2.27,1.03C.13,9.69-.12,10.56,0,11.42l1.06,7.42c.42,2.94,2.97,5.15,5.94,5.15h9.97c2.97,0,5.52-2.21,5.94-5.15l1.06-7.42c.12-.86-.13-1.73-.7-2.39ZM11.97,2c3.52,0,6.43,2.61,6.92,6H5.05c.49-3.39,3.4-6,6.92-6Z" />
+          </svg></a>
+      </div>
+    </nav>
+
+  </header>
+
+
+
+  <!--🍔햄버거 메뉴바-->
+  <nav id="top">
+    <div id="menu_hamburger">
+      <!--삼단바모양-->
+      <input type="checkbox" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+      <!--메뉴 종류-->
+      <ul id="menu">
+        <li><a href="#">메인</a></li>
+
+        <li class="dropdown">
+          <label for="headphone-toggle">헤드폰</label>
+          <input type="checkbox" id="headphone-toggle">
+          <ul class="submenu">
+            <li><a href="#">전체</a></li>
+            <li><a href="#">헤드폰</a></li>
+            <li><a href="#">헤드폰 악세서리</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <label for="earphone-toggle">이어폰</label>
+          <input type="checkbox" id="earphone-toggle">
+          <ul class="submenu">
+            <li><a href="#">전체</a></li>
+            <li><a href="#">이어폰</a></li>
+            <li><a href="#">이어폰 악세서리</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <label for="speaker-toggle">스피커</label>
+          <input type="checkbox" id="speaker-toggle">
+          <ul class="submenu">
+            <li><a href="#">전체</a></li>
+            <li><a href="#">스피커</a></li>
+            <li><a href="#">스피커 악세서리</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <label for="bar-toggle">사운드바</label>
+          <input type="checkbox" id="bar-toggle">
+          <ul class="submenu">
+            <li><a href="#">전체</a></li>
+            <li><a href="#">사운드바</a></li>
+            <li><a href="#">사운드바 악세서리</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <label for="my-toggle">마이페이지</label>
+          <input type="checkbox" id="my-toggle">
+          <ul class="submenu">
+            <li><a href="#">배송정보</a></li>
+            <li><a href="#">내정보수정</a></li>
+            <li><a href="#">취소/교환/반품</a></li>
+            <li><a href="#">내 글 관리</a></li>
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <label for="info-toggle">고객지원</label>
+          <input type="checkbox" id="info-toggle">
+          <ul class="submenu">
+            <li><a href="#">공지 및 이벤트</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">1:1문의</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+
+  </nav>
+
+  <!--👀최근 본 상품-->
+  <div class="recently-viewed">
+    <h3>최근 본 상품</h3>
+    <div class="arrow up">&#9650;</div>
+    <ul>
+      <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품1"></a></li>
+      <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품2"></a></li>
+      <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품3"></a></li>
+      <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품4"></a></li>
+      <li><a href="#"><img src="https://via.placeholder.com/100" alt="상품5"></a></li>
+    </ul>
+    <div class="arrow down">&#9660;</div>
+  </div>
+
+
+  <!--👆top으로-->
+  <div class=" totop">
+    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" id="arrow-circle-down" viewBox="0 0 24 24" width="40"
+        height="40">
+        <path
+          d="M12,24A12,12,0,1,0,0,12,12.013,12.013,0,0,0,12,24ZM6.293,9.465,9.879,5.879h0a3,3,0,0,1,4.243,0l3.585,3.586.024.025a1,1,0,1,1-1.438,1.389L13,7.586,13.007,18a1,1,0,0,1-2,0L11,7.587,7.707,10.879A1,1,0,1,1,6.293,9.465Z" />
+      </svg></a>
+  </div>
+
+
+  <div class="wrap">
+
+
+    <div class="container">
+
+      <!-- <div class="tabs">
+      <button class="tab-button active" onclick="openTab('tab1')">아이디 찾기</button>
+      <button class="tab-button" onclick="openTab('tab2')">비밀번호 찾기</button>
+      </div> -->
+
+      <div class="content">
+        <div id="tab1">
+          <div class="tab_element">
+            <h2>아이디 찾기</h2>
+            <form id="loginForm" action="#" method="post">
+              <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="이름" required>
+              </div>
+              <div class="form-group password-group">
+                <div class="password-container">
+                  <input type="tel" id="phone" name="phone" placeholder="연락처" pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}"
+                    required>
+                </div>
+              </div>
+              <button type="submit" class="log-button">아이디 찾기</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="tab2">
+          <div class="tab_element">
+
+            <h2>비밀번호 찾기</h2>
+            <form id="orderLookupForm">
+              <div class="form-group">
+                <input type="text" id="login-ID" name="ID" placeholder="아이디" required>
+              </div>
+              <div class="form-group">
+                <input type="text" id="name-o" name="name" placeholder="이름" required>
+              </div>
+              <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="연락처" required>
+              </div>
+              <button type="submit" class="lookup-button">비밀번호 찾기</button>
+            </form>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+  <div class="footer_wrap">
+    <div class="footer_sub footer">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio repellendus, vel
+      quisquam
+      saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint adipisci
+      cumque.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio repellendus, vel
+      quisquam
+      saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint adipisci
+      cumque.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores esse, totam commodi optio repellendus, vel
+      quisquam
+      saepe consectetur ipsum quas corporis error laudantium at? Recusandae aspernatur fugiat sint adipisci
+      cumque.
+    </div>
+  </div>
+
+
+
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const upArrow = document.querySelector('.arrow.up'); // 위쪽 화살표 요소 선택
+      const downArrow = document.querySelector('.arrow.down'); // 아래쪽 화살표 요소 선택
+      const list = document.querySelector('.recently-viewed ul'); // 최근 본 상품 목록 선택
+      let scrollPosition = 0; // 현재 스크롤 위치 저장 변수
+      const itemHeight = 110; // 각 항목의 높이 (이미지 100px + 10px 마진)
+
+      // 화살표의 활성화/비활성화 상태를 업데이트하는 함수
+      function updateArrows() {
+        const maxScrollPosition = list.scrollHeight - list.clientHeight; // 최대 스크롤 가능한 위치 계산
+        upArrow.classList.toggle('disabled', scrollPosition <= 0); // 스크롤이 최상단이면 위쪽 화살표 비활성화
+        downArrow.classList.toggle('disabled', scrollPosition >= maxScrollPosition); // 스크롤이 최하단이면 아래쪽 화살표 비활성화
+      }
+
+      // 위쪽 화살표 클릭 시 동작
+      upArrow.addEventListener('click', function () {
+        if (scrollPosition > 0) { // 스크롤 위치가 최상단보다 아래에 있는 경우에만 실행
+          scrollPosition -= itemHeight; // 스크롤 위치를 한 항목만큼 위로 이동
+          list.scrollTo({ top: scrollPosition, behavior: 'smooth' }); // 스크롤을 부드럽게 이동
+          updateArrows(); // 화살표 상태 업데이트
+        }
+      });
+
+      // 아래쪽 화살표 클릭 시 동작
+      downArrow.addEventListener('click', function () {
+        const maxScrollPosition = list.scrollHeight - list.clientHeight; // 최대 스크롤 가능한 위치 계산
+        if (scrollPosition < maxScrollPosition) { // 스크롤 위치가 최하단보다 위에 있는 경우에만 실행
+          scrollPosition += itemHeight; // 스크롤 위치를 한 항목만큼 아래로 이동
+          list.scrollTo({ top: scrollPosition, behavior: 'smooth' }); // 스크롤을 부드럽게 이동
+          updateArrows(); // 화살표 상태 업데이트
+        }
+      });
+
+      updateArrows(); // 초기 상태에서 화살표 상태 업데이트
+    });
+
+
+
+
+
+
+
+    // function openTab(tabId) {
+    //   // 모든 탭 콘텐츠 숨기기
+    //   const tabContents = document.querySelectorAll('.tab-content');
+    //   tabContents.forEach(content => content.classList.remove('active'));
+
+    //   // 모든 탭 버튼에서 active 클래스 제거
+    //   const tabButtons = document.querySelectorAll('.tab-button');
+    //   tabButtons.forEach(button => button.classList.remove('active'));
+
+    //   // 클릭한 탭 콘텐츠 표시
+    //   document.getElementById(tabId).classList.add('active');
+
+    //   // 클릭한 탭 버튼에 active 클래스 추가
+    //   event.currentTarget.classList.add('active');
+    // }
+  </script>
+
+</body>
+
+
+</html>
