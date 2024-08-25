@@ -64,7 +64,7 @@ h1 {
   position: relative;
   top: -42px;
   left: 40px;
-  z-index: 10000 !important;
+  z-index: 10000;
   width: 50px;
   height: 100%;
 
@@ -170,7 +170,6 @@ label {
 
 label:hover {
   color: #1e4a89;
-
 }
 
 .dropdown li {
@@ -316,6 +315,7 @@ body>nav {
   overflow: hidden;
 }
 
+
 /*⏹메인박스*/
 .container {
   height: auto;
@@ -324,13 +324,83 @@ body>nav {
   padding: 0 auto;
 }
 
+/*상품 이름, 가격 설정*/
+.product_con{
+  margin: 1px 0;
+  font-size: 0.7rem;
+  color: #000000;
+  text-align: center;
+}
+
+/*🥇베스트 상품*/
+.bestproducts {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #ccc;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/*베스트 상품 목록*/
+.bestproduct {
+  overflow: hidden;
+}
+
+/*베스트 상품 사진 설정*/
+.bestproduct img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+}
+
+/*서브 카테고리*/
+.category_sub{
+  display: flex;
+  margin-bottom: 20px;
+  text-align: center;
+  gap: 10px;
+}
+
+.category_sub_box{
+width: 100%;
+border: 1px solid black;
+}
+
+.category_sub_box:hover
+{
+  background-color:#4676ce;
+  cursor: pointer;
+}
+
 
 /*🔍상세검색*/
+
+.searchbox {
+  display: flex;
+  align-items: flex-start; /* 버튼과 테이블을 상단에 정렬 */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search {
+  margin-right: 20px; /* 버튼과 테이블 사이의 간격 */
+  cursor: pointer; /* 클릭 가능 표시 */
+  flex-shrink: 0; /* 버튼이 테이블의 크기에 영향을 미치지 않도록 함 */
+}
+
+.table-container {
+  flex-grow: 1; /* 테이블이 남는 공간을 차지하도록 함 */
+  display: flex;
+  justify-content: center; /* 테이블을 중앙에 정렬 */
+}
+
 table {
   border: 1px solid black;
   border-collapse: collapse;
-  width: 100%;
-  /* 테이블이 전체 너비를 차지하도록 */
+  width: 100%; /* 부모 요소의 넓이 100% 차지 */
+  max-width: 100%; /* 최대 너비를 설정하여 테이블이 너무 넓어지지 않도록 함 */
 }
 
 td,
@@ -340,33 +410,25 @@ th {
   text-align: center;
 }
 
-.search {
-  display: inline-block;
-  cursor: pointer;
-  /* 클릭 가능 표시 */
-  margin-right: 20px;
+#searchTable {
+  display: none; /* 기본적으로 테이블을 숨김 */
 }
 
-#searchTable {
-  display: none;
-}
+
 
 /*1️⃣상품 목록 1번째줄-----------------------------------------------*/
 
+
 /*🎧헤드셋 상품 목록 1번째줄 전체 속성*/
 .products_line1 {
-  /*카테고리 사진 가로정렬*/
   display: flex;
-  /*상품 간 간격 동일하게*/
   justify-content: space-evenly;
-  padding-top: 5%;
+  margin-bottom: 20px;
 }
 
 /*상품 목록 1번째줄*/
 .product_line1 {
-  /*고정 ? */
   overflow: hidden;
-  text-align: center;
 }
 
 /*1번째 줄 상품 사진 설정*/
@@ -376,14 +438,6 @@ th {
   border: 1px solid #000000;
 }
 
-/*1번째 줄 상품 이름, 가격 속성*/
-.product_line1 h3,
-p {
-  font-family: 'GmarketSansMedium';
-  margin: 1px 0;
-  font-size: 0.7rem;
-  color: #000000;
-}
 
 /*2️⃣상품 목록 2번째줄-----------------------------------------------*/
 
@@ -391,13 +445,12 @@ p {
 .products_line2 {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 5%;
+  margin-bottom: 20px;
 }
 
 /*상품 목록 2번째줄*/
 .product_line2 {
   overflow: hidden;
-  text-align: center;
 }
 
 /*2번째 줄 상품 사진 설정*/
@@ -407,28 +460,18 @@ p {
   border: 1px solid #000000;
 }
 
-/*2번째 줄 상품 이름, 가격 속성*/
-.product_line2 h3,
-p {
-  font-family: 'GmarketSansMedium';
-  margin: 1px 0;
-  font-size: 0.7rem;
-  color: #000000;
-}
-
 /*3️⃣상품 목록 3번째줄-----------------------------------------------*/
 
 /*🎧헤드셋 상품 목록 3번째줄 전체 속성*/
 .products_line3 {
   display: flex;
   justify-content: space-evenly;
-  padding-top: 5%;
+  margin-bottom: 20px;
 }
 
 /*상품 목록 3번째줄*/
 .product_line3 {
   overflow: hidden;
-  text-align: center;
 }
 
 /*3번째 줄 상품 사진 설정*/
@@ -437,21 +480,6 @@ p {
   height: auto;
   border: 1px solid #000000;
 }
-
-/*3 번째 줄 상품 이름, 가격 속성*/
-.product_line3 h3,
-p {
-  font-family: 'GmarketSansMedium';
-  margin: 1px 0;
-  font-size: 0.7rem;
-  color: #000000;
-}
-
-
-
-
-
-
 
 
 
@@ -464,6 +492,7 @@ p {
   position: fixed;
   right: 77px;
   bottom: 30px;
+  z-index: 100;
 }
 
 /*스크롤시 부드럽게*/
@@ -474,8 +503,7 @@ html {
 
 /*🦶푸터*/
 footer {
-  /* position: absolute;
-  일단은 내용이 많이 있을 경우에는 없어야하고, 내용이 별로 없으면 있어야함*/
+  z-index: -100;
   bottom: 0;
   background: #4676ce;
   color: white;

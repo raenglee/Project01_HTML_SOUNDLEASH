@@ -1,5 +1,13 @@
+@font-face {
+  font-family: 'S-CoreDream-3Light';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*전체속성*/
 * {
+  font-family: 'S-CoreDream-3Light';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -14,11 +22,15 @@ a {
   color: #000000;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
 
-/* 헤더 스타일 */
+/* 🌊헤더 스타일 */
 header {
   height: 70px;
-  background-color: #e6e6e6;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,11 +45,17 @@ h1 {
   flex: 1;
   text-align: center;
   margin: 0;
+  color: #1e4a89;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .top_icons {
   display: flex;
   gap: 5px;
+  position: absolute;
+  right: 1%;
 }
 
 .top_icon {
@@ -53,9 +71,10 @@ h1 {
   position: relative;
   top: -42px;
   left: 40px;
-  z-index: 1;
+  z-index: 10000 !important;
   width: 50px;
   height: 100%;
+
 }
 
 /* 햄버거 메뉴바 인풋박스 */
@@ -119,6 +138,7 @@ h1 {
   padding-right: 0px;
   padding-left: 0px;
   padding-top: 80px;
+
 
   background: #ffffff;
   box-shadow: 2px 2px 10px 0px #1e4a89;
@@ -196,7 +216,6 @@ label:hover {
 /* 하위 카테고리 항목의 호버 효과 */
 .submenu li:hover {
   /* 호버 시 배경색 */
-
 }
 
 /* 드롭다운 기능: 클릭 시 하위 메뉴 표시 */
@@ -217,12 +236,12 @@ label:hover {
   transform: none;
 }
 
-
-
 body>nav {
   position: fixed;
 }
 
+
+/*👀최근 본 상품*/
 
 /* 목록 화면 오른쪽에 고정 */
 .recently-viewed {
@@ -239,7 +258,7 @@ body>nav {
   background-color: #ffffff;
   border: 1px solid #000000;
   padding: 10px;
-  z-index: 1000;
+  z-index: 1;
   text-align: center;
 }
 
@@ -300,13 +319,18 @@ body>nav {
   color: #ccc;
   cursor: not-allowed;
   /* 커서 비활성화 */
+  overflow: hidden;
 }
 
 /*⏹메인박스*/
 .container {
+  height: auto;
+  width: 73vw;
   margin: 0 auto;
   padding: 0 auto;
-  width: 73vw;
+}
+
+.container_con{
 }
 
 /*상품소개*/
@@ -420,10 +444,12 @@ body>nav {
 table {
   border: 1px solid black;
   border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
 
   td,
   th {
-    font-size: 0.9rem;
+    font-size: 13px;
     border: 1px solid black;
     padding: 10px;
   }
@@ -434,17 +460,19 @@ table {
   margin-bottom: 5px;
 }
 
-#return {
-  margin-top: 5px;
+/*반품/교환*/
+#return_name{
   margin-bottom: 5px;
 }
+.return {
+  margin-bottom: 20px;
+}
 
-
-/*푸터*/
+/*🦶푸터*/
 footer {
-  background-color: #33438b;
+  background-color: #4676ce;
   color: #ffffff;
-  margin-top: 30px;
+  bottom: 0;
 }
 
 /*👆top으로*/
