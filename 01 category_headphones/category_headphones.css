@@ -336,7 +336,7 @@ body>nav {
 .bestproducts {
   display: flex;
   justify-content: space-evenly;
-  background-color: white;
+  background-color: rgb(175, 168, 168);
   vertical-align: middle;
   padding: 20px;
   margin-bottom: 20px;
@@ -349,6 +349,8 @@ body>nav {
 
 /*베스트 상품 사진 설정*/
 .bestproduct img {
+  height: 255px;
+  width: 255px;
   max-width: 100%;
   height: auto;
   border: 1px solid #000000;
@@ -438,7 +440,7 @@ th {
 /*🎧헤드셋 상품 목록 1번째줄 전체 속성*/
 .products_line1 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -449,8 +451,9 @@ th {
 
 /*1번째 줄 상품 사진 설정*/
 .product_line1 img {
+  height: 255px;
+  width: 255px;
   max-width: 100%;
-  height: auto;
   border: 1px solid #000000;
 }
 
@@ -471,8 +474,9 @@ th {
 
 /*2번째 줄 상품 사진 설정*/
 .product_line2 img {
+  height: 255px;
+  width: 255px;
   max-width: 100%;
-  height: auto;
   border: 1px solid #000000;
 }
 
@@ -492,8 +496,9 @@ th {
 
 /*3번째 줄 상품 사진 설정*/
 .product_line3 img {
+  height: 255px;
+  width: 255px;
   max-width: 100%;
-  height: auto;
   border: 1px solid #000000;
 }
 
