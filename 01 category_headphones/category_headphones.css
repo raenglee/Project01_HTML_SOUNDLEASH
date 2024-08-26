@@ -349,8 +349,6 @@ body>nav {
 
 /*베스트 상품 사진 설정*/
 .bestproduct img {
-  height: 255px;
-  width: 255px;
   max-width: 100%;
   height: auto;
   border: 1px solid #000000;
@@ -451,9 +449,8 @@ th {
 
 /*1번째 줄 상품 사진 설정*/
 .product_line1 img {
-  height: 255px;
-  width: 255px;
   max-width: 100%;
+  height: auto;
   border: 1px solid #000000;
 }
 
@@ -476,6 +473,7 @@ th {
 .product_line2 img {
   height: 255px;
   width: 255px;
+  height: auto;
   max-width: 100%;
   border: 1px solid #000000;
 }
