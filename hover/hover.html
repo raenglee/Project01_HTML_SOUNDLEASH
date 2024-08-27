@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .bestproducts {
+      display: flex;
+      justify-content: space-evenly;
+      background-color: rgb(175, 168, 168);
+      vertical-align: middle;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    /*베스트 상품 목록*/
+    .bestproduct {
+      overflow: hidden;
+    }
+
+    /*베스트 상품 사진 설정*/
+    .bestproduct img {
+      height: 255px;
+      width: 255px;
+      height: auto;
+      max-width: 100%;
+      border: 1px solid #000000;
+    }
+
+
+
+
+
+
+    #appleblack {
+      position: relative;
+
+    }
+
+    #applewhite {
+      position: absolute;
+
+      top: 0px;
+      left: 0px;
+      display: none;
+    }
+
+    #appleblack img {
+
+      position: relative;
+
+    }
+
+    #applewhite img {
+      position: absolute;
+
+      top: 0p;
+      left: 0px;
+      display: none;
+    }
+
+    #appleblack:hover>#applewhite {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <p>BEST 상품</p>
+  <div class="bestproducts">
+    <div class="bestproduct"><a href="#">
+        <img id="appleblack" src="../y_img/headphones/[애플] 에어팟 맥스_검은색.jpg" width="255" height="255"
+          onmouseover="this.src='../y_img/headphones/[애플] 에어팟 맥스_실버.jpg'"
+          onmouseout="this.src='../y_img/headphones/[애플] 에어팟 맥스_검은색.jpg'">
+
+
+        <!-- <img id="applewhite" src="../y_img/headphones/[애플] 에어팟 맥스_실버.jpg" width="255" height="255"> -->
+        <div class="product_con">
+          <p><b>[애플] 에어팟 맥스</b></p>
+          <p>769,000원</p>
+        </div>
+      </a>
+    </div>
+    <div class="bestproduct"><a href="#">
+        <img src="../y_img/headphones/[보스] BOSE QC 45_검은색.jpg" width="255" height="255">
+        <div class="product_con">
+          <p><b>[보스] QC 45</b></p>
+          <p>255,500원</p>
+        </div>
+      </a>
+    </div>
+    <div class="bestproduct"><a href="#">
+        <img src="../y_img/headphones/[소니] WH-1000XM5_블랙.PNG" width="255" height="255">
+        <div class="product_con">
+          <p><b>[소니] WH-1000XM5</b></p>
+          <p>519,000원</p>
+        </div>
+      </a>
+    </div>
+    <div class="bestproduct"><a href="#">
+        <img id=beats src="../y_img/headphones/[비츠] Beats Studio Pro_블랙.jpg" width="255" height="255">
+        <div class="product_con">
+          <p><b>[비츠] Beats Studio Pro</b></p>
+          <p>449,000원</p>
+        </div>
+      </a>
+    </div>
+    <div class="bestproduct"><a href="#">
+        <img src="../y_img/headphones/[로지텍] G733 LIGHTSPEED_블랙.jpg" width="255" height="255">
+        <div class="product_con">
+          <p><b>[로지텍] G733 LIGHTSPEED</b></p>
+          <p>141,900원</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <script>
+    const beats = document.getElementById('beats');
+
+    beats.addEventListener('mouseover', (event) => {
+      beats.src = "../y_img/headphones/[비츠] Beats Studio Pro_샌드스톤.jpg"
+    });
+    beats.addEventListener('mouseout', (event) => {
+      beats.src = "../y_img/headphones/[비츠] Beats Studio Pro_블랙.jpg"
+    })
+
+
+  </script>
+
+</body>
+
+</html>

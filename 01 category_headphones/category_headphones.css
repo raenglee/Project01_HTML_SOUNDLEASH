@@ -349,8 +349,10 @@ body>nav {
 
 /*베스트 상품 사진 설정*/
 .bestproduct img {
-  max-width: 100%;
+  height: 255px;
+  width: 255px;
   height: auto;
+  max-width: 100%;
   border: 1px solid #000000;
 }
 
@@ -383,12 +385,12 @@ body>nav {
   margin-bottom: 20px;
 }
 
-.searchtitle {
+#searchLabel {
   font-size: 15px;
   padding-right: 15px;
 }
 
-.searchtitle :hover {
+#searchLabel :hover {
   cursor: pointer;
 }
 
@@ -421,6 +423,7 @@ table {
 td,
 th {
   border: 1px solid black;
+  font-size: 14px;
   padding: 10px;
   text-align: center;
 }
@@ -449,8 +452,10 @@ th {
 
 /*1번째 줄 상품 사진 설정*/
 .product_line1 img {
-  max-width: 100%;
+  height: 255px;
+  width: 255px;
   height: auto;
+  max-width: 100%;
   border: 1px solid #000000;
 }
 
@@ -460,7 +465,7 @@ th {
 /*🎧헤드셋 상품 목록 2번째줄 전체 속성*/
 .products_line2 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -483,7 +488,7 @@ th {
 /*🎧헤드셋 상품 목록 3번째줄 전체 속성*/
 .products_line3 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   margin-bottom: 20px;
 }
 
@@ -496,12 +501,10 @@ th {
 .product_line3 img {
   height: 255px;
   width: 255px;
+  height: auto;
   max-width: 100%;
   border: 1px solid #000000;
 }
-
-
-
 
 
 
