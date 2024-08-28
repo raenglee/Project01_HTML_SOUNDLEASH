@@ -362,10 +362,13 @@ body>nav {
   margin-bottom: 20px;
   text-align: center;
   gap: 10px;
+
 }
 
 .category_sub_box {
   width: 100%;
+  font-size: 15px;
+  padding: 5px;
   border: 1px solid black;
 }
 
@@ -377,21 +380,30 @@ body>nav {
 
 /*🔍상세검색*/
 
-.searchbox {
+.searchbox_t {
   display: flex;
+}
+
+.searchbox {
+  display: block;
   align-items: flex-start;
-  /* 버튼과 테이블을 상단에 정렬 */
   width: 100%;
   margin-bottom: 20px;
 }
 
 #searchLabel {
+  border: 1px solid black;
+  background-color: #ffffff;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
   font-size: 15px;
-  padding-right: 15px;
 }
 
 #searchLabel :hover {
-  cursor: pointer;
+  background-color: #4676ce;
 }
 
 .search {
@@ -433,7 +445,10 @@ th {
   /* 기본적으로 테이블을 숨김 */
 }
 
-
+/*상품 전체 글씨 크기*/
+.product_con {
+  font-size: 14px;
+}
 
 /*1️⃣상품 목록 1번째줄-----------------------------------------------*/
 
@@ -448,6 +463,7 @@ th {
 /*상품 목록 1번째줄*/
 .product_line1 {
   overflow: hidden;
+
 }
 
 /*1번째 줄 상품 사진 설정*/
@@ -458,6 +474,7 @@ th {
   max-width: 100%;
   border: 1px solid #000000;
 }
+
 
 
 /*2️⃣상품 목록 2번째줄-----------------------------------------------*/
