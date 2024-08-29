@@ -22,6 +22,11 @@ a {
   color: #000000;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 /* 🌊헤더 스타일 */
 header {
   height: 70px;
@@ -34,21 +39,25 @@ header {
   margin-top: 0;
   /* 헤더 아래에 빈 공간이 생길 경우 margin-bottom 설정 */
   margin: 0;
+
 }
 
 h1 {
   flex: 1;
   text-align: center;
   margin: 0;
-  color: #1e4a89;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.logo {
+  color: #1e4a89;
+}
+
 .top_icons {
   display: flex;
-  gap: 5px;
+  gap: 11px;
   position: absolute;
   right: 1%;
 }
@@ -57,6 +66,8 @@ h1 {
   display: flex;
   align-items: center;
 }
+
+
 
 /* 🍔햄버거 메뉴바 전체 설정 */
 #menu_hamburger {
@@ -71,20 +82,37 @@ h1 {
 }
 
 /* 햄버거 메뉴바 인풋박스 */
-#menu_hamburger input[type="checkbox"] {
+#menu-toggle {
   width: 70px;
   height: 70px;
   position: absolute;
   cursor: pointer;
   opacity: 0;
-  z-index: 200;
+  z-index: 2000000000;
   top: -30px;
   left: -20px;
   right: 20px;
 }
 
+.dropdown {
+  position: relative;
+}
+
+#menu input[type="checkbox"] {
+  position: absolute;
+  width: 70px;
+  height: 20px;
+  top: 7%;
+  opacity: 0;
+  cursor: pointer;
+
+}
+
+
 /* 햄버거 아이콘 */
 #menu_hamburger span {
+  z-index: 2000000;
+
   display: block;
   width: 30px;
   height: 3px;
@@ -95,7 +123,6 @@ h1 {
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
     opacity 0.55s ease;
-  z-index: 100;
 }
 
 
@@ -110,7 +137,7 @@ h1 {
 #menu_hamburger input[type="checkbox"]:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: #1e4a89;
 }
 
 #menu_hamburger input[type="checkbox"]:checked~span:nth-last-child(3) {
@@ -126,14 +153,14 @@ h1 {
 #menu {
   position: absolute;
   width: 210px;
-  height: 200vh;
+  height: 500vh;
   margin: -60px 0 0 -40px;
   padding-right: 0px;
   padding-left: 0px;
   padding-top: 80px;
 
+
   background: #ffffff;
-  box-shadow: 2px 2px 10px 0px #1e4a89;
   list-style-type: none;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
@@ -148,19 +175,22 @@ h1 {
 }
 
 #menu a:hover {
-  color: #000000;
-  box-shadow: 5px 0px 0px 0px #1e4a89;
+  color: #1e4a89;
 }
 
 #menu li {
-  padding: 7px 0;
+  padding: 10px 0;
   font-size: 19px;
+}
+
+#menu li :hover {
+  color: #1e4a89;
 }
 
 #menu label {
   padding-left: 40px;
-  padding-bottom: 10px;
   padding-right: 70px;
+  color: #000000;
 }
 
 label {
@@ -169,6 +199,7 @@ label {
 
 label:hover {
   color: #1e4a89;
+
 }
 
 .dropdown li {
@@ -198,7 +229,6 @@ label:hover {
 
 /* 하위 카테고리 배경색 및 스타일 추가 */
 .submenu li {
-  background-color: #a1a1a1;
   padding: 0px;
   margin: 0px;
 
@@ -332,10 +362,16 @@ body>nav {
 }
 
 /*🥇베스트 상품*/
+
+#best_text {
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
 .bestproducts {
   display: flex;
   justify-content: space-evenly;
-  background-color: rgb(175, 168, 168);
+  background-color: #1e4b89a8;
   vertical-align: middle;
   padding: 20px;
   margin-bottom: 20px;
@@ -348,6 +384,8 @@ body>nav {
 
 /*베스트 상품 사진 설정*/
 .bestproduct img {
+  margin-bottom: 5px;
+  display: block;
   height: 255px;
   width: 255px;
   height: auto;
@@ -360,19 +398,20 @@ body>nav {
   display: flex;
   margin-bottom: 20px;
   text-align: center;
-  gap: 10px;
-
+  gap: 30px;
+  justify-content: center;
 }
 
 .category_sub_box {
-  width: 100%;
+  /* width: 100%; */
+  width: 200px;
   font-size: 15px;
   padding: 5px;
   border: 1px solid black;
 }
 
 .category_sub_box:hover {
-  background-color: #4676ce;
+  background-color: #1e4a89;
   cursor: pointer;
 }
 
@@ -468,12 +507,13 @@ th {
   width: 255px;
   height: auto;
   max-width: 100%;
-
+  margin-bottom: 20px;
 
 }
 
 /*1번째 줄 상품 사진 설정*/
 .product_line img {
+  margin-bottom: 5px;
   display: block;
   height: auto;
   max-width: 100%;
