@@ -157,12 +157,12 @@
   <div class="container">
 
     <!--🥇베스트 상품-->
-    <p>BEST 상품</p>
+    <p id="best_text">BEST</p>
     <div class="bestproducts">
       <div class="bestproduct"><a href="#">
-          <img id="best_airpodmax" src="../y_img/headphones/[애플] 에어팟 맥스_검은색.jpg" width="255" height="255"
-            onmouseover="this.src='../y_img/headphones/[애플] 에어팟 맥스_실버.jpg'"
-            onmouseout="this.src='../y_img/headphones/[애플] 에어팟 맥스_검은색.jpg'">
+          <img id="best_airpodmax" src="../y_img/headphones/[애플] 에어팟 맥스_실버.jpg" width="255" height="255"
+            onmouseover="this.src='../y_img/headphones/[애플] 에어팟 맥스_검은색.jpg'"
+            onmouseout="this.src='../y_img/headphones/[애플] 에어팟 맥스_실버.jpg'">
           <div class="product_con">
             <p><b>[애플] 에어팟 맥스</b></p>
             <p>769,000원</p>
@@ -180,12 +180,12 @@
         </a>
       </div>
       <div class="bestproduct"><a href="#">
-          <img id="best_sony1000" src="../y_img/headphones/[소니] WH-1000XM5_블랙.PNG" width="255" height="255"
-            onmouseover="this.src='../y_img/headphones/[소니] WH-1000XM5_실버.PNG'"
-            onmouseout="this.src='../y_img/headphones/[소니] WH-1000XM5_블랙.PNG'">
+          <img id="best_sony1000" src="../y_img/headphones/[JBL] T670NC_라일락.png" width="255" height="255"
+            onmouseover="this.src='../y_img/headphones/[JBL] T670NC_블랙.png'"
+            onmouseout="this.src='../y_img/headphones/[JBL] T670NC_라일락.png'">
           <div class="product_con">
-            <p><b>[소니] WH-1000XM5</b></p>
-            <p>519,000원</p>
+            <p><b>[JBL] T670NC</b></p>
+            <p>109,000원</p>
           </div>
         </a>
       </div>
@@ -214,13 +214,19 @@
     <!--서브 카테고리-->
     <div class="category_sub">
       <div class="category_sub_box">
-        <p>전체</p>
+        <a href="#">
+          <p>전체</p>
+        </a>
       </div>
       <div class="category_sub_box">
-        <p>헤드폰</p>
+        <a href="#">
+          <p>헤드폰</p>
+        </a>
       </div>
       <div class="category_sub_box">
-        <p>악세사리</p>
+        <a href="#">
+          <p>악세사리</p>
+        </a>
       </div>
     </div>
 
@@ -244,7 +250,6 @@
               <label><input type="checkbox" id="search_"> 소니</label>
               <label><input type="checkbox" id="search_"> 베이어 다이나믹</label>
               <label><input type="checkbox" id="search_"> 비츠</label>
-
             </td>
           </tr>
           <tr>
@@ -317,6 +322,16 @@
     <!--1️⃣🎧헤드셋 상품 목록-->
     <div class="products_line">
       <div class="product_line"><a href="#">
+          <img id="airpodmax" src="../y_img/headphones/[애플] 에어팟 맥스_실버.jpg" width="255" height="255"
+            onmouseover="this.src='../y_img/headphones/[애플] 에어팟 맥스_검은색.jpg'"
+            onmouseout="this.src='../y_img/headphones/[애플] 에어팟 맥스_실버.jpg'">
+          <div class="product_con">
+            <p><b>[애플] 에어팟 맥스</b></p>
+            <p>769,000원</p>
+          </div>
+        </a>
+      </div>
+      <div class="product_line"><a href="#">
           <img id="Corsair" src="../y_img/headphones/[커세어] HS80_검은색.jpg" width="255" height="255"
             onmouseover="this.src='../y_img/headphones/[커세어] HS80_흰색.jpg'"
             onmouseout="this.src='../y_img/headphones/[커세어] HS80_검은색.jpg'">
@@ -339,19 +354,9 @@
         </a>
       </div>
       <div class="product_line"><a href="#">
-          <img id="airpodmax" src="../y_img/headphones/[애플] 에어팟 맥스_검은색.jpg" width="255" height="255"
-            onmouseover="this.src='../y_img/headphones/[애플] 에어팟 맥스_실버.jpg'"
-            onmouseout="this.src='../y_img/headphones/[애플] 에어팟 맥스_검은색.jpg'">
-          <div class="product_con">
-            <p><b>[애플] 에어팟 맥스</b></p>
-            <p>769,000원</p>
-          </div>
-        </a>
-      </div>
-      <div class="product_line"><a href="#">
-          <img id="jbl" src="../y_img/headphones/[삼성전자 JBL] T720BT_블랙.jpg" width="255" height="255"
-            onmouseover="this.src='../y_img/headphones/[삼성전자 JBL] T720BT_화이트.jpg'"
-            onmouseout="this.src='../y_img/headphones/[삼성전자 JBL] T720BT_블랙.jpg'">
+          <img id="jbl" src="../y_img/headphones/[JBL] T720BT_화이트.jpg" width="255" height="255"
+            onmouseover="this.src='../y_img/headphones/[JBL] T720BT_블랙.jpg'"
+            onmouseout="this.src='../y_img/headphones/[JBL] T720BT_화이트.jpg'">
           <div class="product_con">
             <p><b>[JBL] Tune 720 BT</b></p>
             <p><s>99,000원</s></p>
@@ -368,6 +373,16 @@
           </div>
         </a>
       </div>
+      <div class="bestproduct"><a href="#">
+          <img id="best_sony1000" src="../y_img/headphones/[JBL] T670NC_라일락.png" width="255" height="255"
+            onmouseover="this.src='../y_img/headphones/[JBL] T670NC_블랙.png'"
+            onmouseout="this.src='../y_img/headphones/[JBL] T670NC_라일락.png'">
+          <div class="product_con">
+            <p><b>[JBL] T670NC</b></p>
+            <p>109,000원</p>
+          </div>
+        </a>
+      </div>
       <div class="product_line"><a href="#">
           <img id="beatspro" src="../y_img/headphones/[비츠] Beats Studio Pro_블랙.jpg" width="255" height="255"
             onmouseover="this.src='../y_img/headphones/[비츠] Beats Studio Pro_샌드스톤.jpg'"
@@ -380,24 +395,13 @@
         </a>
       </div>
       <div class="product_line"><a href="#">
-          <img id="shureaonic" src="../y_img/headphones/[슈어] SHURE AONIC 50 무선 노이즈 캔슬링 헤드폰_브라운.jpg" width="255"
-            height="255" onmouseover="this.src='../y_img/headphones/[슈어] SHURE AONIC 50 무선 노이즈 캔슬링 헤드폰_화이트.jpg'"
-            onmouseout="this.src='../y_img/headphones/[슈어] SHURE AONIC 50 무선 노이즈 캔슬링 헤드폰_브라운.jpg'">
+          <img id="shureaonic" src="../y_img/headphones/[브리츠] W800BT QPlus_레드.jpg" width="255" height="255"
+            onmouseover="this.src='../y_img/headphones/[브리츠] W800BT QPlus_흰색.jpg'"
+            onmouseout="this.src='../y_img/headphones/[브리츠] W800BT QPlus_레드.jpg'">
           <div class="product_con">
-            <p><b>[슈어] AONIC 50</b></p>
+            <p><b>[브리츠] W800BT QPlus</b></p>
             <p><s>521,000원</s></p>
             <p><b>품절</b></p>
-          </div>
-        </a>
-      </div>
-      <div class="product_line"><a href="#">
-          <img id="sennheiser450" src="../y_img/headphones/[젠하이저] HD 450BT_블랙.png" width="255" height="255"
-            onmouseover="this.src='../y_img/headphones/[젠하이저] HD 450BT_화이트.jpg'"
-            onmouseout="this.src='../y_img/headphones/[젠하이저] HD 450BT_블랙.png'">
-          <div class="product_con">
-            <p><b>[젠하이저] HD 450BT</b></p>
-            <p><s>249,000원</s></p>
-            <p>179,000원</p>
           </div>
         </a>
       </div>
@@ -419,20 +423,21 @@
           </div>
         </a>
       </div>
-      <div class="product_line"><a href="#">
-          <img id="sony1000" src="../y_img/headphones/[소니] WH-1000XM5_블랙.PNG" width="255" height="255"
-            onmouseover="this.src='../y_img/headphones/[소니] WH-1000XM5_실버.PNG'"
-            onmouseout="this.src='../y_img/headphones/[소니] WH-1000XM5_블랙.PNG'">
-          <div class="product_con">
-            <p><b>[소니] WH-1000XM5</b></p>
-            <p>519,000원</p>
-          </div>
-        </a>
-      </div>
     </div>
   </div>
 
 
+  <!-- <div class="product_line"><a href="#">
+          <img id="sennheiser450" src="../y_img/headphones/[젠하이저] HD 450BT_블랙.png" width="255" height="255"
+            onmouseover="this.src='../y_img/headphones/[젠하이저] HD 450BT_화이트.jpg'"
+            onmouseout="this.src='../y_img/headphones/[젠하이저] HD 450BT_블랙.png'">
+          <div class="product_con">
+            <p><b>[젠하이저] HD 450BT</b></p>
+            <p><s>249,000원</s></p>
+            <p>179,000원</p>
+          </div>
+        </a>
+      </div> -->
 
 
 

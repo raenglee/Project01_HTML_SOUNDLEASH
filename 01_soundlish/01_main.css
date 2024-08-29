@@ -432,7 +432,9 @@ html {
 }
 
 .noevnet_title {
+  border-top: 2px solid #000000;
   color: #1e4a89;
+  padding-top: 10px;
   padding-bottom: 10px;
 }
 
@@ -484,11 +486,12 @@ html {
   text-align: center;
   line-height: 70px;
   width: 21%;
+  border-top: 2px solid #000000;
 
 }
 
 .go_headphones :hover {
-  background-color: #ffffff;
+  background-color: #1e4b8954
 }
 
 .go_earphones {
@@ -496,10 +499,11 @@ html {
   text-align: center;
   line-height: 70px;
   width: 21%;
+  border-top: 2px solid #000000;
 }
 
 .go_earphones :hover {
-  background-color: hsla(0, 0%, 100%, 0.123);
+  background-color: #1e4b8954
 }
 
 .go_speaker {
@@ -507,10 +511,11 @@ html {
   text-align: center;
   line-height: 70px;
   width: 21%;
+  border-top: 2px solid #000000;
 }
 
 .go_speaker :hover {
-  background-color: hsla(0, 0%, 100%, 0.123);
+  background-color: #1e4b8954
 }
 
 .go_soundbar {
@@ -518,10 +523,11 @@ html {
   text-align: center;
   line-height: 70px;
   width: 21%;
+  border-top: 2px solid #000000;
 }
 
 .go_soundbar :hover {
-  background-color: hsla(0, 0%, 100%, 0.123);
+  background-color: #1e4b8954
 }
 
 /*🥇베스트상품*/
@@ -550,6 +556,7 @@ html {
   max-width: 100%;
   height: auto;
   border: 1px solid #000000;
+
 }
 
 /*베스트상품 이름, 가격*/
@@ -596,7 +603,7 @@ html {
 }
 
 .introduce_rent:hover {
-  color: #4676ce;
+  color: #1e4a89;
   font-weight: bolder;
 }
 
@@ -605,7 +612,7 @@ html {
 }
 
 .introduce_sell:hover {
-  color: #4676ce;
+  color: #1e4a89;
   font-weight: bolder;
 }
 
@@ -640,6 +647,10 @@ html {
 .gogo {
   float: left;
   font-size: 13px;
+}
+
+.gogo:hover {
+  color: #1e4a89;
 }
 
 #news_bose {

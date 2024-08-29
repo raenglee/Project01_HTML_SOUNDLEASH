@@ -362,10 +362,16 @@ body>nav {
 }
 
 /*🥇베스트 상품*/
+
+#best_text {
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+
 .bestproducts {
   display: flex;
   justify-content: space-evenly;
-  background-color: rgb(175, 168, 168);
+  background-color: #1e4b89a8;
   vertical-align: middle;
   padding: 20px;
   margin-bottom: 20px;
@@ -378,6 +384,8 @@ body>nav {
 
 /*베스트 상품 사진 설정*/
 .bestproduct img {
+  margin-bottom: 5px;
+  display: block;
   height: 255px;
   width: 255px;
   height: auto;
@@ -390,19 +398,20 @@ body>nav {
   display: flex;
   margin-bottom: 20px;
   text-align: center;
-  gap: 10px;
-
+  gap: 30px;
+  justify-content: center;
 }
 
 .category_sub_box {
-  width: 100%;
+  /* width: 100%; */
+  width: 200px;
   font-size: 15px;
   padding: 5px;
   border: 1px solid black;
 }
 
 .category_sub_box:hover {
-  background-color: #4676ce;
+  background-color: #1e4a89;
   cursor: pointer;
 }
 
@@ -498,12 +507,13 @@ th {
   width: 255px;
   height: auto;
   max-width: 100%;
-
+  margin-bottom: 20px;
 
 }
 
 /*1번째 줄 상품 사진 설정*/
 .product_line img {
+  margin-bottom: 5px;
   display: block;
   height: auto;
   max-width: 100%;
