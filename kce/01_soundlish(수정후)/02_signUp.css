@@ -1,0 +1,674 @@
+        @font-face {
+          font-family: 'S-CoreDream-3Light';
+          src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+        }
+
+        * {
+          font-family: 'S-CoreDream-3Light';
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
+
+
+
+        body {
+          margin: 0;
+          padding: 0;
+        }
+
+
+
+
+        #color-overlay {
+          position: fixed;
+          top: 0;
+          left: 210px; /* #menu의 너비만큼 이동 */
+          width: 100%;
+          height: 100%;
+          background-color: #00000052; /* 기본 색상은 투명 */
+          display: none; /* 기본적으로 숨김 */
+          z-index: 99;
+          /* transition: background-color 0.1s; 색상 변경에 대한 트랜지션 적용 */
+        }
+        
+        
+
+
+        ul li {
+          list-style: none;
+        }
+
+        a {
+          text-decoration: none;
+          color: #000000;
+        }
+
+
+
+        /* 🌊헤더 스타일 */
+        header {
+          height: 70px;
+          background-color: #ffffff;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          /* 헤더 위에 빈 공간 없애기 위해 margin-top 설정 */
+          margin-top: 0;
+          /* 헤더 아래에 빈 공간이 생길 경우 margin-bottom 설정 */
+          margin: 0;
+
+        }
+
+        h1 {
+          flex: 1;
+          text-align: center;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .logo {
+          color: #1e4a89;
+        }
+
+        .top_icons {
+          display: flex;
+          gap: 11px;
+          position: absolute;
+          right: 1%;
+        }
+
+        .top_icon {
+          display: flex;
+          align-items: center;
+        }
+
+
+
+        /* 🍔햄버거 메뉴바 전체 설정 */
+        #menu_hamburger {
+          display: block;
+          position: relative;
+          top: -42px;
+          left: 40px;
+          z-index: 10000;
+          width: 50px;
+          height: 100%;
+
+        }
+
+        /* 햄버거 메뉴바 인풋박스 */
+        #menu-toggle {
+          width: 70px;
+          height: 70px;
+          position: absolute;
+          cursor: pointer;
+          opacity: 0;
+          z-index: 2000000000;
+          top: -30px;
+          left: -20px;
+          right: 20px;
+        }
+
+        .dropdown {
+          position: relative;
+        }
+
+        #menu input[type="checkbox"] {
+          position: absolute;
+          width: 70px;
+          height: 20px;
+          top: 7%;
+          opacity: 0;
+          cursor: pointer;
+
+        }
+
+
+        /* 햄버거 아이콘 */
+        #menu_hamburger span {
+          z-index: 2000000;
+
+          display: block;
+          width: 30px;
+          height: 3px;
+          margin-bottom: 5px;
+          position: relative;
+          background: #1e4a89;
+          transform-origin: 4px 0px;
+          transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+            background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+            opacity 0.55s ease;
+        }
+
+
+        #menu_hamburger span:first-child {
+          transform-origin: 0% 0%;
+        }
+
+        #menu_hamburger span:nth-last-child(2) {
+          transform-origin: 0% 100%;
+        }
+
+        #menu_hamburger input[type="checkbox"]:checked~span {
+          opacity: 1;
+          transform: rotate(45deg) translate(-2px, -1px);
+          background: #1e4a89;
+        }
+
+        #menu_hamburger input[type="checkbox"]:checked~span:nth-last-child(3) {
+          opacity: 0;
+          transform: rotate(0deg) scale(0.2, 0.2);
+        }
+
+        #menu_hamburger input[type="checkbox"]:checked~span:nth-last-child(2) {
+          transform: rotate(-45deg) translate(0, -1px);
+        }
+
+        /* 메뉴 박스 속성 */
+        #menu {
+          position: absolute;
+          width: 210px;
+          height: 500vh;
+          margin: -60px 0 0 -40px;
+          padding-right: 0px;
+          padding-left: 0px;
+          padding-top: 80px;
+
+
+          background: #ffffff;
+          list-style-type: none;
+          transform-origin: 0% 0%;
+          transform: translate(-100%, 0);
+          transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+        }
+
+        #menu a {
+          text-decoration: none;
+          color: #000000;
+          transition: color 0.2s ease;
+          padding-left: 45px;
+        }
+
+        #menu a:hover {
+          color: #1e4a89;
+        }
+
+        #menu li {
+          padding: 10px 0;
+          font-size: 19px;
+        }
+
+        #menu li :hover {
+          color: #1e4a89;
+        }
+
+        #menu label {
+          padding-left: 40px;
+          padding-right: 70px;
+          color: #000000;
+        }
+
+        label {
+          transition: color 0.2s ease;
+        }
+
+        label:hover {
+          color: #1e4a89;
+
+        }
+
+        .dropdown li {
+          width: 100%;
+
+        }
+
+        .dropdown a {
+          font-size: 16px;
+        }
+
+        /* 하위 메뉴 스타일 */
+        .submenu {
+          max-height: 0;
+          /* 기본 상태에서는 숨김 */
+          overflow: hidden;
+          /* 넘치는 내용 숨기기 */
+          opacity: 0;
+          /* 기본 상태에서 투명 */
+          padding: 0;
+          margin: 0;
+          list-style-type: none;
+          /* 불릿 제거 */
+          transition: max-height 0.2s ease, opacity 0.5s ease;
+          /* 부드러운 전환 효과 */
+        }
+
+        /* 하위 카테고리 배경색 및 스타일 추가 */
+        .submenu li {
+          padding: 0px;
+          margin: 0px;
+
+        }
+
+        /* 하위 카테고리 항목의 호버 효과 */
+        .submenu li:hover {
+          /* 호버 시 배경색 */
+
+        }
+
+        /* 드롭다운 기능: 클릭 시 하위 메뉴 표시 */
+        .dropdown>input:checked+ul.submenu {
+          max-height: 500px;
+          /* 하위 메뉴가 펼쳐질 때의 높이 */
+          opacity: 1;
+          /* 하위 메뉴가 펼쳐질 때 불투명 */
+        }
+
+        /* 숨겨진 체크박스 추가 */
+        .dropdown>label {
+          cursor: pointer;
+        }
+
+        /* 햄버거 메뉴 활성화 시 메뉴 보이게 설정 */
+        #menu_hamburger input[type="checkbox"]:checked~ul {
+          transform: none;
+        }
+
+        body>nav {
+          position: fixed;
+        }
+
+        /*👀최근 본 상품*/
+
+        /* 목록 화면 오른쪽에 고정 */
+        .recently-viewed {
+          /* 스크롤을 내려도 위치 고정 */
+          position: fixed;
+          /* 전체 화면의 중앙에 위치 */
+          top: 50%;
+          /* 화면의 오른쪽 끝에 배치 */
+          right: 50px;
+          /* 스크롤 내려도 중앙정렬 유지 */
+          transform: translateY(-50%);
+          /* 상품 목록 너비 */
+          width: 100px;
+          background-color: #ffffff;
+          border: 1px solid #000000;
+          padding: 10px;
+          z-index: 99;
+          text-align: center;
+        }
+
+        /* 목록 제목 */
+        .recently-viewed h3 {
+          font-size: 14px;
+          margin: 0;
+          margin-bottom: 8px;
+        }
+
+        /* 상품들 보이는 공간 */
+        .recently-viewed ul {
+          list-style: none;
+          /* 불릿 제거 */
+          padding: 0;
+          margin: 0;
+          max-height: 320px;
+          overflow: hidden;
+        }
+
+        /* 상품 */
+        .recently-viewed ul li {
+          margin-bottom: 5px;
+        }
+
+        /* 마지막 상품 항목의 여백 제거 */
+        .recently-viewed ul li:last-child {
+          margin-bottom: 0;
+          /* 마지막 항목의 하단 여백 제거 */
+        }
+
+        /* 상품 링크 */
+        .recently-viewed ul li a {
+          display: block;
+          /* 이미지 전체 클릭 가능 */
+        }
+
+        /* 상품 이미지 */
+        .recently-viewed ul li img {
+          width: 100%;
+          height: auto;
+          /* 이미지 비율 유지하며 높이 자동 조정 */
+          border: 0px solid #ddd;
+          border-radius: 4px;
+          /* 이미지 모서리를 둥글게 설정 */
+        }
+
+        /* 화살표 버튼 */
+        .arrow {
+          cursor: pointer;
+          font-size: 20px;
+          margin: 3px 0;
+          color: #333;
+        }
+
+        /* 비활성화된 화살표 */
+        .arrow.disabled {
+          color: #ccc;
+          cursor: not-allowed;
+          /* 커서 비활성화 */
+          overflow: hidden;
+        }
+
+
+        .wrap {
+          background-color: #ffffff;
+        }
+
+
+
+        /*⏹메인박스*/
+        .container {
+          background-color: #ffffff;
+          margin: 100px auto;
+          /*위아래 마진 개인조절*/
+          width: 73vw;
+          min-width: 800px;
+          /*개인조절(저는 가장 넓은 요소의 픽셀에 맞췃습니다)*/
+        }
+
+
+        /*👆top으로*/
+        .totop {
+          position: fixed;
+          right: 77px;
+          bottom: 30px;
+          z-index: 9999999;
+        }
+
+        /*스크롤시 부드럽게*/
+        html {
+          scroll-behavior: smooth;
+        }
+
+        /*🦶푸터~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+        .footer_wrap {
+          position: fixed;
+          /*<<<<<<<<*/
+          bottom: 0px;
+          z-index: -1000;
+          /*<<<<<<<<*/
+          margin: 0px auto;
+          /*<<<<<<<<*/
+        }
+
+
+        .footer_sub {
+          background: #ceddf8;
+          color: white;
+          height: 90px;
+          /*<<<<<<<<*/
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .SignUp-wrap {
+          position: relative;
+          margin: 0 auto;
+          padding-bottom: 30px;
+          width: 100%;
+        }
+
+
+
+        #SignUp-info {
+          width: 500px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin: 0 auto 50px auto;
+
+        }
+
+        .h2-ok {
+          padding: 0 0 15px 20px;
+          font-size: 17px;
+          color: #222;
+          line-height: 100%;
+          border-bottom: 2px solid #cbe6ff;
+        }
+
+        .title {
+          margin: 20px auto;
+          font-size: 26px;
+          text-align: center;
+        }
+
+        .agree-container {
+          width: 600px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1rem;
+          margin: 0 auto;
+          list-style: none;
+        }
+
+        .agree {
+          position: relative;
+          background-color: #ffffff;
+          overflow: hidden;
+          transition: 0.3s ease;
+          align-items: center;
+
+        }
+
+        .agree.active {
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .agree0 {
+          padding: 1rem 3rem 2rem 1rem;
+          background-color: rgb(255, 255, 255);
+          border-top: 2px solid #1e4a89;
+
+
+        }
+
+        .agree1 {
+          padding: 1rem;
+          background-color: rgb(240, 247, 255);
+          height: 50px;
+
+        }
+
+        .agree-title {
+          margin: 0;
+          font-size: 15px;
+          display: inline-flex;
+
+        }
+
+        .agree-container input {
+          margin-right: 10px;
+        }
+
+        .agree-sub {
+          max-height: 0;
+          overflow: auto;
+          transition: max-height 0.3s ease-in-out;
+          background-color: rgba(246, 251, 255, 0.438);
+        }
+
+        .agree-text {
+
+          padding: 0.5rem 1rem 0.5rem 1rem;
+          color: rgba(0, 0, 0, 0.863);
+          font-size: 16px;
+          overflow: auto;
+
+        }
+
+        .agree.active .agree-sub {
+          max-height: 200px;
+          border-top: 1px solid silver;
+          transition: max-height 0.3s ease-in-out;
+        }
+
+        .agree-btn {
+          cursor: pointer;
+          width: 2rem;
+          height: 2rem;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 10px;
+          right: 1rem;
+          border: 0;
+          border-radius: 50%;
+          font-size: 1.5rem;
+          background-color: #007bff2f;
+          display: inline-flex;
+
+
+        }
+
+        .agree-btn:focus {
+          outline: 0;
+        }
+
+        .agree-icon.close {
+          display: none;
+        }
+
+        .agree.active .agree-icon.close {
+          color: #ffffff;
+          display: block;
+        }
+
+        .agree.active .agree-icon.open {
+          display: none;
+        }
+
+
+        .line {
+          display: flex;
+          flex-basis: 100%;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+          color: rgba(0, 0, 0, 0.35);
+          font-size: 15px;
+          padding-top: 30px;
+          width: 500px;
+
+
+        }
+
+        .line::before {
+          content: "";
+          flex-grow: 50px;
+          margin: 0px 16px;
+          background: rgba(0, 0, 0, 0.35);
+          height: 1px;
+          font-size: 0px;
+          line-height: 0px;
+          width: 150px;
+
+
+        }
+
+        .line::after {
+          content: "";
+          margin: 0px 16px;
+          background: rgba(0, 0, 0, 0.35);
+          height: 1px;
+          font-size: 0px;
+          line-height: 0px;
+          width: 150px;
+        }
+
+
+
+        .h2-info {
+          padding: 50px 0 30px 0;
+          font-size: 26px;
+          color: #222;
+          line-height: 100%;
+          margin: 0 auto;
+          height: auto;
+        }
+
+        .form-group {
+          padding-bottom: 20px;
+
+        }
+
+
+        .form-group>input {
+
+          width: 470px;
+          height: 45px;
+          /* 인풋 박스 높이 */
+          padding: 0 10px;
+          color: #000000;
+          /* 입력 박스 텍스트 색상 */
+          font-size: 17px;
+          /* 입력 박스 텍스트 크기 */
+          border-width: 0 0 1px;
+          background-color: #d1e7ff7f;
+
+
+        }
+
+        .form-group>input:focus {
+          outline: none;
+          background-color: rgb(240, 247, 255);
+          border-color: #1e4a89;
+
+        }
+
+        #up-form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .lookup-button {
+          margin: 60px;
+          padding: 15px;
+          width: 280px;
+          background-color: #ffffff;
+          color: #000000;
+          border: 1px solid #000000;
+          cursor: pointer;
+          font-size: 20px;
+          transition: background-color 0.3s;
+        }
+
+        .lookup-button:hover {
+          color: #ffffff;
+          background-color: #1e4a89;
+          width: 280px;
+        }
