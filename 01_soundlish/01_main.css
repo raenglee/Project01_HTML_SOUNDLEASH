@@ -13,6 +13,19 @@
   box-sizing: border-box;
 }
 
+
+#color-overlay {
+  position: fixed;
+  top: 0;
+  left: 210px; /* #menu의 너비만큼 이동 */
+  width: 100%;
+  height: 100%;
+  background-color: #00000052; /* 기본 색상은 투명 */
+  display: none; /* 기본적으로 숨김 */
+  z-index: 99;
+  /* transition: background-color 0.1s; 색상 변경에 대한 트랜지션 적용 */
+}
+
 ul li {
   list-style: none;
 }
@@ -109,6 +122,7 @@ h1 {
 }
 
 
+
 /* 햄버거 아이콘 */
 #menu_hamburger span {
   z-index: 2000000;
@@ -128,25 +142,35 @@ h1 {
 
 #menu_hamburger span:first-child {
   transform-origin: 0% 0%;
+  z-index: 2000000;
+
 }
 
 #menu_hamburger span:nth-last-child(2) {
   transform-origin: 0% 100%;
+  z-index: 2000000;
+
 }
 
 #menu_hamburger input[type="checkbox"]:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #1e4a89;
+  z-index: 2000000;
+
 }
 
 #menu_hamburger input[type="checkbox"]:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
+  z-index: 2000000;
+
 }
 
 #menu_hamburger input[type="checkbox"]:checked~span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
+  z-index: 2000000;
+
 }
 
 /* 메뉴 박스 속성 */
@@ -164,7 +188,7 @@ h1 {
   list-style-type: none;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.2s;
 }
 
 #menu a {
@@ -256,6 +280,7 @@ label:hover {
 /* 햄버거 메뉴 활성화 시 메뉴 보이게 설정 */
 #menu_hamburger input[type="checkbox"]:checked~ul {
   transform: none;
+  
 }
 
 body>nav {
@@ -280,7 +305,7 @@ body>nav {
   background-color: #ffffff;
   border: 1px solid #000000;
   padding: 10px;
-  z-index: 100;
+  z-index: 99;
   text-align: center;
 }
 
@@ -479,10 +504,13 @@ html {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
+  padding: 10px 15px 0px 15px;
+  
 }
 
+
 .go_headphones {
-  background-color: hsla(0, 0%, 100%, 0.123);
+  font-size: 18px;
   text-align: center;
   line-height: 70px;
   width: 21%;
@@ -491,23 +519,31 @@ html {
 }
 
 .go_headphones :hover {
-  background-color: #1e4b8954
+  color: #ffffff;
+  background-color: #1e4a89;
+  transition: background-color 0.5s;
+
 }
 
 .go_earphones {
-  background-color: hsla(0, 0%, 100%, 0.123);
+  font-size: 18px;
   text-align: center;
   line-height: 70px;
   width: 21%;
   border-top: 2px solid #000000;
+
+
 }
 
 .go_earphones :hover {
-  background-color: #1e4b8954
+  color: #ffffff;
+  background-color: #1e4a89;
+  transition: background-color 0.5s;
+
 }
 
 .go_speaker {
-  background-color: hsla(0, 0%, 100%, 0.123);
+  font-size: 18px;
   text-align: center;
   line-height: 70px;
   width: 21%;
@@ -515,11 +551,14 @@ html {
 }
 
 .go_speaker :hover {
-  background-color: #1e4b8954
+  color: #ffffff;
+  background-color: #1e4a89;
+  transition: background-color 0.5s;
+
 }
 
 .go_soundbar {
-  background-color: hsla(0, 0%, 100%, 0.123);
+  font-size: 18px;
   text-align: center;
   line-height: 70px;
   width: 21%;
@@ -527,7 +566,10 @@ html {
 }
 
 .go_soundbar :hover {
-  background-color: #1e4b8954
+  color: #ffffff;
+  background-color:#1e4a89;
+  transition: background-color 0.5s;
+
 }
 
 /*🥇베스트상품*/

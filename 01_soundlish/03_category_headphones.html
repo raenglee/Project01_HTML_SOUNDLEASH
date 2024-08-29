@@ -460,6 +460,42 @@
 
   <!--자바스크립트-->
   <script>
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const checkbox = document.getElementById('menu-toggle');
+  const overlay = document.createElement('div');
+  overlay.id = 'color-overlay';
+
+  document.body.appendChild(overlay);
+
+  // 메뉴가 열릴 때 배경색을 변경하도록 이벤트 리스너 추가
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      overlay.style.display = 'block'; // 색상 적용을 위한 display 변경
+      setTimeout(() => {
+        overlay.style.backgroundColor = '#00000052'; // 메뉴가 열린 후 배경색을 변경
+      }, 150); // 메뉴 열리는 애니메이션과 동기화 (300ms 후 색상 적용)
+    } else {
+      overlay.style.backgroundColor = 'transparent'; // 색상 제거
+      setTimeout(() => {
+        overlay.style.display = 'none'; // 색상 제거 후 display 숨김
+      }, 300); // 색상 제거 애니메이션과 동기화
+    }
+  });
+
+ // 색상이 적용된 부분을 클릭하면 메뉴를 닫고 색상도 제거하도록 이벤트 리스너 추가
+ overlay.addEventListener('click', () => {
+    checkbox.checked = false; // 체크박스 해제하여 메뉴 닫기
+    overlay.style.backgroundColor = 'transparent'; // 색상 제거
+    setTimeout(() => {
+      overlay.style.display = 'none'; // 색상 제거 후 display 숨김
+    }, 0); // 색상 제거 애니메이션과 동기화
+  });
+});
+
+
+
     document.addEventListener('DOMContentLoaded', function () {
       const upArrow = document.querySelector('.arrow.up'); // 위쪽 화살표 요소 선택
       const downArrow = document.querySelector('.arrow.down'); // 아래쪽 화살표 요소 선택
