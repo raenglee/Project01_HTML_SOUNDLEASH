@@ -438,6 +438,7 @@ body>nav {
   padding: 5px;
   cursor: pointer;
   font-size: 15px;
+  
 }
 
 .searchLabel :hover {
@@ -453,27 +454,27 @@ body>nav {
   /* 버튼이 테이블의 크기에 영향을 미치지 않도록 함 */
 }
 
+.searchcheck{
+  padding-left: 20px;
+}
+
 .table-container {
   flex-grow: 1;
-  /* 테이블이 남는 공간을 차지하도록 함 */
   display: flex;
   justify-content: center;
-  /* 테이블을 중앙에 정렬 */
 }
 
 table {
-  border: 1px solid black;
   border-collapse: collapse;
-  width: 100%;
-  /* 부모 요소의 넓이 100% 차지 */
-  max-width: 100%;
-  /* 최대 너비를 설정하여 테이블이 너무 넓어지지 않도록 함 */
+  width: 100%;  
 }
 
 td,
-th {
-  border: 1px solid black;
-  font-size: 14px;
+th {  
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  font-size: 15px;
   padding: 10px;
   text-align: center;
 }
@@ -482,6 +483,7 @@ th {
   display: none;
   /* 기본적으로 테이블을 숨김 */
 }
+
 
 /*상품 전체 글씨 크기*/
 .product_con {
@@ -543,4 +545,15 @@ footer {
   bottom: 0;
   background: #4676ce;
   color: white;
+}
+
+.footer_con{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.footer_etc{
+right: 0%;
+  display: flex;
 }
