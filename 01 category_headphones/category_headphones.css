@@ -486,12 +486,12 @@ th {
   margin-bottom: 20px;
 }
 
-/*상품 목록 2번째줄*/
+/*상품 목록 1번째줄*/
 .product_line2 {
   overflow: hidden;
 }
 
-/*2번째 줄 상품 사진 설정*/
+/*1번째 줄 상품 사진 설정*/
 .product_line2 img {
   height: 255px;
   width: 255px;
@@ -509,12 +509,13 @@ th {
   margin-bottom: 20px;
 }
 
-/*상품 목록 3번째줄*/
+/*상품 목록 1번째줄*/
 .product_line3 {
   overflow: hidden;
+
 }
 
-/*3번째 줄 상품 사진 설정*/
+/*1번째 줄 상품 사진 설정*/
 .product_line3 img {
   height: 255px;
   width: 255px;
