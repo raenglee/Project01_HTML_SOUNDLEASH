@@ -387,7 +387,7 @@ body>nav {
 .bestproducts {
   display: flex;
   justify-content: space-evenly;
-  background-color: #1e4a89;
+  background-color: #1e4b8938;
   vertical-align: middle;
   padding: 20px;
   margin-bottom: 20px;
@@ -428,6 +428,8 @@ body>nav {
 
 .category_sub_box:hover {
   background-color: #1e4a89;
+  transition: background-color 0.3s;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -478,7 +480,6 @@ body>nav {
 }
 
 table {
-  border: 1px solid black;
   border-collapse: collapse;
   width: 100%;
   /* 부모 요소의 넓이 100% 차지 */
@@ -488,7 +489,9 @@ table {
 
 td,
 th {
-  border: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
   font-size: 14px;
   padding: 10px;
   text-align: center;
@@ -555,8 +558,67 @@ html {
 
 /*🦶푸터*/
 footer {
+  position: relative;
   z-index: -100;
   bottom: 0;
-  background: #4676ce;
+  background: #1e4a89;
   color: white;
+  font-size: 14px;
+}
+
+/*푸터 전체 내용 묶음*/
+.footer_con{
+  padding: 15px;
+  display: flex;
+}
+
+.footer_explain{
+  display: flex;
+  flex-direction: column;
+  padding-left: 240px;
+  margin-right: 100px;
+}
+
+.f_con{
+  padding: 3px;
+}
+
+.footer_etc{  
+  display: flex;
+}
+
+.f_etc{
+  padding-top: 100px;
+  padding-right: 20px;
+}
+
+.f_etc:hover{
+  cursor: pointer;
+}
+
+/*sns연결 아이콘*/
+.footer_sns{
+  display: flex;
+}
+
+#f_kakao{
+  position: absolute;
+  bottom: 8%;
+  right: 23%;
+}
+
+#f_insta{
+  position: absolute;
+  bottom: 9%;
+  right: 20%;
+}
+#f_X{
+  position: absolute;
+  bottom: 9%;
+  right: 17%;
+}
+#f_Youtube{
+  position: absolute;
+  bottom: 9%;
+  right: 14%;
 }

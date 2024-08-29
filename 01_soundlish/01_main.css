@@ -390,7 +390,7 @@ html {
 
 /*🦶푸터*/
 
-.footer_wrap {
+/* .footer_wrap {
   position: fixed;
   bottom: 0px;
   z-index: -1000;
@@ -409,7 +409,7 @@ html {
 
   margin: 0px auto;
 
-}
+} */
 
 
 .wrap {
@@ -426,10 +426,31 @@ html {
 }
 
 /*🎬메인 상단 이미지*/
-#main-img {
+/* #main-img {
   display: block;
   margin-bottom: 20px;
+} */
+
+.slider {
+  width: 100vw; /* 화면 너비에 맞게 설정 */
+  height: 100vh; /* 화면 높이에 맞게 설정 */
+  overflow: hidden;
+  position: relative;
 }
+
+.slides {
+  display: flex;
+  width: calc(1920px * 3); /* 모든 슬라이드를 포함한 너비 */
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.slides img {
+  width: 1920px; /* 슬라이드 너비 고정 */
+  height: 100%; /* 슬라이드 컨테이너 높이에 맞게 설정 */
+  object-fit: cover; /* 비율 유지하면서 컨테이너를 완전히 채우도록 설정 */
+}
+
 
 /*메인 박스 요소 정렬*/
 .main-sub {
@@ -667,7 +688,7 @@ html {
   justify-content: space-between;
   overflow: auto;
   font-size: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .news h3 {
@@ -711,13 +732,6 @@ html {
   width: 24%;
 }
 
-/*🦶푸터*/
-footer {
-  background-color: #4676ce;
-  color: #ffffff;
-  bottom: 0;
-}
-
 /*👆top으로*/
 .totop {
   position: fixed;
@@ -728,4 +742,72 @@ footer {
 /*스크롤시 부드럽게*/
 html {
   scroll-behavior: smooth;
+}
+
+
+/*🦶푸터*/
+footer {
+  position: relative;
+  z-index: -100;
+  bottom: 0;
+  background: #1e4a89;
+  color: white;
+  font-size: 14px;
+}
+
+/*푸터 전체 내용 묶음*/
+.footer_con{
+  padding: 15px;
+  display: flex;
+}
+
+.footer_explain{
+  display: flex;
+  flex-direction: column;
+  padding-left: 240px;
+  margin-right: 100px;
+}
+
+.f_con{
+  padding: 3px;
+}
+
+.footer_etc{  
+  display: flex;
+}
+
+.f_etc{
+  padding-top: 100px;
+  padding-right: 20px;
+}
+
+.f_etc:hover{
+  cursor: pointer;
+}
+
+/*sns연결 아이콘*/
+.footer_sns{
+  display: flex;
+}
+
+#f_kakao{
+  position: absolute;
+  bottom: 8%;
+  right: 23%;
+}
+
+#f_insta{
+  position: absolute;
+  bottom: 9%;
+  right: 20%;
+}
+#f_X{
+  position: absolute;
+  bottom: 9%;
+  right: 17%;
+}
+#f_Youtube{
+  position: absolute;
+  bottom: 9%;
+  right: 14%;
 }

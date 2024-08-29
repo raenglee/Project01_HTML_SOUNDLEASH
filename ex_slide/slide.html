@@ -9,11 +9,10 @@
 <body>
     <div class="slider">
         <div class="slides">
-            <img src="../y_img/main/bose_1920x900.png" alt="Slide 1">
-            <img src="../y_img/main/bangandolufsen_1920x900.jpg" alt="Slide 2">
-            <img src="../y_img/main/marshall_1920x900.jpg" alt="Slide 3">
+            <img src="../y_img/main/bose_1920x900_logo.png" alt="Slide 1">
+            <img src="../y_img/main/bangandolufsen_1920x900_logo.jpg" alt="Slide 2">
+            <img src="../y_img/main/marshall_1920x900_logo.jpg" alt="Slide 3">
             <img src="../y_img/main/sennheiser_1920x900.jpg" alt="Slide 4">
-            <img src="../y_img/main/apple_1920x900.jpg" alt="Slide 5">
         </div>
     </div>
  
@@ -26,7 +25,7 @@
         const totalSlides = slideImages.length;
     
         function updateSlideWidth() {
-            // 슬라이드 컨테이너의 너비를 업데이트합니다
+            // 슬라이드 컨테이너의 너비를 업데이트
             const sliderWidth = document.querySelector('.slider').clientWidth;
             slides.style.width = `${sliderWidth * totalSlides}px`; // 슬라이드의 전체 너비 조정
             slideImages.forEach(image => {
