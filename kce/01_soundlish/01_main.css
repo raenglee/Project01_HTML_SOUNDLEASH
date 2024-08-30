@@ -91,7 +91,7 @@ h1 {
   position: relative;
   top: -42px;
   left: 40px;
-  z-index: 10000;
+  z-index: 1000;
   width: 50px;
   height: 100%;
 
@@ -121,7 +121,7 @@ h1 {
   top: 7%;
   opacity: 0;
   cursor: pointer;
-
+  z-index: 2000000;
 }
 
 
@@ -185,7 +185,7 @@ h1 {
   padding-right: 0px;
   padding-left: 0px;
   padding-top: 80px;
-
+  z-index: 999;
 
   background: #ffffff;
   list-style-type: none;
@@ -439,6 +439,7 @@ html {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  z-index: -20;
 }
 
 .slides {
@@ -446,6 +447,11 @@ html {
   width: calc(1920px * 3);
   transition: transform 0.5s ease-in-out;
   will-change: transform;
+}
+
+
+.slides a :hover img {
+  cursor: pointer;
 }
 
 .slides img {
