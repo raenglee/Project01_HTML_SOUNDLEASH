@@ -14,7 +14,6 @@
 }
 
 
-
 #color-overlay {
   position: fixed;
   top: 0;
@@ -29,8 +28,6 @@
   z-index: 99;
   /* transition: background-color 0.1s; 색상 변경에 대한 트랜지션 적용 */
 }
-
-
 
 ul li {
   list-style: none;
@@ -94,7 +91,7 @@ h1 {
   position: relative;
   top: -42px;
   left: 40px;
-  z-index: 10000;
+  z-index: 1000;
   width: 50px;
   height: 100%;
 
@@ -124,8 +121,9 @@ h1 {
   top: 7%;
   opacity: 0;
   cursor: pointer;
-
+  z-index: 2000000;
 }
+
 
 
 /* 햄버거 아이콘 */
@@ -147,25 +145,35 @@ h1 {
 
 #menu_hamburger span:first-child {
   transform-origin: 0% 0%;
+  z-index: 2000000;
+
 }
 
 #menu_hamburger span:nth-last-child(2) {
   transform-origin: 0% 100%;
+  z-index: 2000000;
+
 }
 
 #menu_hamburger input[type="checkbox"]:checked~span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #1e4a89;
+  z-index: 2000000;
+
 }
 
 #menu_hamburger input[type="checkbox"]:checked~span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
+  z-index: 2000000;
+
 }
 
 #menu_hamburger input[type="checkbox"]:checked~span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
+  z-index: 2000000;
+
 }
 
 /* 메뉴 박스 속성 */
@@ -177,13 +185,13 @@ h1 {
   padding-right: 0px;
   padding-left: 0px;
   padding-top: 80px;
-
+  z-index: 999;
 
   background: #ffffff;
   list-style-type: none;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.2s;
 }
 
 #menu a {
@@ -275,6 +283,7 @@ label:hover {
 /* 햄버거 메뉴 활성화 시 메뉴 보이게 설정 */
 #menu_hamburger input[type="checkbox"]:checked~ul {
   transform: none;
+
 }
 
 body>nav {
@@ -364,6 +373,53 @@ body>nav {
 }
 
 
+
+
+
+
+
+/*👆top으로*/
+.totop {
+  position: fixed;
+  right: 77px;
+  bottom: 30px;
+  z-index: 9999999;
+}
+
+/*스크롤시 부드럽게*/
+html {
+  scroll-behavior: smooth;
+}
+
+/*🦶푸터*/
+
+/* .footer_wrap {
+  position: fixed;
+  bottom: 0px;
+  z-index: -1000;
+  height: 90px;
+
+}
+
+
+.footer_sub {
+  background: #ceddf8;
+  color: white;
+  position: fixed;
+
+  bottom: 0px;
+  z-index: -1000;
+
+  margin: 0px auto;
+
+} */
+
+
+.wrap {
+  background-color: #ffffff;
+
+}
+
 /*⏹메인박스*/
 .container {
   height: auto;
@@ -372,198 +428,317 @@ body>nav {
   padding: 0 auto;
 }
 
-/*상품 이름, 가격 설정*/
-.product_con {
-  margin: 1px 0;
-  font-size: 0.7rem;
-  color: #000000;
-  text-align: center;
-}
-
-/*🥇베스트 상품*/
-
-#best_text {
-  padding-bottom: 10px;
-  font-size: 20px;
-  color: #1e4a89
-}
-
-.bestproducts {
-  display: flex;
-  justify-content: space-evenly;
-  border-bottom: 2px solid #000000;
-  vertical-align: middle;
-  padding: 15px;
-  margin-bottom: 50px;
-}
-
-/*베스트 상품 목록*/
-.bestproduct {
-  overflow: hidden;
-}
-
-/*베스트 상품 사진 설정*/
-.bestproduct img {
-  margin-bottom: 5px;
+/*🎬메인 상단 이미지*/
+/* #main-img {
   display: block;
-  height: 255px;
-  width: 255px;
-  height: auto;
-  max-width: 100%;
-  border: 1px solid #000000;
-}
-
-/*서브 카테고리*/
-.category_sub {
-  display: flex;
   margin-bottom: 20px;
-  text-align: center;
-  gap: 50px;
-  justify-content: center;
+} */
+
+.slider {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  z-index: -20;
 }
 
-.category_sub_box {
-  /* width: 100%; */
-  width: 200px;
-  font-size: 15px;
-  padding: 5px;
+.slides {
+  display: flex;
+  width: calc(1920px * 3);
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+
+.slides a :hover img {
+  cursor: pointer;
+}
+
+.slides img {
+  width: 1920px;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/*메인 박스 요소 정렬*/
+.main-sub {
+  overflow: hidden;
+  width: 100%;
+  z-index: -1;
+}
+
+/*🔔공지, 이벤트*/
+.noevent {
+  gap: 10px;
+  display: flex;
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.noevent_con_da {
+  display: flex;
+}
+
+.noevent_date {
+  margin-left: auto;
+  font-size: 13px;
+}
+
+.noevnet_title {
+  border-top: 2px solid #000000;
+  color: #1e4a89;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.n_title {
+  color: #1e4a89;
+}
+
+.noevnet_con {
+  padding-bottom: 7px;
+  font-size: 14px;
+}
+
+.notice {
+  background-color: hsla(0, 0%, 100%, 0.123);
+  padding: 15px;
+  width: 50%;
+}
+
+.notice a:hover {
+  color: #1e4a89;
+  font-weight: bolder;
+}
+
+.event {
+  background-color: hsla(0, 0%, 100%, 0.123);
+  padding: 15px;
+
+  width: 50%;
+}
+
+.event a:hover {
+  color: #1e4a89;
+  font-weight: bolder;
+}
+
+/*카테고리로 이동*/
+
+.go_cate {
+  /* background-color: #4676ce; */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  padding: 10px 15px 0px 15px;
+
+}
+
+
+.go_headphones {
+  font-size: 18px;
+  text-align: center;
+  line-height: 70px;
+  width: 21%;
+  border-top: 2px solid #000000;
+
+}
+
+.go_headphones :hover {
+  color: #ffffff;
+  background-color: #1e4a89;
+  transition: background-color 0.5s;
+
+}
+
+.go_earphones {
+  font-size: 18px;
+  text-align: center;
+  line-height: 70px;
+  width: 21%;
+  border-top: 2px solid #000000;
+
+
+}
+
+.go_earphones :hover {
+  color: #ffffff;
+  background-color: #1e4a89;
+  transition: background-color 0.5s;
+
+}
+
+.go_speaker {
+  font-size: 18px;
+  text-align: center;
+  line-height: 70px;
+  width: 21%;
   border-top: 2px solid #000000;
 }
 
-.category_sub_box:hover {
-  background-color: #1e4a89;
-  transition: background-color 0.3s;
+.go_speaker :hover {
   color: #ffffff;
-  cursor: pointer;
+  background-color: #1e4a89;
+  transition: background-color 0.5s;
+
 }
 
+.go_soundbar {
+  font-size: 18px;
+  text-align: center;
+  line-height: 70px;
+  width: 21%;
+  border-top: 2px solid #000000;
+}
 
-/*🔍상세검색*/
+.go_soundbar :hover {
+  color: #ffffff;
+  background-color: #1e4a89;
+  transition: background-color 0.5s;
 
-.searchbox_t {
+}
+
+/*🥇베스트상품*/
+
+.best {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/*베스트 상품 전체 속성*/
+.best_products {
+  margin-bottom: 20px;
+  /*카테고리 사진 가로정렬*/
   display: flex;
+  justify-content: space-between;
 }
 
-.searchbox {
-  display: block;
-  width: 700px;
+/*베스트상품 목록*/
+.best_product {
+  overflow: hidden;
+  text-align: center;
+}
 
-  margin: 0px auto 50px auto;
+/*베스트상품 사진*/
+.best_product_img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #000000;
+
+}
+
+/*베스트상품 이름, 가격*/
+.best_product_text {
+  margin: 1px 0;
+  color: #000000;
+  font-size: 14px;
+}
+
+
+/*회사 소개*/
+.introduce {
+  width: 100%;
+  position: relative;
+}
+
+.introduce_img {
+  vertical-align: middle;
+  opacity: 0.7;
+  margin-bottom: 20px;
+}
+
+.introduce_text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+/*대여하기, 쇼핑하기 글자배열이이상함*/
+.introduce_click {
+  position: absolute;
+  padding-top: 50px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.introduce_rent {
+  color: white;
+}
+
+.introduce_rent:hover {
+  color: #1e4a89;
+  font-weight: bolder;
+}
+
+.introduce_sell {
+  color: white;
+}
+
+.introduce_sell:hover {
+  color: #1e4a89;
+  font-weight: bolder;
+}
+
+
+
+/*📰뉴스레터 */
+.news {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.news h3 {
+  overflow: hidden;
+  height: 6vh;
+  padding-top: 5px;
+}
+
+#news-con {
+  overflow: hidden;
+  height: 12vh;
   padding-top: 10px;
 }
 
-#searchLabel {
-  border: 1px solid black;
-  background-color: #ffffff;
+#news_img {
   width: 100%;
-  align-items: center;
-  text-align: center;
-  padding: 5px;
-  cursor: pointer;
-  font-size: 15px;
 }
 
-.searchLabel :hover {
-  background-color: #4676ce;
-}
-
-.search {
-  margin-right: 20px;
-  /* 버튼과 테이블 사이의 간격 */
-  cursor: pointer;
-  flex-shrink: 0;
-  /* 버튼이 테이블의 크기에 영향을 미치지 않도록 함 */
-}
-
-.table-container {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 100%;
-}
-
-td,
-th {
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-  font-size: 14px;
-  padding: 10px;
-  text-align: center;
-}
-
-#searchTable {
-  display: none;
-  /* 기본적으로 테이블을 숨김 */
-}
-
-/*상품 전체 글씨 크기*/
-.product_con {
-  font-size: 14px;
-}
-
-/*1️⃣상품 목록-----------------------------------------------*/
-
-
-/*🎧헤드셋 상품 목록 1번째줄 전체 속성*/
-.products_line {
-  flex-wrap: wrap;
-  display: flex;
-  margin-bottom: 20px;
-  width: 100%;
-  gap: 31.6px;
-  /* justify-content: space-between; */
-}
-
-/*상품 목록 1번째줄*/
-.product_line {
-  overflow: hidden;
-  height: 255px;
-  width: 255px;
-  height: auto;
-  max-width: 100%;
-  margin-bottom: 20px;
-
-}
-
-/*1번째 줄 상품 사진 설정*/
-.product_line img {
-  margin-bottom: 5px;
-  display: block;
-  height: auto;
-  max-width: 100%;
-  border: 1px solid #000000;
-}
-
-.product_price {
-  display: flex;
-  justify-content: center;
-}
-
-.p_sale {
-  text-align: center;
+.gogo {
+  float: left;
   font-size: 13px;
-  background-color: red;
-  color: white;
-  padding-left: 3px;
-  padding-right: 3px;
-  margin-right: 4px;
 }
 
+.gogo:hover {
+  color: #1e4a89;
+}
 
-.p_new {
-  text-align: center;
-  font-size: 13px;
-  background-color: #1e4a89;
-  color: white;
-  padding-left: 3px;
-  padding-right: 3px;
-  margin-right: 4px;
+#news_bose {
+  width: 24%;
+}
+
+#news_sony {
+  width: 24%;
+}
+
+#news_airpodpro2 {
+  width: 24%;
+}
+
+#news_bao {
+  width: 24%;
 }
 
 /*👆top으로*/
@@ -571,7 +746,6 @@ th {
   position: fixed;
   right: 77px;
   bottom: 30px;
-  z-index: 100;
 }
 
 /*스크롤시 부드럽게*/
