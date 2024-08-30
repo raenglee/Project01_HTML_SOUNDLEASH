@@ -141,19 +141,19 @@
   </div>
 
   <!--🎬메인 상단 이미지-->
-  <!-- <img id="main-img" src="../y_img/main/headphones_green_cut.png" style="width: 100%; "> -->
+  <img id="main-img" src="../y_img/main/headphones_green_cut.png" style="width: 100%; ">
 
-  
+
   <!--슬라이드-->
-  <div class="slider">
+  <!-- <div class="slider">
     <div class="slides">
-        <a herf="#"><img src="../y_img/main/bose_1920x900_logo.png"></a>
-          <a herf="#"><img src="../y_img/main/bangandolufsen_1920x900_logo2.png"></a>
-            <a herf="#"><img src="../y_img/main/marshall_1920x900_logo2.png"></a>
-              <a herf="#"><img src="../y_img/main/sennheiser_1920x900.jpg"></a>
+      <a herf="#"><img src="../y_img/main/bose_1920x900_logo.png"></a>
+      <a herf="#"><img src="../y_img/main/bangandolufsen_1920x900_logo2.png"></a>
+      <a herf="#"><img src="../y_img/main/marshall_1920x900_logo2.png"></a>
+      <a herf="#"><img src="../y_img/main/sennheiser_1920x900.jpg"></a>
     </div>
-</div>
-
+  </div>
+ -->
 
 
   <!--⏹메인박스-->
@@ -265,13 +265,12 @@
         </a>
       </div>
       <div class="best_product"><a href="#">
-          <img class="best_product_img" src="../y_img/earphones/[비츠] Beats Studio Buds +_투명.jpg" width="200"
-            height="200"
-            onmouseover="this.src='../y_img/earphones/[비츠] Beats Studio Buds +_블랙골드.jpg'"
-            onmouseout="this.src='../y_img/earphones/[비츠] Beats Studio Buds +_투명.jpg'">
+          <img class="best_product_img" src="../y_img/headphones/Acc/[애플] 에어팟 이어쿠션_블랙.png" width="200" height="200"
+            onmouseover="this.src='../y_img/headphones/Acc/[애플] 에어팟 이어쿠션_실버.png'"
+            onmouseout="this.src='../y_img/headphones/Acc/[애플] 에어팟 이어쿠션_블랙.png'">
           <div class="best_product_text">
-            <p><b>[비츠] Beats Studio Buds +</b></p>
-            <p>229,000원</p>
+            <p><b>[애플] 에어팟 맥스 이어패드</b></p>
+            <p>85,000원</p>
           </div>
         </a>
       </div>
@@ -402,37 +401,37 @@
   <script>
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const checkbox = document.getElementById('menu-toggle');
-  const overlay = document.createElement('div');
-  overlay.id = 'color-overlay';
+    document.addEventListener('DOMContentLoaded', () => {
+      const checkbox = document.getElementById('menu-toggle');
+      const overlay = document.createElement('div');
+      overlay.id = 'color-overlay';
 
-  document.body.appendChild(overlay);
+      document.body.appendChild(overlay);
 
-  // 메뉴가 열릴 때 배경색을 변경하도록 이벤트 리스너 추가
-  checkbox.addEventListener('change', () => {
-    if (checkbox.checked) {
-      overlay.style.display = 'block'; // 색상 적용을 위한 display 변경
-      setTimeout(() => {
-        overlay.style.backgroundColor = '#00000052'; // 메뉴가 열린 후 배경색을 변경
-      }, 150); // 메뉴 열리는 애니메이션과 동기화 (300ms 후 색상 적용)
-    } else {
-      overlay.style.backgroundColor = 'transparent'; // 색상 제거
-      setTimeout(() => {
-        overlay.style.display = 'none'; // 색상 제거 후 display 숨김
-      }, 300); // 색상 제거 애니메이션과 동기화
-    }
-  });
+      // 메뉴가 열릴 때 배경색을 변경하도록 이벤트 리스너 추가
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          overlay.style.display = 'block'; // 색상 적용을 위한 display 변경
+          setTimeout(() => {
+            overlay.style.backgroundColor = '#00000052'; // 메뉴가 열린 후 배경색을 변경
+          }, 150); // 메뉴 열리는 애니메이션과 동기화 (300ms 후 색상 적용)
+        } else {
+          overlay.style.backgroundColor = 'transparent'; // 색상 제거
+          setTimeout(() => {
+            overlay.style.display = 'none'; // 색상 제거 후 display 숨김
+          }, 300); // 색상 제거 애니메이션과 동기화
+        }
+      });
 
- // 색상이 적용된 부분을 클릭하면 메뉴를 닫고 색상도 제거하도록 이벤트 리스너 추가
- overlay.addEventListener('click', () => {
-    checkbox.checked = false; // 체크박스 해제하여 메뉴 닫기
-    overlay.style.backgroundColor = 'transparent'; // 색상 제거
-    setTimeout(() => {
-      overlay.style.display = 'none'; // 색상 제거 후 display 숨김
-    }, 0); // 색상 제거 애니메이션과 동기화
-  });
-});
+      // 색상이 적용된 부분을 클릭하면 메뉴를 닫고 색상도 제거하도록 이벤트 리스너 추가
+      overlay.addEventListener('click', () => {
+        checkbox.checked = false; // 체크박스 해제하여 메뉴 닫기
+        overlay.style.backgroundColor = 'transparent'; // 색상 제거
+        setTimeout(() => {
+          overlay.style.display = 'none'; // 색상 제거 후 display 숨김
+        }, 0); // 색상 제거 애니메이션과 동기화
+      });
+    });
 
 
 
@@ -474,33 +473,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-    
 
-    //이미지 슬라이드
-    let index = 0;
-        const slides = document.querySelector('.slides');
-        const slideImages = document.querySelectorAll('.slides img');
-        const slideWidth = 1920; // 고정된 슬라이드 너비
-        const totalSlides = slideImages.length;
-    
-        function updateSlideWidth() {
-            // 슬라이드 컨테이너의 너비를 업데이트
-            const sliderWidth = document.querySelector('.slider').clientWidth;
-            slides.style.width = `${sliderWidth * totalSlides}px`; // 슬라이드의 전체 너비 조정
-            slideImages.forEach(image => {
-                image.style.width = `${sliderWidth}px`; // 각 이미지의 너비를 조정
-            });
-        }
-    
-        function showNextSlide() {
-            index = (index + 1) % totalSlides;
-            slides.style.transform = `translateX(${-index * 1920}px)`; // 슬라이드를 이동
-        }
-    
-        window.addEventListener('resize', updateSlideWidth); // 윈도우 리사이즈 시 슬라이드 너비 업데이트
-    
-        updateSlideWidth(); // 초기화 시 슬라이드 너비 업데이트
-        setInterval(showNextSlide, 3000); // 슬라이드를 3초마다 변경
+    // //이미지 슬라이드
+    // let index = 0;
+    // const slides = document.querySelector('.slides');
+    // const slideImages = document.querySelectorAll('.slides img');
+    // const slideWidth = 1920; // 고정된 슬라이드 너비
+    // const totalSlides = slideImages.length;
+
+    // function updateSlideWidth() {
+    //   // 슬라이드 컨테이너의 너비를 업데이트
+    //   const sliderWidth = document.querySelector('.slider').clientWidth;
+    //   slides.style.width = `${sliderWidth * totalSlides}px`; // 슬라이드의 전체 너비 조정
+    //   slideImages.forEach(image => {
+    //     image.style.width = `${sliderWidth}px`; // 각 이미지의 너비를 조정
+    //   });
+    // }
+
+    // function showNextSlide() {
+    //   index = (index + 1) % totalSlides;
+    //   slides.style.transform = `translateX(${-index * 1920}px)`; // 슬라이드를 이동
+    // }
+
+    // window.addEventListener('resize', updateSlideWidth); // 윈도우 리사이즈 시 슬라이드 너비 업데이트
+
+    // updateSlideWidth(); // 초기화 시 슬라이드 너비 업데이트
+    // setInterval(showNextSlide, 3000); // 슬라이드를 3초마다 변경
 
 
   </script>
@@ -532,7 +530,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
 
-    
+
     <!--쇼핑몰마다 있는 항목이길래 넣음-->
     <!--a태그 넣으면 글씨 색이 바뀌고, a태그 작동이 안됨-->
     <div class="footer_etc">
@@ -550,37 +548,37 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
       <div>
         <p class="f_etc">쿠키</p>
+      </div>
+      <div>
+        <p class="f_etc">보안</p>
+      </div>
+      <div>
+        <p class="f_etc">모든 정책</p></a>
+      </div>
     </div>
-    <div>
-      <p class="f_etc">보안</p>
+
+    <!--SNS등 연결-->
+    <div class="footer_sns">
+      <div id="f_kakao"><a href="#">
+          <img class="f_sns" src="../y_img/footer/kakao.png" width="32">
+        </a>
+      </div>
+      <div id="f_insta"><a href="#">
+          <img class="f_sns" src="../y_img/footer/instagram.png" width="30">
+        </a>
+      </div>
+      <div id="f_X"><a href="#">
+          <img class="f_sns" src="../y_img/footer/twitter X.png" width="30">
+        </a>
+      </div>
+      <div id="f_Youtube"><a href="#">
+          <img class="f_sns" src="../y_img/footer/youtube.png" width="30">
+        </a>
+      </div>
     </div>
-    <div>
-      <p class="f_etc">모든 정책</p></a>
-    </div>
+
   </div>
-  
-  <!--SNS등 연결-->
-  <div class="footer_sns">
-    <div id="f_kakao"><a href="#">
-        <img class="f_sns" src="../y_img/footer/kakao.png" width="32">
-      </a>
-    </div>
-    <div id="f_insta"><a href="#">
-        <img class="f_sns" src="../y_img/footer/instagram.png" width="30">
-      </a>
-    </div>
-    <div id="f_X"><a href="#">
-        <img class="f_sns" src="../y_img/footer/twitter X.png" width="30">
-      </a>
-    </div>
-    <div id="f_Youtube"><a href="#">
-        <img class="f_sns" src="../y_img/footer/youtube.png" width="30">
-      </a>
-    </div>
-  </div>
-  
-</div>
-  
+
 </footer>
 
 </html>
