@@ -18,11 +18,14 @@
 #color-overlay {
   position: fixed;
   top: 0;
-  left: 210px; /* #menu의 너비만큼 이동 */
+  left: 210px;
+  /* #menu의 너비만큼 이동 */
   width: 100%;
   height: 100%;
-  background-color: #00000052; /* 기본 색상은 투명 */
-  display: none; /* 기본적으로 숨김 */
+  background-color: #00000052;
+  /* 기본 색상은 투명 */
+  display: none;
+  /* 기본적으로 숨김 */
   z-index: 99;
   /* transition: background-color 0.1s; 색상 변경에 대한 트랜지션 적용 */
 }
@@ -382,14 +385,15 @@ body>nav {
 #best_text {
   padding-bottom: 10px;
   font-size: 20px;
+  color: #1e4a89
 }
 
 .bestproducts {
   display: flex;
   justify-content: space-evenly;
-  background-color: #1e4b8938;
+  border-top: 2px solid #000000;
   vertical-align: middle;
-  padding: 20px;
+  padding: 30px;
   margin-bottom: 20px;
 }
 
@@ -414,7 +418,7 @@ body>nav {
   display: flex;
   margin-bottom: 20px;
   text-align: center;
-  gap: 30px;
+  gap: 50px;
   justify-content: center;
 }
 
@@ -423,7 +427,7 @@ body>nav {
   width: 200px;
   font-size: 15px;
   padding: 5px;
-  border: 1px solid black;
+  border-top: 2px solid #000000;
 }
 
 .category_sub_box:hover {
@@ -466,25 +470,20 @@ body>nav {
   margin-right: 20px;
   /* 버튼과 테이블 사이의 간격 */
   cursor: pointer;
-  /* 클릭 가능 표시 */
   flex-shrink: 0;
   /* 버튼이 테이블의 크기에 영향을 미치지 않도록 함 */
 }
 
 .table-container {
   flex-grow: 1;
-  /* 테이블이 남는 공간을 차지하도록 함 */
   display: flex;
   justify-content: center;
-  /* 테이블을 중앙에 정렬 */
 }
 
 table {
   border-collapse: collapse;
   width: 100%;
-  /* 부모 요소의 넓이 100% 차지 */
   max-width: 100%;
-  /* 최대 너비를 설정하여 테이블이 너무 넓어지지 않도록 함 */
 }
 
 td,
@@ -514,8 +513,10 @@ th {
 .products_line {
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
   margin-bottom: 20px;
+  width: 100%;
+  gap: 31.6px;
+  /* justify-content: space-between; */
 }
 
 /*상품 목록 1번째줄*/
@@ -536,6 +537,32 @@ th {
   height: auto;
   max-width: 100%;
   border: 1px solid #000000;
+}
+
+.product_price {
+  display: flex;
+  justify-content: center;
+}
+
+.p_sale {
+  text-align: center;
+  font-size: 13px;
+  background-color: red;
+  color: white;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 4px;
+}
+
+
+.p_new {
+  text-align: center;
+  font-size: 13px;
+  background-color: #1e4a89;
+  color: white;
+  padding-left: 3px;
+  padding-right: 3px;
+  margin-right: 4px;
 }
 
 /*👆top으로*/
@@ -563,57 +590,59 @@ footer {
 }
 
 /*푸터 전체 내용 묶음*/
-.footer_con{
+.footer_con {
   padding: 15px;
   display: flex;
 }
 
-.footer_explain{
+.footer_explain {
   display: flex;
   flex-direction: column;
   padding-left: 240px;
   margin-right: 100px;
 }
 
-.f_con{
+.f_con {
   padding: 3px;
 }
 
-.footer_etc{  
+.footer_etc {
   display: flex;
 }
 
-.f_etc{
+.f_etc {
   padding-top: 100px;
   padding-right: 20px;
 }
 
-.f_etc:hover{
+.f_etc:hover {
   cursor: pointer;
 }
 
 /*sns연결 아이콘*/
-.footer_sns{
+.footer_sns {
   display: flex;
 }
 
-#f_kakao{
+#f_kakao {
   position: absolute;
   bottom: 8%;
   right: 23%;
 }
 
-#f_insta{
+#f_insta {
   position: absolute;
   bottom: 9%;
   right: 20%;
 }
-#f_X{
+
+#f_X {
   position: absolute;
   bottom: 9%;
   right: 17%;
 }
-#f_Youtube{
+
+#f_Youtube {
   position: absolute;
   bottom: 9%;
   right: 14%;
