@@ -429,12 +429,12 @@ html {
 }
 
 /*🎬메인 상단 이미지*/
-#main-img {
+/* #main-img {
   display: block;
   margin-bottom: 20px;
-}
+} */
 
-/* .slider {
+.slider {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -452,7 +452,7 @@ html {
   width: 1920px;
   height: 100%;
   object-fit: cover;
-} */
+}
 
 
 /*메인 박스 요소 정렬*/
