@@ -17,11 +17,14 @@
 #color-overlay {
   position: fixed;
   top: 0;
-  left: 210px; /* #menu의 너비만큼 이동 */
+  left: 210px;
+  /* #menu의 너비만큼 이동 */
   width: 100%;
   height: 100%;
-  background-color: #00000052; /* 기본 색상은 투명 */
-  display: none; /* 기본적으로 숨김 */
+  background-color: #00000052;
+  /* 기본 색상은 투명 */
+  display: none;
+  /* 기본적으로 숨김 */
   z-index: 99;
   /* transition: background-color 0.1s; 색상 변경에 대한 트랜지션 적용 */
 }
@@ -441,6 +444,7 @@ html {
 
 .content h2 {
   margin: 20px auto 30px auto;
+  font-size: 22px;
 }
 
 .tabs {
@@ -541,13 +545,13 @@ input {
   /* 인풋 박스 너비를 폼 너비에 맞춤 */
   max-width: 360px;
   /* 인풋 박스 최대 너비 설정 */
-  height: 45px;
+  height: 40px;
   /* 인풋 박스 높이 */
   padding: 0 10px;
   margin: 5px auto;
   color: #000000;
   /* 입력 박스 텍스트 색상 */
-  font-size: 17px;
+  font-size: 15px;
   /* 입력 박스 텍스트 크기 */
   border-width: 0 0 1px;
   background-color: #007bff17;
@@ -574,7 +578,7 @@ input:focus {
   color: #000000;
   border: 1px solid #000000;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 17px;
   transition: background-color 0.3s;
 
 
@@ -588,7 +592,7 @@ input:focus {
   color: #000000;
   border: 1px solid #000000;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 17px;
   transition: background-color 0.3s;
 
 }
@@ -667,57 +671,59 @@ footer {
 }
 
 /*푸터 전체 내용 묶음*/
-.footer_con{
+.footer_con {
   padding: 15px;
   display: flex;
 }
 
-.footer_explain{
+.footer_explain {
   display: flex;
   flex-direction: column;
   padding-left: 240px;
   margin-right: 100px;
 }
 
-.f_con{
+.f_con {
   padding: 3px;
 }
 
-.footer_etc{  
+.footer_etc {
   display: flex;
 }
 
-.f_etc{
+.f_etc {
   padding-top: 100px;
   padding-right: 20px;
 }
 
-.f_etc:hover{
+.f_etc:hover {
   cursor: pointer;
 }
 
 /*sns연결 아이콘*/
-.footer_sns{
+.footer_sns {
   display: flex;
 }
 
-#f_kakao{
+#f_kakao {
   position: absolute;
   bottom: 8%;
   right: 23%;
 }
 
-#f_insta{
+#f_insta {
   position: absolute;
   bottom: 9%;
   right: 20%;
 }
-#f_X{
+
+#f_X {
   position: absolute;
   bottom: 9%;
   right: 17%;
 }
-#f_Youtube{
+
+#f_Youtube {
   position: absolute;
   bottom: 9%;
   right: 14%;

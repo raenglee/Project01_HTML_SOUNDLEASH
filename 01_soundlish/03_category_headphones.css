@@ -383,18 +383,23 @@ body>nav {
 /*🥇베스트 상품*/
 
 #best_text {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   font-size: 20px;
-  color: #1e4a89
+  text-align: center;
+  color: #1e4a89;
+  border-top: 2px solid #000000;
+  padding-top: 15px;
 }
 
 .bestproducts {
   display: flex;
   justify-content: space-evenly;
   border-bottom: 2px solid #000000;
+
   vertical-align: middle;
   padding: 15px;
-  margin-bottom: 50px;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /*베스트 상품 목록*/
@@ -416,25 +421,30 @@ body>nav {
 /*서브 카테고리*/
 .category_sub {
   display: flex;
-  margin-bottom: 20px;
+  padding-top: 40px;
+  margin-bottom: 40px;
   text-align: center;
   gap: 50px;
   justify-content: center;
 }
 
+
 .category_sub_box {
   /* width: 100%; */
   width: 200px;
   font-size: 15px;
-  padding: 5px;
-  border-top: 2px solid #000000;
+  border: 1px solid #000000;
+  height: 40px;
+  line-height: 35px;
+
 }
 
-.category_sub_box:hover {
+.category_sub_box :hover {
   background-color: #1e4a89;
-  transition: background-color 0.3s;
   color: #ffffff;
+  transition: background-color 0.3s;
   cursor: pointer;
+  height: 40px;
 }
 
 

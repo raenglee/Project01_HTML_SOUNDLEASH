@@ -126,7 +126,7 @@
     </div>
 
   </nav>
-  
+
   <!--👀최근 본 상품-->
   <div class="recently-viewed">
     <h3>최근 본 상품</h3>
@@ -233,37 +233,37 @@
   <script>
 
 
-document.addEventListener('DOMContentLoaded', () => {
-  const checkbox = document.getElementById('menu-toggle');
-  const overlay = document.createElement('div');
-  overlay.id = 'color-overlay';
+    document.addEventListener('DOMContentLoaded', () => {
+      const checkbox = document.getElementById('menu-toggle');
+      const overlay = document.createElement('div');
+      overlay.id = 'color-overlay';
 
-  document.body.appendChild(overlay);
+      document.body.appendChild(overlay);
 
-  // 메뉴가 열릴 때 배경색을 변경하도록 이벤트 리스너 추가
-  checkbox.addEventListener('change', () => {
-    if (checkbox.checked) {
-      overlay.style.display = 'block'; // 색상 적용을 위한 display 변경
-      setTimeout(() => {
-        overlay.style.backgroundColor = '#00000052'; // 메뉴가 열린 후 배경색을 변경
-      }, 150); // 메뉴 열리는 애니메이션과 동기화 (300ms 후 색상 적용)
-    } else {
-      overlay.style.backgroundColor = 'transparent'; // 색상 제거
-      setTimeout(() => {
-        overlay.style.display = 'none'; // 색상 제거 후 display 숨김
-      }, 300); // 색상 제거 애니메이션과 동기화
-    }
-  });
+      // 메뉴가 열릴 때 배경색을 변경하도록 이벤트 리스너 추가
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          overlay.style.display = 'block'; // 색상 적용을 위한 display 변경
+          setTimeout(() => {
+            overlay.style.backgroundColor = '#00000052'; // 메뉴가 열린 후 배경색을 변경
+          }, 150); // 메뉴 열리는 애니메이션과 동기화 (300ms 후 색상 적용)
+        } else {
+          overlay.style.backgroundColor = 'transparent'; // 색상 제거
+          setTimeout(() => {
+            overlay.style.display = 'none'; // 색상 제거 후 display 숨김
+          }, 300); // 색상 제거 애니메이션과 동기화
+        }
+      });
 
- // 색상이 적용된 부분을 클릭하면 메뉴를 닫고 색상도 제거하도록 이벤트 리스너 추가
- overlay.addEventListener('click', () => {
-    checkbox.checked = false; // 체크박스 해제하여 메뉴 닫기
-    overlay.style.backgroundColor = 'transparent'; // 색상 제거
-    setTimeout(() => {
-      overlay.style.display = 'none'; // 색상 제거 후 display 숨김
-    }, 0); // 색상 제거 애니메이션과 동기화
-  });
-});
+      // 색상이 적용된 부분을 클릭하면 메뉴를 닫고 색상도 제거하도록 이벤트 리스너 추가
+      overlay.addEventListener('click', () => {
+        checkbox.checked = false; // 체크박스 해제하여 메뉴 닫기
+        overlay.style.backgroundColor = 'transparent'; // 색상 제거
+        setTimeout(() => {
+          overlay.style.display = 'none'; // 색상 제거 후 display 숨김
+        }, 0); // 색상 제거 애니메이션과 동기화
+      });
+    });
 
 
 
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
     </div>
 
-    
+
     <!--쇼핑몰마다 있는 항목이길래 넣음-->
     <!--a태그 넣으면 글씨 색이 바뀌고, a태그 작동이 안됨-->
     <div class="footer_etc">
@@ -372,37 +372,37 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>
       <div>
         <p class="f_etc">쿠키</p>
+      </div>
+      <div>
+        <p class="f_etc">보안</p>
+      </div>
+      <div>
+        <p class="f_etc">모든 정책</p></a>
+      </div>
     </div>
-    <div>
-      <p class="f_etc">보안</p>
+
+    <!--SNS등 연결-->
+    <div class="footer_sns">
+      <div id="f_kakao"><a href="#">
+          <img class="f_sns" src="../y_img/footer/kakao.png" width="32">
+        </a>
+      </div>
+      <div id="f_insta"><a href="#">
+          <img class="f_sns" src="../y_img/footer/instagram.png" width="30">
+        </a>
+      </div>
+      <div id="f_X"><a href="#">
+          <img class="f_sns" src="../y_img/footer/twitter X.png" width="30">
+        </a>
+      </div>
+      <div id="f_Youtube"><a href="#">
+          <img class="f_sns" src="../y_img/footer/youtube.png" width="30">
+        </a>
+      </div>
     </div>
-    <div>
-      <p class="f_etc">모든 정책</p></a>
-    </div>
+
   </div>
-  
-  <!--SNS등 연결-->
-  <div class="footer_sns">
-    <div id="f_kakao"><a href="#">
-        <img class="f_sns" src="../y_img/footer/kakao.png" width="32">
-      </a>
-    </div>
-    <div id="f_insta"><a href="#">
-        <img class="f_sns" src="../y_img/footer/instagram.png" width="30">
-      </a>
-    </div>
-    <div id="f_X"><a href="#">
-        <img class="f_sns" src="../y_img/footer/twitter X.png" width="30">
-      </a>
-    </div>
-    <div id="f_Youtube"><a href="#">
-        <img class="f_sns" src="../y_img/footer/youtube.png" width="30">
-      </a>
-    </div>
-  </div>
-  
-</div>
-  
+
 </footer>
 
 
